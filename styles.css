@@ -149,6 +149,8 @@ h1 .gold { color: var(--gold); }
 .portfolio-nav { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
 .carousel-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--bordure); background: var(--blanc); color: var(--navy); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
 .carousel-btn:hover { background: var(--navy); color: var(--blanc); border-color: var(--navy); }
+.portfolio-grid.portfolio-grid-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
+.inspiration-note { margin-top: 22px; font-size: 12.5px; font-style: italic; color: var(--texte-sec); text-align: center; }
 
 /* PROCESSUS */
 .process { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 16px; margin-top: 46px; padding: 0; position: relative; }
