@@ -109,12 +109,14 @@ h1 .gold { color: var(--gold); }
 .domain-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 46px; }
 .domain-card-photo { position: relative; border-radius: 10px; overflow: hidden; height: 320px; box-shadow: 0 1px 3px rgba(10,18,56,0.12); }
 .domain-card-photo .photo-placeholder-card { position: absolute; inset: 0; height: 100%; border-radius: 0; }
-.domain-card-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 6px; background: linear-gradient(180deg, rgba(10,18,56,0) 0%, rgba(8,14,44,0.55) 40%, rgba(6,11,32,0.94) 100%); }
-.domain-card-body h3 { font-size: 18px; display: flex; align-items: center; gap: 8px; color: var(--blanc); }
-.h3-icon { color: var(--gold); width: 20px; height: 20px; }
-.domain-card-tagline { font-family: 'Fraunces', serif; font-style: italic; font-size: 15px; color: var(--gold); margin: 0; }
-.domain-card-body p { font-size: 13px; color: #D9E4F1; line-height: 1.5; }
-.domain-card-body .link-arrow { color: var(--gold); }
+.domain-card-photo .photo-placeholder-card img { filter: brightness(0.82); }
+.domain-card-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 20px 20px 20px; display: flex; flex-direction: column; gap: 6px; background: linear-gradient(180deg, rgba(6,11,32,0) 0%, rgba(6,11,32,0.55) 22%, rgba(6,11,32,0.93) 48%, rgba(6,11,32,0.97) 100%); backdrop-filter: blur(1.5px); }
+.domain-card-body h3 { font-size: 18px; display: flex; align-items: center; gap: 10px; color: var(--blanc); text-shadow: 0 1px 4px rgba(0,0,0,0.35); }
+.h3-icon-badge { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+.h3-icon { color: var(--gold); width: 17px; height: 17px; }
+.domain-card-tagline { font-family: 'Fraunces', serif; font-style: italic; font-size: 15px; color: var(--gold); margin: 0; text-shadow: 0 1px 4px rgba(0,0,0,0.35); }
+.domain-card-body p { font-size: 13px; color: #D9E4F1; line-height: 1.5; text-shadow: 0 1px 4px rgba(0,0,0,0.35); }
+.domain-card-body .link-arrow { color: var(--gold); text-shadow: 0 1px 4px rgba(0,0,0,0.35); }
 .domain-card-text { background: var(--navy); border-radius: 10px; padding: 26px; display: flex; flex-direction: column; gap: 10px; height: 320px; justify-content: center; }
 .domain-icon { width: 58px; height: 58px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; color: var(--gold); box-shadow: 0 3px 8px rgba(10,18,56,0.18); flex-shrink: 0; }
 .domain-icon svg { width: 28px; height: 28px; stroke-width: 1.8; }
