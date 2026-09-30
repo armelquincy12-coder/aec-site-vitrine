@@ -64,8 +64,13 @@ svg { width: 22px; height: 22px; flex: 0 0 auto; }
 .hero { background: var(--navy); padding: 70px 0 80px; }
 .hero-inner { display: flex; align-items: center; gap: 56px; }
 .hero-text { flex: 1 1 460px; display: flex; flex-direction: column; gap: 18px; }
+.hero-inner-solo { justify-content: center; text-align: center; }
+.hero-inner-solo .hero-text { flex: 0 1 640px; align-items: center; }
+.hero-inner-solo .lead { max-width: 520px; }
+.hero-inner-solo .cta-row, .hero-inner-solo .cta-links { justify-content: center; }
 .eyebrow { color: var(--gold); font-size: 15px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; }
 .eyebrow-dark { color: var(--gold-text); }
+.eyebrow-lg { font-size: 19px; }
 h1 { font-weight: 700; font-size: 40px; line-height: 1.18; color: var(--blanc); letter-spacing: .01em; }
 h1 .gold { color: var(--gold); }
 .lead { font-size: 16px; line-height: 1.6; color: #B9C6D6; max-width: 440px; }
