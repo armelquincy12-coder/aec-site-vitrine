@@ -159,7 +159,7 @@ h1 .gold { color: var(--gold); }
 /* POUR QUI */
 .target-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 46px; }
 .target-card { display: flex; flex-direction: column; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
-.target-card-highlight { border-color: rgba(212,175,55,0.4); }
+.target-card-highlight { background: var(--blanc); border-color: var(--gold); }
 .target-card-content { padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 12px; order: 1; }
 .target-card-head { display: flex; align-items: center; gap: 12px; }
 .photo-placeholder-target { height: 190px; order: 2; }
@@ -169,6 +169,10 @@ h1 .gold { color: var(--gold); }
 .target-card ul li { font-size: 14.5px; color: #B9C6D6; padding: 3px 0; position: relative; padding-left: 16px; line-height: 1.4; }
 .target-card ul li::before { content: "•"; position: absolute; left: 0; color: var(--gold); }
 .target-card .link-arrow { color: var(--gold); font-size: 15px; margin-top: 2px; }
+.target-card-highlight h3 { color: var(--navy); }
+.target-card-highlight ul li { color: var(--texte-sec); }
+.target-card-highlight .target-tagline { border-top-color: var(--bordure); }
+.target-card-highlight .target-desc { color: var(--texte-sec); }
 .target-tagline { color: var(--gold); font-size: 12.5px; font-weight: 700; letter-spacing: .02em; margin: 10px 0 2px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.12); }
 .target-desc { color: #B9C6D6; font-size: 13.5px; line-height: 1.5; margin: 0; }
 
