@@ -76,12 +76,12 @@ h1 .gold { color: var(--gold); }
 .badge span { display: block; color: #8496AD; font-size: 10.5px; line-height: 1.4; margin-top: 2px; }
 .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
 
-.hero-photo { flex: 1 1 440px; position: relative; }
+.hero-photo { flex: 1.15 1 500px; position: relative; }
 .photo-placeholder {
   border-radius: 6px;
   background: repeating-linear-gradient(135deg, #0A1238 0 2px, #16213F 2px 16px);
   border: 1px solid rgba(212,175,55,0.35);
-  height: 440px;
+  height: 500px;
   display: flex; align-items: flex-end; padding: 16px; box-sizing: border-box;
 }
 .photo-placeholder span { color: #E8F1FC; font-size: 12px; letter-spacing: .02em; }
@@ -107,29 +107,34 @@ h1 .gold { color: var(--gold); }
 
 /* DOMAINES */
 .domain-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 46px; }
-.domain-card-photo .photo-placeholder-card { height: 170px; }
-.domain-card-photo { border: 1px solid var(--bordure); border-radius: 10px; overflow: hidden; }
-.domain-card-body { padding: 20px; display: flex; flex-direction: column; gap: 8px; }
-.domain-card-body h3 { font-size: 17px; display: flex; align-items: center; gap: 8px; }
-.h3-icon { color: var(--gold-text); width: 20px; height: 20px; }
-.domain-card-body p { font-size: 13.5px; color: var(--texte-sec); line-height: 1.5; }
-.domain-card-text { background: var(--ivoire); border-radius: 10px; padding: 26px; display: flex; flex-direction: column; gap: 10px; }
-.domain-icon { width: 46px; height: 46px; border-radius: 50%; background: rgba(212,175,55,0.15); display: flex; align-items: center; justify-content: center; color: var(--gold-text); }
+.domain-card-photo { position: relative; border-radius: 10px; overflow: hidden; height: 320px; box-shadow: 0 1px 3px rgba(10,18,56,0.12); }
+.domain-card-photo .photo-placeholder-card { position: absolute; inset: 0; height: 100%; border-radius: 0; }
+.domain-card-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 6px; background: linear-gradient(180deg, rgba(10,18,56,0) 0%, rgba(8,14,44,0.55) 40%, rgba(6,11,32,0.94) 100%); }
+.domain-card-body h3 { font-size: 18px; display: flex; align-items: center; gap: 8px; color: var(--blanc); }
+.h3-icon { color: var(--gold); width: 20px; height: 20px; }
+.domain-card-body p { font-size: 13px; color: #D9E4F1; line-height: 1.5; }
+.domain-card-body .link-arrow { color: var(--gold); }
+.domain-card-text { background: var(--navy); border-radius: 10px; padding: 26px; display: flex; flex-direction: column; gap: 10px; height: 320px; justify-content: center; }
+.domain-icon { width: 46px; height: 46px; border-radius: 50%; background: rgba(212,175,55,0.15); display: flex; align-items: center; justify-content: center; color: var(--gold); }
 .domain-icon svg { width: 24px; height: 24px; }
-.domain-card-text h3 { font-size: 16px; }
-.domain-card-text p { font-size: 13.5px; color: var(--texte-sec); line-height: 1.5; }
+.domain-card-text h3 { font-size: 17px; color: var(--blanc); }
+.domain-card-text p { font-size: 13.5px; color: #B9C6D6; line-height: 1.5; }
 .link-arrow { font-size: 13px; font-weight: 600; color: var(--gold-text); margin-top: 4px; }
 .link-arrow:hover { color: var(--navy); }
+.domain-card-text .link-arrow { color: var(--gold); }
 
 /* POUR QUI */
 .target-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 46px; }
-.target-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+.target-card { position: relative; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
 .target-card-highlight { border-color: rgba(212,175,55,0.4); }
-.target-card-body { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
-.target-icon { width: 38px; height: 38px; border-radius: 50%; background: rgba(212,175,55,0.15); display: flex; align-items: center; justify-content: center; color: var(--gold); }
-.target-icon svg { width: 20px; height: 20px; }
+.photo-placeholder-target { height: 200px; }
+.target-photo-overlay { position: absolute; left: 0; right: 0; top: 0; height: 200px; display: flex; flex-direction: column; justify-content: flex-end; padding: 16px; gap: 6px; background: linear-gradient(180deg, rgba(10,18,56,0) 35%, rgba(6,11,32,0.85) 100%); pointer-events: none; }
+.target-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(6,11,32,0.55); border: 1px solid rgba(212,175,55,0.5); display: flex; align-items: center; justify-content: center; color: var(--gold); }
+.target-icon svg { width: 18px; height: 18px; }
+.target-photo-overlay h3 { color: var(--blanc); font-size: 16px; }
+.target-card-body { padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 8px; }
 .target-card h3 { font-size: 16px; }
-.target-card ul li { font-size: 12.5px; color: #B9C6D6; padding: 2px 0; position: relative; padding-left: 14px; }
+.target-card ul li { font-size: 12px; color: #B9C6D6; padding: 1.5px 0; position: relative; padding-left: 14px; }
 .target-card ul li::before { content: "•"; position: absolute; left: 0; color: var(--gold); }
 .target-card .link-arrow { color: var(--gold); }
 
