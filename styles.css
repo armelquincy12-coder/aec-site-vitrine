@@ -127,18 +127,17 @@ h1 .gold { color: var(--gold); }
 
 /* POUR QUI */
 .target-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 46px; }
-.target-card { position: relative; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+.target-card { display: flex; flex-direction: column; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
 .target-card-highlight { border-color: rgba(212,175,55,0.4); }
-.photo-placeholder-target { height: 200px; }
-.target-photo-overlay { position: absolute; left: 0; right: 0; top: 0; height: 200px; display: flex; flex-direction: column; justify-content: flex-end; padding: 16px; gap: 6px; background: linear-gradient(180deg, rgba(10,18,56,0) 35%, rgba(6,11,32,0.85) 100%); pointer-events: none; }
-.target-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(6,11,32,0.55); border: 1px solid rgba(212,175,55,0.5); display: flex; align-items: center; justify-content: center; color: var(--gold); flex-shrink: 0; }
-.target-icon svg { width: 18px; height: 18px; }
-.target-photo-overlay h3 { color: var(--blanc); font-size: 16px; }
-.target-card-body { padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 8px; }
-.target-card h3 { font-size: 16px; }
-.target-card ul li { font-size: 12px; color: #B9C6D6; padding: 1.5px 0; position: relative; padding-left: 14px; }
+.target-card-content { padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 12px; order: 1; }
+.target-card-head { display: flex; align-items: center; gap: 12px; }
+.photo-placeholder-target { height: 190px; order: 2; }
+.target-icon { width: 46px; height: 46px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; color: var(--gold); flex-shrink: 0; box-shadow: 0 3px 8px rgba(10,18,56,0.18); }
+.target-icon svg { width: 22px; height: 22px; stroke-width: 1.7; }
+.target-card h3 { color: var(--blanc); font-size: 19px; margin: 0; }
+.target-card ul li { font-size: 14.5px; color: #B9C6D6; padding: 3px 0; position: relative; padding-left: 16px; line-height: 1.4; }
 .target-card ul li::before { content: "•"; position: absolute; left: 0; color: var(--gold); }
-.target-card .link-arrow { color: var(--gold); }
+.target-card .link-arrow { color: var(--gold); font-size: 15px; margin-top: 2px; }
 
 /* RÉALISATIONS */
 .portfolio-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 26px; margin-top: 46px; }
