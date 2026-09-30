@@ -75,6 +75,11 @@ h1 .gold { color: var(--gold); }
 .badge strong { display: block; color: var(--blanc); font-size: 12.5px; font-weight: 600; }
 .badge span { display: block; color: #8496AD; font-size: 10.5px; line-height: 1.4; margin-top: 2px; }
 .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.cta-links { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 4px; }
+.cta-links a { display: inline-flex; align-items: center; gap: 6px; color: #C9D6E8; font-size: 13.5px; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 2px; transition: color .15s, border-color .15s; }
+.cta-links a::after { content: "→"; font-size: 12px; transition: transform .15s; }
+.cta-links a:hover { color: var(--gold); border-color: var(--gold); }
+.cta-links a:hover::after { transform: translateX(2px); }
 
 .hero-photo { flex: 1.15 1 500px; position: relative; }
 .photo-placeholder {
@@ -285,4 +290,5 @@ h1 .gold { color: var(--gold); }
   .page-hero .eyebrow { font-size: 14.5px; }
   .page-hero-photo img { height: 220px; }
   .pack-grid { grid-template-columns: 1fr; }
+  .process { grid-template-columns: 1fr; row-gap: 22px; }
 }
