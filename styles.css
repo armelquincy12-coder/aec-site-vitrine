@@ -26,6 +26,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 svg { width: 22px; height: 22px; flex: 0 0 auto; }
 
 .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+@media (min-width: 981px) {
+  .wrap { max-width: none; width: 100%; padding: 0 5vw; box-sizing: border-box; }
+}
 .gold-text { color: var(--gold-text); }
 
 /* NAV */
