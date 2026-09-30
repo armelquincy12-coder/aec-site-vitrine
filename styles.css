@@ -291,6 +291,10 @@ h1 .gold { color: var(--gold); }
 .feature-card .domain-icon svg { width: 18px; height: 18px; }
 .feature-card .domain-icon-num { font-size: 18px; }
 .feature-card p { font-size: 15.5px; color: var(--texte-sec); line-height: 1.65; margin: 0; }
+.feature-deliverables-label { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; color: var(--navy); margin: 6px 0 0; padding-top: 12px; border-top: 1px solid var(--bordure); }
+.feature-deliverables { list-style: none; margin: 2px 0 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+.feature-deliverables li { font-size: 13.5px; color: var(--texte-sec); line-height: 1.5; padding-left: 20px; position: relative; text-align: left; }
+.feature-deliverables li::before { content: "—"; position: absolute; left: 0; top: 0; color: var(--gold-text); font-weight: 700; }
 
 .profile-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 40px; }
 .profile-card { background: var(--blanc); border: 1px solid var(--bordure); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 10px; }
