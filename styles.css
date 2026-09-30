@@ -114,6 +114,20 @@ h1 .gold { color: var(--gold); }
 .section h2 { font-weight: 600; font-size: 30px; max-width: 620px; margin-top: 10px; }
 .section-lead { font-size: 14.5px; line-height: 1.65; color: var(--texte-sec); max-width: 560px; margin-top: 14px; }
 .on-dark-lead { color: #B9C6D6; }
+
+/* Uniform text distribution: justify body-copy paragraphs so line edges stay even,
+   while headings, taglines, buttons and single-line labels keep their own alignment. */
+.section-lead,
+.feature-card p,
+.profile-card p,
+.domain-card-body p,
+.domain-card-text p,
+.target-desc,
+.engagement p,
+.page-hero .lead {
+  text-align: justify;
+  text-justify: inter-word;
+}
 .section-head { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; max-width: 620px; }
 .section-head .btn { margin-top: 16px; }
 
