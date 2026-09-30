@@ -104,7 +104,8 @@ h1 .gold { color: var(--gold); }
 .section-bordered { border-top: 1px solid var(--bordure); }
 
 /* DOMAINES */
-.domain-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 26px; margin-top: 46px; }
+.domain-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 46px; }
+.domain-card-photo .photo-placeholder-card { height: 170px; }
 .domain-card-photo { border: 1px solid var(--bordure); border-radius: 10px; overflow: hidden; }
 .domain-card-body { padding: 20px; display: flex; flex-direction: column; gap: 8px; }
 .domain-card-body h3 { font-size: 17px; display: flex; align-items: center; gap: 8px; }
@@ -176,6 +177,9 @@ h1 .gold { color: var(--gold); }
 .footer-social a:hover { color: var(--gold); border-color: var(--gold); }
 
 /* RESPONSIVE */
+@media (max-width: 1080px) {
+  .domain-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
 @media (max-width: 980px) {
   .nav-links { display: none; }
   .nav-burger { display: flex; }
