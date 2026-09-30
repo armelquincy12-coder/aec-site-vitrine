@@ -50,7 +50,7 @@ svg { width: 22px; height: 22px; flex: 0 0 auto; }
 .mobile-menu.open { display: flex; }
 
 /* Buttons */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 24px; font-weight: 600; letter-spacing: .01em; cursor: pointer; border: 1px solid transparent; white-space: nowrap; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 24px; font-weight: 600; letter-spacing: .01em; cursor: pointer; border: 1px solid transparent; white-space: nowrap; padding: 13px 24px; font-size: 14px; }
 .btn-sm { padding: 9px 20px; font-size: 13px; }
 .btn-lg { padding: 16px 34px; font-size: 15px; }
 .btn-gold { background: var(--gold); color: var(--navy); }
@@ -183,6 +183,31 @@ h1 .gold { color: var(--gold); }
 .footer-social svg { width: 15px; height: 15px; }
 .footer-social a:hover { color: var(--gold); border-color: var(--gold); }
 
+/* PAGE SECTORIELLE */
+.page-hero { background: var(--navy); padding: 26px 0 0; }
+.page-hero-inner { display: flex; flex-direction: column; gap: 16px; padding-bottom: 0; }
+.breadcrumb { font-size: 12.5px; color: #8496AD; }
+.breadcrumb a { color: #8496AD; }
+.breadcrumb a:hover { color: var(--gold); }
+.page-hero h1 { font-size: 34px; line-height: 1.2; color: var(--blanc); max-width: 680px; }
+.page-hero .lead { max-width: 600px; }
+.page-hero-photo { margin: 30px -24px 0; }
+.page-hero-photo img { width: 100%; height: 360px; object-fit: cover; display: block; }
+
+.feature-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 46px; }
+.feature-card { background: var(--blanc); border: 1px solid var(--bordure); border-radius: 10px; padding: 24px 20px; display: flex; flex-direction: column; gap: 10px; }
+.feature-card h3 { font-size: 15.5px; }
+.feature-card p { font-size: 13px; color: var(--texte-sec); line-height: 1.55; }
+
+.profile-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 40px; }
+.profile-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; }
+.profile-card h3 { color: var(--blanc); font-size: 15.5px; }
+.profile-card p { color: #B9C6D6; font-size: 13px; line-height: 1.55; }
+
+.contact-cta { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.contact-cta h2 { max-width: none; }
+.contact-cta .btn { margin-top: 10px; }
+
 /* RESPONSIVE */
 @media (max-width: 1080px) {
   .domain-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -199,6 +224,7 @@ h1 .gold { color: var(--gold); }
   .process li::after { display: none; }
   .section-head { flex-direction: column; align-items: flex-start; }
   .contact-inner { flex-direction: column; }
+  .feature-grid, .profile-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) {
   .portfolio-grid { grid-template-columns: 1fr; }
@@ -206,4 +232,7 @@ h1 .gold { color: var(--gold); }
   h1 { font-size: 27px; }
   .logo-caption { display: none; }
   .logo-divider { display: none; }
+  .feature-grid, .profile-grid { grid-template-columns: 1fr; }
+  .page-hero h1 { font-size: 27px; }
+  .page-hero-photo img { height: 220px; }
 }
