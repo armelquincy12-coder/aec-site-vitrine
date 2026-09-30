@@ -145,6 +145,8 @@ h1 .gold { color: var(--gold); }
 .target-card ul li { font-size: 14.5px; color: #B9C6D6; padding: 3px 0; position: relative; padding-left: 16px; line-height: 1.4; }
 .target-card ul li::before { content: "•"; position: absolute; left: 0; color: var(--gold); }
 .target-card .link-arrow { color: var(--gold); font-size: 15px; margin-top: 2px; }
+.target-tagline { color: var(--gold); font-size: 12.5px; font-weight: 700; letter-spacing: .02em; margin: 10px 0 2px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.12); }
+.target-desc { color: #B9C6D6; font-size: 13.5px; line-height: 1.5; margin: 0; }
 
 /* RÉALISATIONS */
 .portfolio-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 26px; margin-top: 46px; }
