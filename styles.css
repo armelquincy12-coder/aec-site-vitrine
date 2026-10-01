@@ -2,7 +2,7 @@
   --navy: #0D197F;
   --navy-2: #09125B;
   --gold: #D4AF37;
-  --gold-text: #B45309;
+  --gold-text: #A34B13;
   --gold-dark: #B8932E;
   --ivoire: #DCEDFB;
   --texte: #1F2937;
@@ -41,7 +41,7 @@ svg { width: 22px; height: 22px; flex: 0 0 auto; }
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 78px; gap: 20px; }
 .logo { display: flex; align-items: center; gap: 10px; }
-.logo-badge { background: var(--ivoire); border-radius: 6px; padding: 5px 10px; display: inline-flex; align-items: center; }
+.logo-badge { display: inline-flex; align-items: center; }
 .logo-img { height: 30px; width: auto; display: block; }
 .logo-divider { width: 1px; height: 30px; background: rgba(212,175,55,0.4); }
 .logo-caption { font-size: 8.5px; color: #E8F1FC; letter-spacing: .1em; line-height: 1.5; text-transform: uppercase; }
@@ -118,17 +118,34 @@ h1 .gold { color: var(--gold); }
 .on-dark-lead { color: #B9C6D6; }
 
 /* Uniform text distribution: justify body-copy paragraphs so line edges stay even,
-   while headings, taglines, buttons and single-line labels keep their own alignment. */
+   while headings, taglines, buttons and single-line labels keep their own alignment.
+   Narrow columns (engagement cards) are excluded — justifying short, narrow text
+   creates uneven word gaps ("rivers") instead of fixing them. */
 .section-lead,
 .feature-card p,
 .profile-card p,
 .domain-card-body p,
 .domain-card-text p,
 .target-desc,
-.engagement p,
 .page-hero .lead {
   text-align: justify;
   text-justify: inter-word;
+}
+.engagement p { text-align: left; }
+
+/* Justify only helps on wide-enough columns; below that it creates the same
+   uneven spacing it's meant to fix, so always left-align on mobile. */
+@media (max-width: 760px) {
+  .section-lead,
+  .feature-card p,
+  .profile-card p,
+  .domain-card-body p,
+  .domain-card-text p,
+  .target-desc,
+  .page-hero .lead {
+    text-align: left;
+    text-justify: auto;
+  }
 }
 .section-head { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; max-width: 620px; }
 .section-head .btn { margin-top: 16px; }
@@ -136,20 +153,17 @@ h1 .gold { color: var(--gold); }
 /* APROPOS / ENGAGEMENTS */
 .engagements-label { font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--navy); margin: 44px 0 0; }
 .apropos-scope { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--gold-text); margin: 18px 0 0; }
-.engagements { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); margin-top: 18px; border-top: 1px solid var(--bordure); }
-.engagement { padding: 22px 22px 4px 0; border-left: 1px solid var(--bordure); padding-left: 20px; }
-.engagement:first-child { border-left: none; padding-left: 0; }
-.engagement svg { color: var(--gold); width: 26px; height: 26px; margin-bottom: 12px; }
+.engagements { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; margin-top: 18px; }
+.engagement { background: var(--blanc); border: 1px solid var(--bordure); border-radius: 12px; padding: 20px 18px; }
+.engagement-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--navy); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; flex-shrink: 0; }
+.engagement-icon svg { color: var(--gold); width: 22px; height: 22px; stroke-width: 1.6; }
 .engagement h4 { font-size: 12.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--navy); font-weight: 700; margin: 0 0 6px; }
 .engagement p { font-size: 13px; color: var(--texte-sec); line-height: 1.5; margin: 0; }
 @media (max-width: 980px) {
-  .engagements { grid-template-columns: repeat(2, minmax(0,1fr)); row-gap: 24px; }
-  .engagement:nth-child(3) { border-left: none; padding-left: 0; }
+  .engagements { grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
 @media (max-width: 560px) {
   .engagements { grid-template-columns: 1fr; }
-  .engagement { border-left: none; padding-left: 0; border-top: 1px solid var(--bordure); padding-top: 18px; }
-  .engagement:first-child { border-top: none; padding-top: 0; }
 }
 .section-bordered { border-top: 1px solid var(--bordure); }
 
