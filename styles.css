@@ -4,10 +4,10 @@
   --gold: #D4AF37;
   --gold-text: #B45309;
   --gold-dark: #B8932E;
-  --ivoire: #F7F5F0;
+  --ivoire: #EDF4FC;
   --texte: #1F2937;
   --texte-sec: #3B4568;
-  --bordure: #D9E4F1;
+  --bordure: #D3E2F4;
   --blanc: #FFFFFF;
 }
 
@@ -17,9 +17,9 @@ body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   color: var(--texte);
-  background: var(--blanc);
+  background: var(--ivoire);
 }
-h1, h2, h3 { font-family: 'Fraunces', serif; margin: 0; color: var(--navy); }
+h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; color: var(--navy); }
 p { margin: 0; }
 a { color: inherit; text-decoration: none; }
 ul { margin: 0; padding: 0; list-style: none; }
@@ -160,13 +160,13 @@ h1 .gold { color: var(--gold); }
 .domain-card-body h3 { font-size: 20px; display: flex; align-items: center; gap: 10px; color: var(--blanc); text-shadow: 0 1px 4px rgba(0,0,0,0.35); }
 .h3-icon-badge { flex-shrink: 0; width: 27px; height: 27px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
 .h3-icon { color: var(--gold); width: 14px; height: 14px; }
-.domain-card-tagline { font-family: 'Fraunces', serif; font-style: italic; font-size: 15px; color: var(--gold); margin: 0; text-shadow: 0 1px 4px rgba(0,0,0,0.35); }
+.domain-card-tagline { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 15px; color: var(--gold); margin: 0; text-shadow: 0 1px 4px rgba(0,0,0,0.35); }
 .domain-card-body p { font-size: 13px; color: #D9E4F1; line-height: 1.5; text-shadow: 0 1px 4px rgba(0,0,0,0.35); }
 .domain-card-body .link-arrow { color: var(--gold); text-shadow: 0 1px 4px rgba(0,0,0,0.35); }
 .domain-card-text { background: var(--navy); border-radius: 10px; padding: 26px; display: flex; flex-direction: column; gap: 10px; height: 320px; justify-content: center; }
 .domain-icon { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); display: flex; align-items: center; justify-content: center; color: var(--navy); box-shadow: 0 4px 12px rgba(180,147,46,0.35); flex-shrink: 0; }
 .domain-icon svg { width: 22px; height: 22px; stroke-width: 1.9; }
-.domain-icon-num { font-family: 'Fraunces', serif; font-weight: 700; font-size: 23px; color: var(--navy); line-height: 1; }
+.domain-icon-num { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 23px; color: var(--navy); line-height: 1; }
 .domain-card-text h3 { font-size: 17px; color: var(--blanc); }
 .domain-card-text p { font-size: 13.5px; color: #B9C6D6; line-height: 1.5; }
 .link-arrow { font-size: 13px; font-weight: 600; color: var(--gold-text); margin-top: 4px; }
@@ -216,7 +216,7 @@ h1 .gold { color: var(--gold); }
 .pack-secteurs { font-size: 12px; color: var(--texte-sec); line-height: 1.5; margin: 0; }
 .pack-price { border-top: 1px solid var(--bordure); padding-top: 12px; margin-top: 4px; display: flex; flex-direction: column; gap: 2px; }
 .pack-price span { font-size: 11.5px; color: var(--texte-sec); text-transform: uppercase; letter-spacing: .03em; }
-.pack-price strong { font-family: 'Fraunces', serif; font-size: 18px; color: var(--navy); }
+.pack-price strong { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 18px; color: var(--navy); }
 
 /* TARIFS — TABLEAUX DÉTAILLÉS */
 .price-block { margin-top: 44px; }
@@ -233,7 +233,7 @@ h1 .gold { color: var(--gold); }
 .clients-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; margin-top: 38px; }
 .client-badge { background: var(--blanc); border: 1px solid var(--bordure); border-radius: 10px; padding: 26px 16px; display: flex; align-items: center; justify-content: center; text-align: center; transition: border-color .15s, transform .15s; }
 .client-badge:hover { border-color: var(--gold); transform: translateY(-2px); }
-.client-badge span { font-family: 'Fraunces', serif; font-weight: 600; font-size: 16px; color: var(--navy); letter-spacing: .01em; }
+.client-badge span { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 16px; color: var(--navy); letter-spacing: .01em; }
 
 /* PROCESSUS */
 .process { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 16px; margin-top: 40px; padding: 0; position: relative; }
