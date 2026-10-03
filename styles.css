@@ -230,6 +230,18 @@ h1 .gold { color: var(--gold); }
 .pack-grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
 .travaux-inclus { display: flex; flex-wrap: wrap; gap: 10px 26px; list-style: none; margin: 18px 0 0; padding: 0; }
 .travaux-inclus li { font-size: 13.5px; font-weight: 600; color: var(--navy); }
+
+.pack-tagline { font-size: 14px; font-weight: 700; color: var(--navy); margin: 0; }
+.pack-audience { font-size: 12.5px; color: var(--texte-sec); line-height: 1.55; margin: 0; }
+.pack-receive-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--gold-text); margin: 10px 0 0; }
+.pack-scope { font-size: 13px; color: var(--texte-sec); line-height: 1.6; margin: 0; flex-grow: 1; }
+.pack-detail-list { list-style: none; margin: 2px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; flex-grow: 1; }
+.pack-detail-list li strong { display: block; font-size: 13.5px; color: var(--navy); line-height: 1.4; }
+.pack-detail-list li strong::before { content: "✓ "; color: var(--gold-text); font-weight: 700; }
+.pack-detail-list li p { font-size: 12.5px; color: var(--texte-sec); line-height: 1.5; margin: 3px 0 0; padding-left: 16px; }
+
+.feature-grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.feature-closing { font-size: 13px; font-weight: 700; color: var(--navy); line-height: 1.5; margin: 6px 0 0; padding-top: 10px; border-top: 1px solid var(--bordure); }
 .pack-card { position: relative; background: var(--blanc); border: 1px solid var(--bordure); border-radius: 10px; padding: 24px 20px 22px; display: flex; flex-direction: column; gap: 12px; border-top: 4px solid var(--navy); }
 .pack-essentiel { border-top-color: #2E8B57; }
 .pack-standard { border-top-color: #D2691E; }
