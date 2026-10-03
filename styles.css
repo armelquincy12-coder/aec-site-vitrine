@@ -228,6 +228,8 @@ h1 .gold { color: var(--gold); }
 /* TARIFS — PACKS */
 .pack-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 46px; }
 .pack-grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.travaux-inclus { display: flex; flex-wrap: wrap; gap: 10px 26px; list-style: none; margin: 18px 0 0; padding: 0; }
+.travaux-inclus li { font-size: 13.5px; font-weight: 600; color: var(--navy); }
 .pack-card { position: relative; background: var(--blanc); border: 1px solid var(--bordure); border-radius: 10px; padding: 24px 20px 22px; display: flex; flex-direction: column; gap: 12px; border-top: 4px solid var(--navy); }
 .pack-essentiel { border-top-color: #2E8B57; }
 .pack-standard { border-top-color: #D2691E; }
