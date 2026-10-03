@@ -227,6 +227,7 @@ h1 .gold { color: var(--gold); }
 
 /* TARIFS — PACKS */
 .pack-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 46px; }
+.pack-grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
 .pack-card { position: relative; background: var(--blanc); border: 1px solid var(--bordure); border-radius: 10px; padding: 24px 20px 22px; display: flex; flex-direction: column; gap: 12px; border-top: 4px solid var(--navy); }
 .pack-essentiel { border-top-color: #2E8B57; }
 .pack-standard { border-top-color: #D2691E; }
