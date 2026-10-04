@@ -177,6 +177,10 @@ h1 .gold { color: var(--gold); }
 
 /* DOMAINES */
 .domain-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 46px; }
+.domain-grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.domain-secondary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 28px; padding: 18px 24px; border: 1px solid var(--bordure); border-radius: 10px; background: var(--blanc); }
+.domain-secondary p { font-size: 13.5px; color: var(--texte-sec); margin: 0; }
+.domain-secondary .link-arrow { white-space: nowrap; }
 .domain-card-photo { position: relative; border-radius: 10px; overflow: hidden; height: 320px; box-shadow: 0 1px 3px rgba(10,18,56,0.12); }
 .domain-card-photo .photo-placeholder-card { position: absolute; inset: 0; height: 100%; border-radius: 0; }
 .domain-card-photo .photo-placeholder-card img { filter: brightness(0.82); }
@@ -312,6 +316,21 @@ h1 .gold { color: var(--gold); }
 .contact-logo-card { background: var(--ivoire); border-radius: 8px; padding: 16px 18px; display: inline-flex; }
 .contact-logo-img { width: 200px; height: auto; display: block; }
 .contact-logo-tagline { font-size: 11px; color: #8496AD; letter-spacing: .04em; }
+
+.project-form { display: flex; flex-direction: column; gap: 14px; margin-top: 6px; width: 100%; max-width: 480px; }
+.project-form .form-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.project-form .form-field { flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px; }
+.project-form label { font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #8496AD; }
+.project-form input, .project-form select, .project-form textarea {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px;
+  padding: 11px 14px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; color: var(--blanc);
+}
+.project-form input::placeholder, .project-form textarea::placeholder { color: #8496AD; }
+.project-form select option { color: var(--texte); }
+.project-form textarea { resize: vertical; min-height: 84px; }
+.project-form input:focus, .project-form select:focus, .project-form textarea:focus { outline: none; border-color: var(--gold); }
+.project-form .btn { align-self: flex-start; margin-top: 2px; border: none; cursor: pointer; font: inherit; }
+.form-note { font-size: 12px; color: #8496AD; margin: 0; }
 
 /* FOOTER */
 .footer { background: var(--navy-2); padding: 26px 0; }
