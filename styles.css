@@ -178,9 +178,10 @@ h1 .gold { color: var(--gold); }
 /* DOMAINES */
 .domain-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 22px; margin-top: 46px; }
 .domain-grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
-.domain-secondary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 28px; padding: 18px 24px; border: 1px solid var(--bordure); border-radius: 10px; background: var(--blanc); }
-.domain-secondary p { font-size: 13.5px; color: var(--texte-sec); margin: 0; }
-.domain-secondary .link-arrow { white-space: nowrap; }
+.domain-secondary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; margin-top: 36px; padding: 28px 32px; border: 1px solid var(--bordure); border-left: 4px solid var(--gold); border-radius: 12px; background: linear-gradient(135deg, rgba(13,25,127,0.05), rgba(13,25,127,0.015)); }
+.domain-secondary p { font-size: 16.5px; line-height: 1.5; color: var(--texte); margin: 0; max-width: 560px; }
+.domain-secondary p strong { color: var(--navy); }
+.domain-secondary .link-arrow { white-space: nowrap; font-size: 15.5px; font-weight: 700; }
 .domain-card-photo { position: relative; border-radius: 10px; overflow: hidden; height: 320px; box-shadow: 0 1px 3px rgba(10,18,56,0.12); }
 .domain-card-photo .photo-placeholder-card { position: absolute; inset: 0; height: 100%; border-radius: 0; }
 .domain-card-photo .photo-placeholder-card img { filter: brightness(0.82); }
