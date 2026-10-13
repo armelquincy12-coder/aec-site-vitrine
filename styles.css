@@ -42,9 +42,9 @@ svg { width: 22px; height: 22px; flex: 0 0 auto; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 78px; gap: 20px; }
 .logo { display: flex; align-items: center; gap: 10px; }
 .logo-badge { display: inline-flex; align-items: center; }
-.logo-img { height: 30px; width: auto; display: block; }
-.logo-divider { width: 1px; height: 30px; background: rgba(212,175,55,0.4); }
-.logo-caption { font-size: 8.5px; color: #E8F1FC; letter-spacing: .1em; line-height: 1.5; text-transform: uppercase; }
+.logo-img { height: 36px; width: auto; display: block; }
+.logo-divider { width: 1px; height: 38px; background: rgba(212,175,55,0.4); }
+.logo-caption { font-size: 11px; font-weight: 600; color: #E8F1FC; letter-spacing: .12em; line-height: 1.35; text-transform: uppercase; }
 .nav-links { display: flex; gap: 30px; flex: 1; justify-content: center; }
 .nav-links a { color: #E8F1FC; font-size: 14px; }
 .nav-links a:hover, .nav-links a.active { color: var(--gold); }
@@ -409,6 +409,7 @@ h1 .gold { color: var(--gold); }
   h1 { font-size: 27px; }
   .logo-caption { display: none; }
   .logo-divider { display: none; }
+  .logo-img { height: 30px; }
   .feature-grid, .profile-grid { grid-template-columns: 1fr; }
   .page-hero h1 { font-size: 29px; }
   .page-hero .eyebrow { font-size: 14.5px; }
