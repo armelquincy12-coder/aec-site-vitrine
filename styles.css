@@ -512,16 +512,16 @@ h1 { font-size: 54px; }
 }
 
 /* ---- Hiérarchie corrigée : le titre de section (en couleur) est grand, le sous-titre en dessous est plus petit ---- */
-.section .eyebrow { font-family: 'Syne', sans-serif; font-size: 34px; line-height: 1.15; font-weight: 800; letter-spacing: .01em; }
+.section .eyebrow { font-family: 'Syne', sans-serif; font-size: 28px; line-height: 1.15; font-weight: 800; letter-spacing: .01em; }
 .section .section-head, .section .wrap > .eyebrow { gap: 8px; }
 .section h2 { font-size: 24px; line-height: 1.3; font-weight: 700; max-width: 760px; margin-top: 4px; }
 .section-lead { font-size: 15px; }
 @media (max-width: 980px) {
-  .section .eyebrow { font-size: 30px; }
+  .section .eyebrow { font-size: 25px; }
   .section h2 { font-size: 22px; }
 }
 @media (max-width: 560px) {
-  .section .eyebrow { font-size: 27px; }
+  .section .eyebrow { font-size: 22px; }
   .section h2 { font-size: 20px; }
   .section-lead { font-size: 15px; }
 }
