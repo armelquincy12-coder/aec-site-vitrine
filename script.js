@@ -41,3 +41,37 @@ if (projectForm) {
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${texte}`, "_blank", "noopener");
   });
 }
+
+// ---- Apparitions douces au défilement (le contenu reste visible si le script échoue) ----
+(function () {
+  document.documentElement.classList.add("js");
+  var sel = ".section-head, .engagement, .domain-card, .target-card, .portfolio-card, .feature-card, .pack-card, .detail-block, .profile-card, .closing-banner, .contact-inner, .testi-card, .testi-invite";
+  var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+  if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); }
+  else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    els.forEach(function (e) {
+      var sib = e.parentElement ? Array.prototype.indexOf.call(e.parentElement.children, e) : 0;
+      e.style.transitionDelay = Math.min(sib, 5) * 90 + "ms";
+      e.classList.add("reveal");
+      io.observe(e);
+    });
+  }
+})();
+
+// ---- Bouton WhatsApp flottant (toutes les pages) ----
+(function () {
+  if (document.querySelector(".wa-float")) return;
+  var a = document.createElement("a");
+  a.className = "wa-float";
+  a.href = "https://wa.me/242050238985?text=" + encodeURIComponent("Bonjour AEC, je souhaite parler de mon projet.");
+  a.target = "_blank";
+  a.rel = "noopener";
+  a.setAttribute("aria-label", "Écrire à AEC sur WhatsApp");
+  a.innerHTML = '<span class="wa-float-label">Écrivez-nous sur WhatsApp</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1.2-1.6-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z" fill="currentColor" stroke="none"/></svg>';
+  document.body.appendChild(a);
+})();
