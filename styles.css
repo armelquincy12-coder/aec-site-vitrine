@@ -525,3 +525,71 @@ h1 { font-size: 54px; }
   .section h2 { font-size: 20px; }
   .section-lead { font-size: 15px; }
 }
+
+/* =====================================================================
+   STYLE « OBAT » : coins très arrondis, boutons en pilule, plus d'air,
+   texte plus grand, grande carte d'appel à l'action, rayures discrètes
+   ===================================================================== */
+.btn, .btn-navy, .btn-outline, .btn-gold { border-radius: 999px; }
+.btn-navy { padding: 14px 26px; font-size: 14.5px; }
+.btn-lg { padding: 18px 38px; font-size: 16px; }
+
+.engagement, .target-card, .pack-card, .feature-card, .profile-card, .example-card, .client-badge,
+.testi-card, .testi-invite, .domain-secondary, .closing-banner { border-radius: 28px; }
+.domain-card-photo, .domain-card-text { border-radius: 30px; }
+.photo-placeholder-sm { border-radius: 24px; }
+.photo-placeholder-target { border-radius: 0; }
+.engagement-icon { border-radius: 16px; }
+.project-form input, .project-form select, .project-form textarea { border-radius: 16px; padding: 13px 16px; }
+.contact-logo-card { border-radius: 18px; }
+
+/* Plus d'air */
+.section { padding: 112px 0; }
+.engagement { padding: 26px 24px; }
+.engagements, .testi-grid, .domain-grid, .target-grid, .portfolio-grid { gap: 22px; }
+.section-head + * { margin-top: 36px; }
+@media (max-width: 760px) {
+  .section { padding: 76px 0; }
+  .engagement { padding: 22px 20px; }
+}
+
+/* Texte plus grand et plus aéré */
+.section-lead { font-size: 17px; line-height: 1.75; }
+.engagement p, .feature-card p, .profile-card p, .domain-card-body p, .target-desc, .testi-quote { font-size: 16px; line-height: 1.7; }
+.page-hero .lead { font-size: 18px; line-height: 1.7; }
+@media (max-width: 560px) {
+  .section-lead { font-size: 17px; }
+  body { font-size: 16.5px; }
+}
+
+/* Rayures diagonales discrètes sur les fonds foncés */
+.hero, .section-dark, .page-hero, .closing-banner {
+  background-image: repeating-linear-gradient(115deg, rgba(255,255,255,.035) 0 2px, transparent 2px 16px);
+}
+
+/* Grande carte d'appel à l'action (section contact) */
+#contact.section-dark { background: var(--blanc); background-image: none; }
+#contact .contact-inner {
+  background-color: var(--navy);
+  background-image: repeating-linear-gradient(115deg, rgba(255,255,255,.05) 0 2px, transparent 2px 16px), linear-gradient(135deg, #0D197F 0%, #1E34C4 100%);
+  border-radius: 44px; padding: 64px 56px; box-shadow: 0 24px 60px rgba(13,25,127,.25);
+}
+@media (max-width: 760px) { #contact .contact-inner { border-radius: 30px; padding: 40px 24px; } }
+
+/* Étiquettes en pilule (comme « EN OPTION ») */
+.pill { display: inline-block; align-self: flex-start; background: var(--gold); color: var(--navy); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; margin-bottom: 4px; }
+
+/* Barre d'annonce fermable */
+.announce { background: var(--gold); color: var(--navy); font-size: 14.5px; font-weight: 600; padding: 11px 52px 11px 18px; text-align: center; position: relative; line-height: 1.45; }
+.announce a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+.announce-close { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; border-radius: 8px; border: none; background: rgba(13,25,127,.14); color: var(--navy); font-size: 18px; line-height: 1; cursor: pointer; }
+.announce-close:hover { background: rgba(13,25,127,.26); }
+
+/* Bouton « remonter en haut » */
+.to-top { position: fixed; right: 22px; bottom: 96px; z-index: 89; width: 48px; height: 48px; border-radius: 50%; border: none; background: var(--navy); color: var(--gold); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 16px rgba(0,0,0,.25); opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity .25s ease, transform .25s ease; }
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+.to-top svg { width: 22px; height: 22px; }
+@media (max-width: 560px) { .to-top { right: 16px; bottom: 84px; width: 46px; height: 46px; } }
+#contact .contact-inner { max-width: min(1132px, calc(100% - 48px)); }
+.announce { text-wrap: balance; }
+@media (max-width: 760px) { #contact .contact-inner { max-width: calc(100% - 32px); } }

@@ -75,3 +75,31 @@ if (projectForm) {
   a.innerHTML = '<span class="wa-float-label">Écrivez-nous sur WhatsApp</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1.2-1.6-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z" fill="currentColor" stroke="none"/></svg>';
   document.body.appendChild(a);
 })();
+
+// ---- Barre d'annonce fermable ----
+(function () {
+  var closed = false;
+  try { closed = sessionStorage.getItem("aecAnnounce") === "1"; } catch (e) {}
+  var nav = document.getElementById("nav");
+  if (closed || !nav) return;
+  var bar = document.createElement("div");
+  bar.className = "announce";
+  bar.innerHTML = 'Un projet à Pointe-Noire ou depuis l’étranger ? <a href="https://wa.me/242050238985?text=' + encodeURIComponent("Bonjour AEC, je souhaite parler de mon projet.") + '" target="_blank" rel="noopener">Écrivez-nous sur WhatsApp →</a><button class="announce-close" type="button" aria-label="Fermer">×</button>';
+  nav.parentNode.insertBefore(bar, nav);
+  bar.querySelector(".announce-close").addEventListener("click", function () {
+    bar.remove();
+    try { sessionStorage.setItem("aecAnnounce", "1"); } catch (e) {}
+  });
+})();
+
+// ---- Bouton « remonter en haut » ----
+(function () {
+  var b = document.createElement("button");
+  b.className = "to-top";
+  b.type = "button";
+  b.setAttribute("aria-label", "Remonter en haut de la page");
+  b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+  document.body.appendChild(b);
+  b.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+  window.addEventListener("scroll", function () { b.classList.toggle("show", window.scrollY > 600); }, { passive: true });
+})();
