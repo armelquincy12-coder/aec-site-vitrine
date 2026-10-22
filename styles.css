@@ -689,3 +689,59 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .problemes-sub{margin-top:36px!important;font-family:'Syne',sans-serif;font-size:20px;color:var(--navy);margin:0 0 20px;font-weight:700}
 .engagement p.engagement-answer strong{display:block;color:var(--gold-text);font-size:15px;margin-bottom:6px}
 .engagement p.engagement-answer span{display:block;font-size:14.5px;line-height:1.6;color:var(--texte-sec)}
+
+/* ===== Design premium : header, boutons flottants, micro-cards, motifs ===== */
+body{color:#2D3748}
+h1,h2,.section .eyebrow,.problemes-sub{font-family:'Plus Jakarta Sans',sans-serif}
+h1,h2{letter-spacing:-.02em}
+.section .eyebrow{letter-spacing:.02em}
+.section-lead,.section p{line-height:1.7}
+
+/* Header : logo net et aéré, CTA compact */
+.nav-inner{height:80px}
+.logo{padding:12px 6px 12px 0}
+.logo-img{height:44px}
+@media(max-width:900px){
+  .logo-img{height:40px}
+  .nav-inner .btn-gold,.nav-inner .btn-navy{padding:10px 16px;font-size:13px;font-weight:700}
+}
+
+/* Boutons flottants : une pile alignée, sans chevauchement */
+.wa-float{right:16px;bottom:calc(16px + env(safe-area-inset-bottom));width:54px;height:54px}
+.to-top{right:21px;bottom:calc(82px + env(safe-area-inset-bottom));width:44px;height:44px}
+@media(min-width:900px){
+  .wa-float{right:24px;bottom:24px;width:58px;height:58px}
+  .to-top{right:31px;bottom:94px}
+}
+body{padding-bottom:0}
+footer{padding-bottom:calc(24px + 70px)}
+
+/* Listes de livrables -> micro-cards */
+.feature-deliverables{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
+@media(min-width:760px){.feature-deliverables{grid-template-columns:1fr 1fr}}
+.feature-deliverables li{background:#fff;border:1px solid var(--bordure);border-radius:12px;padding:13px 16px 13px 58px;min-height:52px;display:flex;align-items:center;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.feature-deliverables li::before{content:"";left:14px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;
+  background:rgba(212,175,55,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B8932E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.500 4.500L19 7.500'/%3E%3C/svg%3E") center/16px no-repeat;border:1px solid rgba(212,175,55,.3)}
+.feature-deliverables li:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 10px 24px -12px rgba(13,25,127,.2)}
+.engagement-icon{border-radius:50%}
+
+/* Motifs : maillage triangulaire discret + angle filaire or */
+.section-light{position:relative;overflow:hidden;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='139'%3E%3Cg fill='none' stroke='%230D197F' stroke-opacity=%27.04%27 stroke-width='1'%3E%3Cpath d='M0 0l80 139L160 0zM0 139L80 0l80 139zM0 0h160M0 139h160M40 69.500h80'/%3E%3C/g%3E%3C/svg%3E");background-size:160px 139px}
+.section-light::after{content:"";position:absolute;right:-70px;top:-30px;width:min(480px,80vw);aspect-ratio:1;pointer-events:none;z-index:0;opacity:.45;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='1.2'%3E%3Cpath d='M200 20L380 330H20zM200 20L110 175L290 175zM110 175L20 330L200 330zM290 175L200 330L380 330M110 175H290'/%3E%3C/g%3E%3Cg fill='%23D4AF37'%3E%3Ccircle cx='200' cy='20' r='4'/%3E%3Ccircle cx='20' cy='330' r='4'/%3E%3Ccircle cx='380' cy='330' r='4'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;
+  -webkit-mask-image:linear-gradient(225deg,#000 10%,transparent 72%);mask-image:linear-gradient(225deg,#000 10%,transparent 72%)}
+.section-light>.wrap{position:relative;z-index:1}
+
+/* "Vous recevez" -> micro-cards */
+.pack-detail-list{list-style:none;padding:0;margin:10px 0 0;display:grid;grid-template-columns:1fr;gap:10px}
+@media(min-width:760px){.pack-detail-list{grid-template-columns:1fr 1fr}}
+.pack-detail-list li{position:relative;background:#fff;border:1px solid var(--bordure);border-radius:12px;padding:14px 16px 14px 58px;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.pack-detail-list li::before{content:"";position:absolute;left:14px;top:14px;width:30px;height:30px;border-radius:50%;
+  background:rgba(212,175,55,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B8932E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.500l4.500 4.500L19 7.500'/%3E%3C/svg%3E") center/16px no-repeat;border:1px solid rgba(212,175,55,.3)}
+.pack-detail-list li strong::before{content:none!important}
+.pack-detail-list li:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 10px 24px -12px rgba(13,25,127,.2)}
+.pack-detail-list li strong{display:block;margin-bottom:2px}
+.pack-detail-list li p{padding-left:0!important;font-size:14px!important;margin-top:4px}
