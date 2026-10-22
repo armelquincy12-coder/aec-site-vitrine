@@ -625,3 +625,43 @@ h1 { font-size: 54px; }
   .closing-strong, .closing-sign { font-size: 15px; }
   .closing-chain { font-size: 12px; }
 }
+
+/* =====================================================================
+   ANIMATIONS lors des manipulations (survol, appui, focus, menus, formulaires)
+   ===================================================================== */
+a, button, input, select, textarea, .btn { -webkit-tap-highlight-color: transparent; }
+.btn { position: relative; overflow: hidden; transition: transform .2s ease, background .25s ease, color .25s ease, box-shadow .25s ease; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(212,175,55,.35); }
+.btn:active { transform: translateY(0) scale(.96); box-shadow: none; }
+.ripple { position: absolute; border-radius: 50%; background: rgba(255,255,255,.55); transform: scale(0); animation: ripple .6s ease-out forwards; pointer-events: none; }
+.btn-navy .ripple { background: rgba(255,255,255,.45); }
+.btn-gold .ripple { background: rgba(13,25,127,.25); }
+@keyframes ripple { to { transform: scale(4); opacity: 0; } }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid rgba(212,175,55,.7); outline-offset: 3px; border-radius: 8px; }
+.link-arrow { display: inline-flex; gap: 6px; transition: gap .25s ease, color .25s ease; }
+.link-arrow:hover { gap: 12px; }
+.engagement, .feature-card, .pack-card, .profile-card, .portfolio-card, .target-card, .domain-card, .testi-card, .client-badge, .example-card { transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease, border-color .3s ease; }
+.engagement:active, .feature-card:active, .pack-card:active, .target-card:active, .domain-card:active, .portfolio-card:active { transform: scale(.985); }
+.engagement:hover, .feature-card:hover, .pack-card:hover, .profile-card:hover, .portfolio-card:hover, .target-card:hover { box-shadow: 0 14px 34px rgba(13,25,127,.16); border-color: rgba(212,175,55,.55); }
+.domain-card-photo img, .portfolio-card img, .target-card img { transition: transform .6s ease; }
+.domain-card-photo:hover img, .portfolio-card:hover img, .target-card:hover img { transform: scale(1.06); }
+.project-form input, .project-form select, .project-form textarea { transition: border-color .25s ease, background .25s ease, box-shadow .25s ease, transform .2s ease; }
+.project-form input:focus, .project-form select:focus, .project-form textarea:focus { transform: translateY(-1px); }
+/* Menu mobile : burger → croix, déploiement animé */
+.nav-burger span { transition: transform .3s ease, opacity .2s ease; transform-origin: center; }
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@keyframes menuIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
+.mobile-menu.open { animation: menuIn .28s ease both; }
+.mobile-menu a { transition: padding-left .2s ease, color .2s ease; }
+.mobile-menu a:active, .mobile-menu a:hover { padding-left: 8px; color: var(--gold-text); }
+.to-top:hover { transform: translateY(-3px); }
+.to-top:active { transform: scale(.92); }
+.wa-float:active { transform: scale(.93); }
+@media (prefers-reduced-motion: reduce) { .ripple { display: none; } .btn:hover, .engagement:hover, .domain-card-photo:hover img { transform: none; } }
+.hero h1, .page-hero h1, .section-dark h1, .section-dark h2, .section-dark h3, .closing-banner h1, .closing-banner h2, .closing-banner h3, #contact h2, #contact h3, h2.on-dark, h3.on-dark { color: #fff; }
+.hero h1 .gold { color: #DCEEFF; }
+.section-dark .gold-text, h2.on-dark .gold-text { color: #DCEEFF; }
+.closing-lead { color: #fff; }
+.breadcrumb, .breadcrumb a { color: #DCEEFF; }
