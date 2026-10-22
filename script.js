@@ -103,27 +103,3 @@ if (projectForm) {
   b.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
   window.addEventListener("scroll", function () { b.classList.toggle("show", window.scrollY > 600); }, { passive: true });
 })();
-
-// ---- Burger animé (burger -> croix) ----
-(function () {
-  var burger = document.getElementById("navBurger");
-  var menu = document.getElementById("mobileMenu");
-  if (!burger || !menu) return;
-  burger.addEventListener("click", function () { burger.classList.toggle("open", menu.classList.contains("open")); });
-  menu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { burger.classList.remove("open"); }); });
-})();
-
-// ---- Effet d'onde au toucher / clic sur les boutons ----
-document.addEventListener("click", function (e) {
-  var b = e.target.closest && e.target.closest(".btn");
-  if (!b) return;
-  var r = b.getBoundingClientRect();
-  var size = Math.max(r.width, r.height);
-  var s = document.createElement("span");
-  s.className = "ripple";
-  s.style.width = s.style.height = size + "px";
-  s.style.left = (e.clientX - r.left - size / 2) + "px";
-  s.style.top = (e.clientY - r.top - size / 2) + "px";
-  b.appendChild(s);
-  setTimeout(function () { s.remove(); }, 650);
-});
