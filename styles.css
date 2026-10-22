@@ -875,3 +875,12 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
 .xc-embed{padding:0!important;background:none!important}.xc-embed .xc-form{margin-top:28px}
 .xc-embed .xc-options{grid-template-columns:1fr 1fr}
 .xc-next{margin-left:auto}
+
+/* Motifs plus visibles (v2) : sections claires et blanches */
+.section:not(.section-dark):not(.xc){position:relative;overflow:hidden;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='139'%3E%3Cg fill='none' stroke='%230D197F' stroke-opacity='.085' stroke-width='1'%3E%3Cpath d='M0 0l80 139L160 0zM0 139L80 0l80 139zM0 0h160M0 139h160M40 69.5h80'/%3E%3C/g%3E%3C/svg%3E");background-size:160px 139px}
+.section:not(.section-dark):not(.xc):not(.section-light)::after{content:"";position:absolute;right:-70px;top:-30px;width:min(460px,78vw);aspect-ratio:1;pointer-events:none;z-index:0;opacity:.7;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='1.4'%3E%3Cpath d='M200 20L380 330H20zM200 20L110 175L290 175zM110 175L20 330L200 330zM290 175L200 330L380 330M110 175H290'/%3E%3C/g%3E%3Cg fill='%23D4AF37'%3E%3Ccircle cx='200' cy='20' r='4'/%3E%3Ccircle cx='20' cy='330' r='4'/%3E%3Ccircle cx='380' cy='330' r='4'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;
+  -webkit-mask-image:linear-gradient(225deg,#000 10%,transparent 72%);mask-image:linear-gradient(225deg,#000 10%,transparent 72%)}
+.section:not(.section-dark):not(.xc)>.wrap{position:relative;z-index:1}
+.section-light::after{opacity:.75}
