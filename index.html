@@ -167,6 +167,38 @@
     </div>
   </section>
 
+<!-- ===== 1. CONFIANCE DIASPORA ===== -->
+<section class="xc xc-white" id="confiance-diaspora">
+  <div class="xc-wrap" style="width:min(1160px,100% - 32px)">
+    <div class="xc-trust-card">
+      <div class="xc-trust-inner">
+        <p class="xc-eyebrow">Confiance diaspora</p>
+        <h2 class="xc-title">Votre projet au Congo, piloté en toute sérénité depuis l'étranger.</h2>
+
+        <div class="xc-trust-grid">
+          <article class="xc-trust-item">
+            <span class="xc-ico"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h13v4"/><path d="M3 7v11a2 2 0 002 2h14a1 1 0 001-1v-9a1 1 0 00-1-1H5a2 2 0 01-2-2z"/><circle cx="16.5" cy="14" r="1.2" fill="currentColor"/></svg></span>
+            <h3>Transparence Financière Totale</h3>
+            <p>Déblocage des fonds par étapes validées. Aucun intermédiaire familial, aucun coût masqué, vous gardez une visibilité totale sur chaque étape de paiement.</p>
+          </article>
+
+          <article class="xc-trust-item">
+            <span class="xc-ico"><svg viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9a1 1 0 011-1z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+            <h3>Rapports Techniques Hebdomadaires</h3>
+            <p>Suivi en temps réel de l'avancement via des comptes-rendus détaillés, des photos HD et des vidéos de votre chantier à Pointe-Noire.</p>
+          </article>
+
+          <article class="xc-trust-item">
+            <span class="xc-ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></span>
+            <h3>Présence Juridique &amp; Normative</h3>
+            <p>Une entreprise officielle enregistrée, des contrats clairs et un respect strict des normes de construction pour sécuriser votre patrimoine immobilier.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- PROBLÈMES RÉSOLUS -->
   <section class="section" id="problemes">
     <div class="wrap">
@@ -347,48 +379,101 @@
     </div>
   </section>
 
+<!-- ===== 2. FRISE « NOTRE MÉTHODE » ===== -->
+<section class="xc xc-mesh" id="methode">
+  <div class="xc-wrap">
+    <p class="xc-eyebrow">Notre méthode</p>
+    <h2 class="xc-title">De la première esquisse à la remise des clés.</h2>
+
+    <ol class="xc-timeline">
+      <li class="xc-step">
+        <span class="xc-num">01</span>
+        <h3>Concevoir</h3>
+        <p>Plans architecturaux détaillés, modélisation BIM et visualisations 3D pour figer vos volumes avant de bâtir.</p>
+      </li>
+      <li class="xc-step">
+        <span class="xc-num">02</span>
+        <h3>Chiffrer &amp; Préparer</h3>
+        <p>Édition d'un Devis Quantitatif Estimatif (DQE) précis et d'un planning prévisionnel pour maîtriser votre budget et anticiper les écarts.</p>
+      </li>
+      <li class="xc-step">
+        <span class="xc-num">03</span>
+        <h3>Construire &amp; Suivre</h3>
+        <p>Mobilisation des équipes techniques sur le terrain à Pointe-Noire, exécution aux normes BTP et coordination de tous les corps d'état.</p>
+      </li>
+      <li class="xc-step">
+        <span class="xc-num">04</span>
+        <h3>Contrôler &amp; Réceptionner</h3>
+        <p>Audits de conformité à chaque étape cruciale du chantier, finitions soignées et remise des clés en toute sérénité.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
   <!-- CONTACT -->
   <section class="section section-dark" id="contact">
     <div class="wrap contact-inner">
       <div class="contact-text">
         <span class="eyebrow">— PRÊT À LANCER VOTRE PROJET ?</span>
         <h2 class="on-dark">Présentez-nous votre projet, nous revenons vers vous rapidement.</h2>
-        <form class="project-form" id="projectForm">
-          <div class="form-row">
-            <div class="form-field">
-              <label for="pf-nom">Nom</label>
-              <input type="text" id="pf-nom" name="nom" placeholder="Votre nom" required>
-            </div>
-            <div class="form-field">
-              <label for="pf-tel">Téléphone / WhatsApp</label>
-              <input type="tel" id="pf-tel" name="telephone" placeholder="+242 ..." required>
-            </div>
+        <div class="xc xc-embed" id="devis">
+          <form class="xc-form" id="xc-quote" novalidate>
+      <div aria-live="polite">
+        <div class="xc-progress-top"><span class="a" data-xc="label">Étape 1 sur 3</span><span class="b" data-xc="name">Votre projet</span></div>
+        <div class="xc-track"><div class="xc-bar" data-xc="bar"></div></div>
+      </div>
+
+      <!-- Étape 1 -->
+      <div class="xc-pane" data-step="1">
+        <fieldset class="xc-fs">
+          <legend class="xc-q">Quel est votre projet ?</legend>
+          <div class="xc-options">
+            <label class="xc-option"><input type="radio" name="projet" value="Construction">
+              <span class="xc-card"><span class="xc-ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-6 7 6v11M10 21v-5h4v5"/></svg></span><strong>Construction</strong></span></label>
+            <label class="xc-option"><input type="radio" name="projet" value="Rénovation">
+              <span class="xc-card"><span class="xc-ico"><svg viewBox="0 0 24 24"><path d="M14 6l4 4M4 20l1-5L16 4l4 4L9 19z"/></svg></span><strong>Rénovation</strong></span></label>
+            <label class="xc-option"><input type="radio" name="projet" value="Aménagement">
+              <span class="xc-card"><span class="xc-ico"><svg viewBox="0 0 24 24"><path d="M3 18v-6a3 3 0 013-3h12a3 3 0 013 3v6M5 18v2M19 18v2M7 9V6h10v3"/></svg></span><strong>Aménagement</strong></span></label>
+            <label class="xc-option"><input type="radio" name="projet" value="Bureau d'Études">
+              <span class="xc-card"><span class="xc-ico"><svg viewBox="0 0 24 24"><path d="M4 20L20 4M4 20h4M4 20v-4M14 4h6v6M7 11l6 6"/></svg></span><strong>Bureau d'Études</strong></span></label>
           </div>
-          <div class="form-row">
-            <div class="form-field">
-              <label for="pf-type">Type de projet</label>
-              <select id="pf-type" name="type" required>
-                <option value="" disabled selected>Choisir…</option>
-                <option value="Construction">Construction</option>
-                <option value="Rénovation">Rénovation</option>
-                <option value="Aménagement">Aménagement</option>
-                <option value="Études">Études</option>
-                <option value="Accompagnement technique">Accompagnement technique</option>
-                <option value="Autre">Autre</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="pf-lieu">Localisation du projet</label>
-              <input type="text" id="pf-lieu" name="localisation" placeholder="Quartier, ville">
-            </div>
-          </div>
-          <div class="form-field">
-            <label for="pf-msg">Message</label>
-            <textarea id="pf-msg" name="message" placeholder="Décrivez brièvement votre projet…"></textarea>
-          </div>
-          <button type="submit" class="btn btn-gold btn-lg">Présenter mon projet →</button>
-          <p class="form-note">En validant, WhatsApp s'ouvre avec votre message déjà rédigé.</p>
-        </form>
+          <p class="xc-error" data-xc="err1" hidden>Merci de choisir un type de projet.</p>
+        </fieldset>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="xc-pane" data-step="2" hidden>
+        <p class="xc-q">Vos coordonnées</p>
+        <div class="xc-fields">
+          <div class="xc-field"><label for="xc-nom">Nom complet</label>
+            <input id="xc-nom" name="nom" type="text" autocomplete="name" placeholder="Ex. Armel Quincy"></div>
+          <div class="xc-field"><label for="xc-tel">Téléphone / WhatsApp</label>
+            <input id="xc-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="Ex. +242 05 000 00 00"></div>
+          <div class="xc-field"><label for="xc-lieu">Localisation du projet</label>
+            <input id="xc-lieu" name="lieu" type="text" placeholder="Ex. Pointe-Noire, quartier…"></div>
+        </div>
+        <p class="xc-error" data-xc="err2" hidden>Merci de renseigner les trois champs.</p>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="xc-pane" data-step="3" hidden>
+        <p class="xc-q">Récapitulatif</p>
+        <dl class="xc-recap">
+          <div><dt>Projet</dt><dd class="strong" data-xc="rProjet"></dd></div>
+          <div><dt>Nom</dt><dd data-xc="rNom"></dd></div>
+          <div><dt>Contact</dt><dd data-xc="rTel"></dd></div>
+          <div><dt>Lieu</dt><dd data-xc="rLieu"></dd></div>
+        </dl>
+        <button type="submit" class="xc-cta">Lancer l'étude de mon projet →</button>
+        <p class="xc-note">Votre message s'ouvrira dans WhatsApp, prêt à être envoyé.</p>
+      </div>
+
+      <div class="xc-nav">
+        <button type="button" class="xc-back" data-xc="prev" hidden>← Retour</button>
+        <button type="button" class="xc-next" data-xc="next">Continuer →</button>
+      </div>
+    </form>
+        </div>
       </div>
       <div class="contact-side">
         <div class="contact-details">
@@ -445,5 +530,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="aec-composants.js" defer></script>
 </body>
 </html>
