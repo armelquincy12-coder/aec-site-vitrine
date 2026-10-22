@@ -671,3 +671,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .ba-card figcaption span { font-size: 15px; line-height: 1.55; color: var(--texte-sec); }
 .ba-note { margin: 16px 4px 0; font-size: 13.5px; font-style: italic; color: var(--texte-sec); }
 @media (max-width: 760px) { .ba-grid { grid-template-columns: 1fr; } }
+
+/* Ajustement des textes — pages de services (mobile) */
+@media (max-width:640px){
+  .detail-block > p,.feature-deliverables li,.feature-closing{font-size:15px;line-height:1.65}
+  .detail-block-head h3{font-size:20px;line-height:1.25}
+  .detail-eyebrow,.pack-receive-label{font-size:12px;letter-spacing:.08em}
+  .check-list strong{font-size:15px}
+  .check-list p{font-size:14px}
+  .wa-float{width:52px;height:52px}
+  .to-top{width:44px;height:44px}
+}
