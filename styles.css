@@ -686,3 +686,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* Réponses aux problèmes */
 .engagement p.engagement-answer{grid-column:2;grid-row:3;margin-top:8px!important;padding-top:10px;border-top:1px solid var(--bordure);font-size:15px;color:var(--navy)!important;line-height:1.55}
 .engagement-answer strong{color:var(--gold-text);font-weight:700}
+.problemes-sub{margin-top:36px!important;font-family:'Syne',sans-serif;font-size:20px;color:var(--navy);margin:0 0 20px;font-weight:700}
+.engagement p.engagement-answer strong{display:block;color:var(--gold-text);font-size:15px;margin-bottom:6px}
+.engagement p.engagement-answer span{display:block;font-size:14.5px;line-height:1.6;color:var(--texte-sec)}
