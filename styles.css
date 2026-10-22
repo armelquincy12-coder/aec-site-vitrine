@@ -593,3 +593,35 @@ h1 { font-size: 54px; }
 #contact .contact-inner { max-width: min(1132px, calc(100% - 48px)); }
 .announce { text-wrap: balance; }
 @media (max-width: 760px) { #contact .contact-inner { max-width: calc(100% - 32px); } }
+
+/* =====================================================================
+   Pages de services : échelle de textes harmonisée (titres > sous-titres > listes > corps)
+   ===================================================================== */
+.detail-block-head { align-items: flex-start; }
+.detail-block-head h3 { font-size: 24px; line-height: 1.3; font-weight: 700; }
+.detail-eyebrow { font-size: 13px; letter-spacing: .08em; margin-bottom: 6px; }
+.detail-block > p { font-size: 16px; line-height: 1.75; font-weight: 400; color: var(--texte-sec); }
+.detail-block > p.pack-receive-label { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-text); line-height: 1.5; margin: 22px 0 6px; }
+.detail-block .feature-deliverables { gap: 8px; margin-top: 4px; }
+.feature-deliverables li { font-size: 16px; line-height: 1.55; padding-left: 24px; }
+.detail-block > p.feature-closing, .feature-closing { font-size: 16px; font-weight: 600; line-height: 1.6; color: var(--navy); margin: 20px 0 0; padding-top: 16px; max-width: 760px; }
+.feature-deliverables-label { font-size: 13px; letter-spacing: .08em; }
+.feature-card h3 { font-size: 21px; }
+.feature-card p { font-size: 15.5px; }
+
+/* Bandeaux de conclusion (« Valoriser un bien… », etc.) */
+.closing-banner { padding: 52px 40px; }
+.section .closing-banner .eyebrow { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 17px; font-weight: 800; letter-spacing: .1em; line-height: 1.4; }
+.closing-lead { font-size: 22px; font-weight: 700; line-height: 1.45; max-width: 700px; margin-top: 18px; }
+.closing-strong { font-size: 16px; font-weight: 500; line-height: 1.7; max-width: 720px; color: #E8F1FC; margin-top: 22px; }
+.closing-chain { font-size: 13px; letter-spacing: .08em; line-height: 2; margin-top: 24px; }
+.closing-sign { font-size: 15px; line-height: 1.7; max-width: 680px; margin-top: 22px; }
+@media (max-width: 560px) {
+  .detail-block-head h3 { font-size: 20px; }
+  .detail-block > p, .feature-deliverables li, .feature-closing { font-size: 15.5px; }
+  .closing-banner { padding: 36px 22px; }
+  .section .closing-banner .eyebrow { font-size: 15px; letter-spacing: .08em; }
+  .closing-lead { font-size: 19px; }
+  .closing-strong, .closing-sign { font-size: 15px; }
+  .closing-chain { font-size: 12px; }
+}
