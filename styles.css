@@ -966,3 +966,16 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
 .cn-badge::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px;background:var(--gold)}
 .cn-badge-site::before{background:#E67E22}.cn-badge-real::before{background:#27AE60}.cn-badge-render::before{background:#3b82f6}
 .cn-cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+
+/* Page Rénovation */
+.cn-offer-detail{font-size:14px!important;color:#64748B!important;border-left:3px solid var(--gold);padding-left:12px;flex:0 0 auto!important}
+.ba-tags{display:flex;flex-wrap:wrap;gap:8px;padding:14px 22px 0}
+.ba-tag{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:#EEF1F6;color:var(--navy)}
+.ba-tag-gold{background:rgba(212,175,55,.16);color:#7A5F10}
+.ba-tag em{font-style:normal;font-weight:600;text-transform:none;letter-spacing:0}
+.ba-card figcaption{padding-top:10px!important}
+.cn-sits{display:grid;grid-template-columns:1fr;gap:18px;margin-top:40px}
+@media(min-width:900px){.cn-sits{grid-template-columns:repeat(3,1fr)}}
+.cn-sit{background:#fff;border:1px solid var(--bordure);border-left:4px solid var(--gold);border-radius:16px;padding:26px 24px}
+.cn-sit h3{font-size:19px;margin:0 0 10px;color:var(--navy);line-height:1.35}
+.cn-sit p{margin:0;font-size:15.5px;line-height:1.7;color:#2D3748}
