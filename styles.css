@@ -979,3 +979,19 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
 .cn-sit{background:#fff;border:1px solid var(--bordure);border-left:4px solid var(--gold);border-radius:16px;padding:26px 24px}
 .cn-sit h3{font-size:19px;margin:0 0 10px;color:var(--navy);line-height:1.35}
 .cn-sit p{margin:0;font-size:15.5px;line-height:1.7;color:#2D3748}
+
+/* Présentation AEC : texte + piliers + photo */
+.pres-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:center}
+@media(min-width:960px){.pres-grid{grid-template-columns:1.05fr .95fr;gap:56px}}
+.pres-pillars{list-style:none;margin:26px 0 30px;padding:0;display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:560px){.pres-pillars{grid-template-columns:1fr 1fr}}
+.pres-pillars li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--bordure);border-radius:14px;padding:14px 14px}
+.pres-ico{flex:none;width:40px;height:40px;border-radius:50%;background:var(--navy);display:grid;place-items:center;box-shadow:0 6px 14px -6px rgba(13,25,127,.6)}
+.pres-ico svg{width:20px;height:20px;fill:none;stroke:var(--gold);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pres-pillars strong{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-bottom:2px}
+.pres-pillars li span:not(.pres-ico){font-size:14px;line-height:1.5;color:#2D3748}
+.pres-photo{margin:0;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(13,25,127,.5)}
+.pres-photo img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+@media(max-width:959px){.pres-photo img{max-height:260px}}
+.pres-photo figcaption{position:absolute;right:10px;bottom:10px;background:rgba(6,11,36,.8);color:#fff;font-size:11px;padding:4px 10px;border-radius:999px}
+@media(min-width:960px){.pres-photo img{aspect-ratio:4/5}}
