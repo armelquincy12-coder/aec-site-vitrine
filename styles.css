@@ -995,3 +995,10 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
 @media(max-width:959px){.pres-photo img{max-height:260px}}
 .pres-photo figcaption{position:absolute;right:10px;bottom:10px;background:rgba(6,11,36,.8);color:#fff;font-size:11px;padding:4px 10px;border-radius:999px}
 @media(min-width:960px){.pres-photo img{aspect-ratio:4/5}}
+
+/* Aménagement : titre CTA + gros bouton */
+.closing-title{color:#fff;font-size:clamp(24px,4vw,34px);margin:6px 0 10px}
+.btn-lg{padding:16px 30px;font-size:16px}
+.closing-title+.closing-lead{font-size:16px;font-weight:400;opacity:.9;max-width:640px;margin:0 auto 22px}
+@media(min-width:760px){.cn-gallery-2{grid-template-columns:1fr 1fr!important;max-width:860px;margin:0 auto}}
+@media(max-width:600px){.btn-lg{padding:15px 18px;font-size:15px;white-space:normal;text-align:center;max-width:100%}}
