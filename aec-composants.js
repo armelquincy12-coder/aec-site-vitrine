@@ -48,3 +48,17 @@
     window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank');
   });
 })();
+
+/* AEC — Accordéons « Ce que nous résolvons » (un seul ouvert à la fois) */
+(function () {
+  var root = document.getElementById('xaAccordion');
+  if (!root) return;
+  var items = root.querySelectorAll('.xa-item');
+  root.addEventListener('click', function (e) {
+    var head = e.target.closest('.xa-head');
+    if (!head) return;
+    var item = head.parentNode, wasOpen = item.classList.contains('open');
+    items.forEach(function (it) { it.classList.remove('open'); it.querySelector('.xa-head').setAttribute('aria-expanded', 'false'); });
+    if (!wasOpen) { item.classList.add('open'); head.setAttribute('aria-expanded', 'true'); }
+  });
+})();

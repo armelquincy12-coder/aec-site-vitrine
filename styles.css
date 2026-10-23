@@ -884,3 +884,33 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
   -webkit-mask-image:linear-gradient(225deg,#000 10%,transparent 72%);mask-image:linear-gradient(225deg,#000 10%,transparent 72%)}
 .section:not(.section-dark):not(.xc)>.wrap{position:relative;z-index:1}
 .section-light::after{opacity:.75}
+
+/* Header : logo 42px, bouton Devis compact */
+.logo-img{height:42px!important;width:auto}
+.nav-devis{padding:10px 20px!important;font-size:13.5px!important;font-weight:800!important;background:var(--gold)!important;color:var(--navy)!important;border-radius:999px}
+@media(max-width:900px){.nav-devis{padding:9px 16px!important;font-size:13px!important}}
+
+/* Footer : adresse */
+.footer-address{flex:1 1 100%;font-size:13.5px;line-height:1.6;color:#E8F1FC;opacity:.9}
+
+/* Accordéons « Ce que nous résolvons » */
+.xa{display:grid;gap:12px;max-width:860px}
+.xa-item{background:#fff;border:1px solid var(--bordure);border-radius:16px;overflow:hidden;transition:border-color .25s,box-shadow .25s}
+.xa-item.open{border-color:var(--gold);box-shadow:0 14px 30px -18px rgba(13,25,127,.35)}
+.xa-head{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:14px;width:100%;padding:18px 18px;cursor:pointer}
+.xa-head:focus-visible{outline:3px solid rgba(212,175,55,.6);outline-offset:-3px;border-radius:16px}
+.xa-num{flex:none;width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:14px;font-weight:800;box-shadow:0 6px 14px -6px rgba(13,25,127,.5)}
+.xa-text{flex:1;display:flex;flex-direction:column;gap:3px;text-align:left}
+.xa-text strong{font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--navy);line-height:1.35}
+.xa-text em{font-style:normal;font-size:14.5px;line-height:1.55;color:#2D3748}
+.xa-chev{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid rgba(212,175,55,.5);background:rgba(212,175,55,.12);position:relative;transition:transform .3s,background .3s}
+.xa-chev::before{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;border-right:2px solid var(--gold-dark);border-bottom:2px solid var(--gold-dark);transform:translate(-50%,-70%) rotate(45deg)}
+.xa-item.open .xa-chev{transform:rotate(180deg);background:var(--gold)}
+.xa-item.open .xa-chev::before{border-color:var(--navy)}
+.xa-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.xa-item.open .xa-panel{grid-template-rows:1fr}
+.xa-panel-in{overflow:hidden;min-height:0}
+.xa-sol-title{margin:0;padding:4px 20px 0 72px;font-weight:700;font-size:16px;color:var(--gold-text)}
+.xa-sol{margin:8px 0 0;padding:0 20px 20px 72px;font-size:15px;line-height:1.7;color:#2D3748}
+@media(max-width:560px){.xa-sol-title,.xa-sol{padding-left:20px}}
+@media(prefers-reduced-motion:reduce){.xa-panel,.xa-chev{transition:none}}
