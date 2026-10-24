@@ -1142,3 +1142,7 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
 .tf-phase li div span{display:block;font-size:14px;line-height:1.5;color:#2D3748;margin-top:2px}
 .tf-dossier-cta{margin-top:22px;text-align:center}
 @media(max-width:900px){.tf-phases{grid-template-columns:1fr}.tf-dossier{padding:26px 18px}}
+.tf-hero-link{margin:18px 0 0}
+.tf-hero-link a{color:var(--gold);font-weight:600;font-size:14.5px;border-bottom:1px solid rgba(212,175,55,.5);padding-bottom:2px}
+.tf-hero-link a:hover{border-bottom-color:var(--gold)}
+html{scroll-padding-top:90px}
