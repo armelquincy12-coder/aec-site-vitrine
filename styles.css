@@ -1146,3 +1146,23 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
 .tf-hero-link a{color:var(--gold);font-weight:600;font-size:14.5px;border-bottom:1px solid rgba(212,175,55,.5);padding-bottom:2px}
 .tf-hero-link a:hover{border-bottom-color:var(--gold)}
 html{scroll-padding-top:90px}
+
+/* Mobile : pas de débordement horizontal + zones tactiles */
+#contact .contact-inner>*{min-width:0;max-width:100%}
+.xc-embed .xc-options{grid-template-columns:repeat(2,minmax(0,1fr))}
+.xc-form,.xc-form *{min-width:0}
+@media(max-width:760px){
+ .link-arrow{display:inline-flex;align-items:center;min-height:40px}
+ .cta-links a{min-height:36px;display:inline-flex;align-items:center}
+ .plan-du-site a,.footer-links a{min-height:36px;display:inline-flex;align-items:center}
+}
+@media(max-width:760px){
+ .hero-inner{flex-direction:column}
+ .hero-inner-solo .hero-text{flex:0 1 auto}
+ .hero{padding:56px 0 64px}
+ .xc-card{padding:14px 10px}
+ .xc-card strong,.xc-card h3{font-size:13.5px;overflow-wrap:normal;word-break:normal;hyphens:none}
+ .footer-links{display:flex;flex-wrap:wrap;gap:6px 18px}
+ .footer-links a{white-space:nowrap}
+}
+@media(max-width:380px){.xc-card strong,.xc-card h3{font-size:12.5px}.xc-card{padding:14px 8px}}
