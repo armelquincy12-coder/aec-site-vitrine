@@ -45,7 +45,7 @@ if (projectForm) {
 // ---- Apparitions douces au défilement (le contenu reste visible si le script échoue) ----
 (function () {
   document.documentElement.classList.add("js");
-  var sel = ".section-head, .engagement, .domain-card, .target-card, .portfolio-card, .feature-card, .pack-card, .detail-block, .profile-card, .closing-banner, .contact-inner, .testi-card, .testi-invite, .cn-card, .cn-offer, .cn-fig, .ar-steps li, .cn-why, .ba-card";
+  var sel = ".section-head, .engagement, .domain-card, .target-card, .portfolio-card, .feature-card, .pack-card, .detail-block, .profile-card, .closing-banner, .contact-inner, .testi-card, .testi-invite, .cn-card, .cn-offer, .cn-fig, .ar-steps li, .cn-why, .ba-card, .tf-acc, .tf-table-wrap";
   var els = Array.prototype.slice.call(document.querySelectorAll(sel));
   if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); }
   else {
