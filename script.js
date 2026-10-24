@@ -127,3 +127,38 @@ document.addEventListener("click", function (e) {
   b.appendChild(s);
   setTimeout(function () { s.remove(); }, 650);
 });
+
+
+// ---- Titres : apparition en fondu ----
+(function () {
+  var t = Array.prototype.slice.call(document.querySelectorAll("main h2, .xc-title, section h2"));
+  t = t.filter(function (e, i) { return t.indexOf(e) === i; });
+  if (!("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function (en) {
+    en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("tin"); io.unobserve(x.target); } });
+  }, { threshold: 0.2 });
+  t.forEach(function (e) { e.classList.add("title-fx"); io.observe(e); });
+})();
+
+// ---- Portfolio : défilement horizontal ----
+(function () {
+  var root = document.getElementById("pfSlider");
+  if (!root) return;
+  var tr = root.querySelector(".pf-track");
+  function step() { var c = tr.querySelector(".portfolio-card"); return c ? c.getBoundingClientRect().width + 24 : 300; }
+  function go(d) {
+    var end = tr.scrollLeft + tr.clientWidth >= tr.scrollWidth - 4;
+    if (d > 0 && end) tr.scrollTo({ left: 0, behavior: "smooth" });
+    else if (d < 0 && tr.scrollLeft <= 4) tr.scrollTo({ left: tr.scrollWidth, behavior: "smooth" });
+    else tr.scrollBy({ left: d * step(), behavior: "smooth" });
+  }
+  root.querySelector(".pf-next").addEventListener("click", function () { stop(); go(1); });
+  root.querySelector(".pf-prev").addEventListener("click", function () { stop(); go(-1); });
+  var timer = null;
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce) {
+    timer = setInterval(function () { go(1); }, 4500);
+    ["pointerdown", "touchstart", "wheel", "focusin", "mouseenter"].forEach(function (ev) { root.addEventListener(ev, stop, { passive: true }); });
+  }
+})();

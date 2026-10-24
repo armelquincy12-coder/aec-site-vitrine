@@ -1002,3 +1002,20 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
 .closing-title+.closing-lead{font-size:16px;font-weight:400;opacity:.9;max-width:640px;margin:0 auto 22px}
 @media(min-width:760px){.cn-gallery-2{grid-template-columns:1fr 1fr!important;max-width:860px;margin:0 auto}}
 @media(max-width:600px){.btn-lg{padding:15px 18px;font-size:15px;white-space:normal;text-align:center;max-width:100%}}
+
+/* Titres en fondu */
+.js .title-fx{opacity:0;transform:translateY(16px);filter:blur(5px);transition:opacity .9s ease .1s,transform .9s ease .1s,filter .9s ease .1s}
+.js .title-fx.tin{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){.js .title-fx{opacity:1;transform:none;filter:none;transition:none}}
+
+/* Portfolio : slider horizontal */
+.pf-slider{position:relative;margin-top:40px}
+.pf-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding:6px 2px 14px;scrollbar-width:none}
+.pf-track::-webkit-scrollbar{display:none}
+.pf-track .portfolio-card{flex:0 0 calc((100% - 48px)/3);scroll-snap-align:start}
+.pf-track .portfolio-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:14px}
+.pf-btn{position:absolute;top:38%;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--navy);font-size:26px;line-height:1;cursor:pointer;box-shadow:0 8px 20px -6px rgba(13,25,127,.45);display:grid;place-items:center}
+.pf-btn:hover{background:var(--gold)}
+.pf-prev{left:-10px}.pf-next{right:-10px}
+@media(max-width:960px){.pf-track .portfolio-card{flex-basis:calc((100% - 24px)/2)}}
+@media(max-width:600px){.pf-track .portfolio-card{flex-basis:82%}.pf-prev{left:2px}.pf-next{right:2px}.pf-btn{width:38px;height:38px}}
