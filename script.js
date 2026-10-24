@@ -45,7 +45,7 @@ if (projectForm) {
 // ---- Apparitions douces au défilement (le contenu reste visible si le script échoue) ----
 (function () {
   document.documentElement.classList.add("js");
-  var sel = ".section-head, .engagement, .domain-card, .target-card, .portfolio-card, .feature-card, .pack-card, .detail-block, .profile-card, .closing-banner, .contact-inner, .testi-card, .testi-invite";
+  var sel = ".section-head, .engagement, .domain-card, .target-card, .portfolio-card, .feature-card, .pack-card, .detail-block, .profile-card, .closing-banner, .contact-inner, .testi-card, .testi-invite, .cn-card, .cn-offer, .cn-fig, .ar-steps li, .cn-why, .ba-card";
   var els = Array.prototype.slice.call(document.querySelectorAll(sel));
   if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); }
   else {
@@ -161,4 +161,25 @@ document.addEventListener("click", function (e) {
     timer = setInterval(function () { go(1); }, 4500);
     ["pointerdown", "touchstart", "wheel", "focusin", "mouseenter"].forEach(function (ev) { root.addEventListener(ev, stop, { passive: true }); });
   }
+})();
+
+
+// ---- Comparateur Avant / Après (souris, toucher, clavier via input range) ----
+(function () {
+  document.querySelectorAll("[data-ba]").forEach(function (f) {
+    var r = f.querySelector(".ba-range"), st = f.querySelector(".ba-stage");
+    function up() { st.style.setProperty("--p", r.value + "%"); }
+    r.addEventListener("input", up); up();
+  });
+})();
+
+// ---- Flèche des boutons : léger glissement au survol ----
+(function () {
+  document.querySelectorAll(".btn, .link-arrow").forEach(function (el) {
+    var n = el.lastChild;
+    if (!n || n.nodeType !== 3 || !/→\s*$/.test(n.textContent)) return;
+    n.textContent = n.textContent.replace(/\s*→\s*$/, " ");
+    var sp = document.createElement("span"); sp.className = "arw"; sp.setAttribute("aria-hidden", "true"); sp.textContent = "→";
+    el.appendChild(sp);
+  });
 })();

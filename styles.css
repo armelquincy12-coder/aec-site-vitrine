@@ -1045,3 +1045,24 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
 .ar-steps p{margin:0;font-size:15px;line-height:1.55;color:#2D3748}
 @media(max-width:900px){.ar-steps{grid-template-columns:1fr}.ar-steps li:not(:last-child)::after{content:"↓";right:auto;left:30px;top:auto;bottom:-18px;transform:none}}
 .pres-text .btn{margin-top:26px}
+
+/* Animations sobres */
+.arw{display:inline-block;transition:transform .25s ease}
+.btn:hover .arw,.link-arrow:hover .arw,.btn:focus-visible .arw{transform:translateX(4px)}
+.btn:focus-visible{outline:3px solid rgba(212,175,55,.8);outline-offset:3px}
+.portfolio-card .photo-placeholder{overflow:hidden;border-radius:14px}
+.portfolio-card img{transition:transform .6s ease}
+.portfolio-card:hover img{transform:scale(1.05)}
+.portfolio-card figcaption strong{transition:color .25s}
+.portfolio-card:hover figcaption strong{color:var(--gold-text)}
+
+/* Comparateur avant/après */
+.ba-compare .ba-stage{position:relative;aspect-ratio:4/5;overflow:hidden;--p:50%;touch-action:pan-y;background:#eee}
+.ba-compare .ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.ba-compare .ba-after{clip-path:inset(0 0 0 var(--p))}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--p);width:2px;background:#fff;box-shadow:0 0 8px rgba(0,0,0,.4);transform:translateX(-1px);pointer-events:none}
+.ba-handle i{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-style:normal;font-weight:700;box-shadow:0 6px 16px rgba(0,0,0,.35)}
+.ba-lbl{position:absolute;bottom:12px;background:rgba(6,11,36,.82);color:#fff;font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;pointer-events:none}
+.ba-lbl-l{left:12px}.ba-lbl-r{right:12px;background:var(--gold);color:var(--navy)}
+.ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-compare:focus-within .ba-handle i{outline:3px solid #fff;outline-offset:2px}
