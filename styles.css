@@ -1094,3 +1094,21 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
 @media(max-width:900px){.feature-grid.feature-grid-2{grid-template-columns:1fr}}
 @media(max-width:560px){.feature-grid-2 .feature-deliverables{grid-template-columns:1fr}}
 .feature-grid-2 .link-arrow{display:inline-block;margin-top:14px}
+
+/* Tarifs v2 : alignement sur les pages services */
+.tf-acc{padding:16px 18px}
+.tf-list{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-direction:column;gap:7px}
+.tf-list li{position:relative;padding-left:22px;font-size:15px;line-height:1.5;color:#2D3748}
+.tf-list li::before{content:"";position:absolute;left:0;top:.5em;width:10px;height:6px;border-left:2px solid var(--gold-dark);border-bottom:2px solid var(--gold-dark);transform:rotate(-45deg)}
+.tf-list small{color:#64748B}
+.tf-price{margin-top:auto;padding-top:14px;border-top:1px solid var(--bordure);display:flex;flex-direction:column;gap:2px}
+.tf-price span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#64748B}
+.tf-price strong{font-size:22px;color:var(--navy);line-height:1.2}
+.tf-price em{font-size:13px;color:#64748B;font-style:normal;line-height:1.45}
+.cn-offer .tf-cta{width:100%;margin-top:12px}
+.tf-sit .tf-more{margin:6px 0 0}
+.tf-sit .tf-list{margin-top:10px}
+.tf-sit .link-arrow{margin-top:auto;padding-top:10px}
+.tf-sub{margin:48px 0 4px;font-size:20px;color:var(--navy)}
+.tf-note{margin:18px auto 0;max-width:760px;text-align:center;font-size:14px;color:#64748B;line-height:1.6}
+.cn-offer>p{flex:0 0 auto!important}
