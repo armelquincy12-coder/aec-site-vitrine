@@ -1204,3 +1204,13 @@ html{scroll-padding-top:90px}
 .tf-tl-item .tf-n{background:var(--navy);color:var(--gold);box-shadow:0 0 0 5px #fff}
 .tf-tl-item strong{color:var(--navy)}
 .tf-tl-item div span{color:#2D3748}
+
+/* Finitions : logo fixe, bascule avant/après, dégagement des boutons flottants */
+.logo-img{height:42px!important;width:auto}
+.logo-badge{margin:0 4px}
+.ba-toggle{display:flex;gap:8px;justify-content:center;padding:12px 12px 2px}
+.ba-toggle button{flex:1;max-width:160px;border:1px solid var(--bordure);background:#fff;color:var(--navy);font:inherit;font-weight:600;font-size:14px;padding:9px 14px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.ba-toggle button:hover,.ba-toggle button:focus-visible{background:var(--gold);border-color:var(--gold)}
+@media(max-width:900px){
+ main>section:last-of-type{padding-bottom:max(80px,var(--sec-pad,0px))!important}
+}

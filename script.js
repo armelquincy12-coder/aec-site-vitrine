@@ -56,7 +56,14 @@ if (projectForm) {
     }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
     els.forEach(function (e) {
       var sib = e.parentElement ? Array.prototype.indexOf.call(e.parentElement.children, e) : 0;
-      e.style.transitionDelay = Math.min(sib, 5) * 90 + "ms";
+      // cascade de 100 ms entre cartes d'une même ligne (colonnes de la grille)
+      var cols = 1;
+      if (e.parentElement) {
+        var gt = getComputedStyle(e.parentElement).gridTemplateColumns;
+        if (gt && gt !== "none") cols = gt.split(" ").length;
+        else cols = 4;
+      }
+      e.style.transitionDelay = (sib % Math.max(cols, 1)) * 100 + "ms";
       e.classList.add("reveal");
       io.observe(e);
     });
@@ -181,5 +188,33 @@ document.addEventListener("click", function (e) {
     n.textContent = n.textContent.replace(/\s*→\s*$/, " ");
     var sp = document.createElement("span"); sp.className = "arw"; sp.setAttribute("aria-hidden", "true"); sp.textContent = "→";
     el.appendChild(sp);
+  });
+})();
+
+
+// ---- Comparateur : boutons de bascule Avant / Après (animation fluide) ----
+(function () {
+  document.querySelectorAll("[data-ba]").forEach(function (f) {
+    var r = f.querySelector(".ba-range"), st = f.querySelector(".ba-stage");
+    var bar = f.querySelector(".ba-toggle");
+    if (!r || !bar) return;
+    var raf = null;
+    function go(to) {
+      if (raf) cancelAnimationFrame(raf);
+      var from = parseFloat(r.value), t0 = null, dur = 600;
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce) { r.value = to; st.style.setProperty("--p", to + "%"); return; }
+      function step(ts) {
+        if (t0 === null) t0 = ts;
+        var k = Math.min((ts - t0) / dur, 1), e = 1 - Math.pow(1 - k, 3);
+        var v = from + (to - from) * e;
+        r.value = v; st.style.setProperty("--p", v + "%");
+        if (k < 1) raf = requestAnimationFrame(step);
+      }
+      raf = requestAnimationFrame(step);
+    }
+    bar.querySelectorAll("button").forEach(function (b) {
+      b.addEventListener("click", function () { go(b.getAttribute("data-to") === "avant" ? 100 : 0); });
+    });
   });
 })();
