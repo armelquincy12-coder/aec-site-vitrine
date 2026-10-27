@@ -1166,3 +1166,28 @@ html{scroll-padding-top:90px}
  .footer-links a{white-space:nowrap}
 }
 @media(max-width:380px){.xc-card strong,.xc-card h3{font-size:12.5px}.xc-card{padding:14px 8px}}
+
+
+/* Dossier de chantier v2 : panneau bleu + frise verticale */
+.tf-dossier{background:var(--navy);border:0;border-radius:26px;padding:40px 28px;display:grid;grid-template-columns:1fr;gap:30px;box-shadow:0 24px 50px -28px rgba(13,25,127,.7);position:relative;overflow:hidden}
+.tf-dossier::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 2px,transparent 2px 22px);pointer-events:none}
+.tf-dossier>*{position:relative}
+.tf-dos-eyebrow{display:block;color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.tf-dossier h3{color:#fff;margin:0 0 14px;font-size:clamp(24px,3.2vw,34px);line-height:1.2}
+.tf-dossier h3 em{font-style:normal;color:var(--gold)}
+.tf-dossier .tf-dos-intro>p{color:#CFDBF0;margin:0 0 24px;font-size:16px;line-height:1.65;max-width:none}
+.tf-dos-cta{align-self:flex-start}
+.tf-tl{list-style:none;margin:0;padding:0 0 0 0;position:relative}
+.tf-tl::before{content:"";position:absolute;left:19px;top:14px;bottom:14px;width:2px;background:linear-gradient(var(--gold),rgba(212,175,55,.25))}
+.tf-tl-phase{position:relative;margin:22px 0 14px 0;padding-left:56px}
+.tf-tl-phase:first-child{margin-top:0}
+.tf-tl-phase span{display:inline-block;background:rgba(212,175,55,.16);color:var(--gold);border:1px solid rgba(212,175,55,.5);border-radius:999px;padding:5px 14px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.tf-tl-item{position:relative;display:flex;gap:16px;align-items:flex-start;padding:0 0 18px 0}
+.tf-tl-item .tf-n{flex:none;width:40px;height:40px;font-size:16px;background:var(--gold);color:var(--navy);box-shadow:0 0 0 5px var(--navy);margin-top:0;position:relative;z-index:1}
+.tf-tl-item strong{display:block;color:#fff;font-size:17px;line-height:1.3;margin-top:2px}
+.tf-tl-item div span{display:block;color:#CFDBF0;font-size:14.5px;line-height:1.5;margin-top:3px}
+@media(min-width:960px){
+ .tf-dossier{grid-template-columns:.95fr 1.05fr;gap:56px;padding:56px 52px;align-items:start}
+ .tf-dos-intro{position:sticky;top:110px}
+}
+@media(max-width:959px){.tf-dos-cta{width:100%}}
