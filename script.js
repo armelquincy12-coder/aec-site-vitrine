@@ -63,7 +63,8 @@ if (projectForm) {
         if (gt && gt !== "none") cols = gt.split(" ").length;
         else cols = 4;
       }
-      e.style.transitionDelay = (sib % Math.max(cols, 1)) * 100 + "ms";
+      var stg = e.parentElement && e.parentElement.getAttribute("data-stagger");
+      e.style.transitionDelay = stg ? (sib % Math.max(cols, 1)) * parseInt(stg, 10) + "ms" : (sib % Math.max(cols, 1)) * 100 + "ms";
       e.classList.add("reveal");
       io.observe(e);
     });
@@ -217,4 +218,43 @@ document.addEventListener("click", function (e) {
       b.addEventListener("click", function () { go(b.getAttribute("data-to") === "avant" ? 100 : 0); });
     });
   });
+})();
+
+
+// ---- Onglets (profils) : clavier + fondu ----
+(function () {
+  document.querySelectorAll("[data-tabs]").forEach(function (root) {
+    var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute("aria-controls")); });
+    function sel(i, focus) {
+      tabs.forEach(function (t, k) {
+        var on = k === i;
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.tabIndex = on ? 0 : -1;
+        if (on) { panels[k].hidden = false; } else { panels[k].hidden = true; }
+      });
+      if (focus) tabs[i].focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener("click", function () { sel(i); });
+      t.addEventListener("keydown", function (e) {
+        var n = null;
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") n = (i + 1) % tabs.length;
+        else if (e.key === "ArrowLeft" || e.key === "ArrowUp") n = (i + tabs.length - 1) % tabs.length;
+        else if (e.key === "Home") n = 0; else if (e.key === "End") n = tabs.length - 1;
+        if (n !== null) { e.preventDefault(); sel(n, true); }
+      });
+    });
+  });
+})();
+
+// ---- Frise : le fil doré se dessine à l'entrée dans l'écran ----
+(function () {
+  var tl = document.querySelectorAll("[data-tl]");
+  if (!tl.length) return;
+  if (!("IntersectionObserver" in window)) { tl.forEach(function (e) { e.classList.add("tl-in"); }); return; }
+  var io = new IntersectionObserver(function (en) {
+    en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("tl-in"); io.unobserve(x.target); } });
+  }, { threshold: 0.15 });
+  tl.forEach(function (e) { io.observe(e); });
 })();

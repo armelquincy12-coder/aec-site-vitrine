@@ -1214,3 +1214,40 @@ html{scroll-padding-top:90px}
 @media(max-width:900px){
  main>section:last-of-type{padding-bottom:max(80px,var(--sec-pad,0px))!important}
 }
+
+
+/* ===== Tarifs : finitions premium ===== */
+.tf-sel{align-self:flex-start;margin-top:14px;background:transparent;color:var(--gold-text);border:1.5px solid var(--gold);padding:9px 18px;font-size:13.5px;font-weight:700;border-radius:999px;width:auto}
+.tf-sel:hover,.tf-sel:focus-visible{background:var(--gold);color:var(--navy)}
+.cn-offer .tf-sel{width:auto}
+/* Onglets */
+.tf-tabs{margin-top:34px}
+.tf-tablist{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:900px){.tf-tablist{grid-template-columns:repeat(4,1fr)}}
+.tf-tablist button{font:inherit;font-weight:600;font-size:14.5px;line-height:1.3;color:var(--navy);background:#fff;border:1px solid var(--bordure);border-radius:14px;padding:14px 12px;cursor:pointer;text-align:center;transition:background .25s,color .25s,border-color .25s,box-shadow .25s}
+.tf-tablist button:hover{border-color:var(--gold)}
+.tf-tablist button[aria-selected="true"]{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 12px 26px -14px rgba(13,25,127,.7)}
+.tf-tablist button:focus-visible{outline:3px solid rgba(212,175,55,.8);outline-offset:2px}
+.tf-panels{margin-top:14px}
+.tf-panel{background:#fff;border:1px solid var(--bordure);border-top:4px solid var(--gold);border-radius:18px;padding:26px 24px;animation:tfFade .45s ease both}
+.tf-panel[hidden]{display:none}
+@keyframes tfFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.tf-panel h3{margin:0 0 8px;font-size:20px;color:var(--navy)}
+.tf-panel>p{margin:0 0 14px;font-size:16px;line-height:1.6;color:#2D3748;max-width:720px}
+.tf-list-2{display:grid;grid-template-columns:1fr;gap:8px 24px;margin-bottom:12px}
+@media(min-width:760px){.tf-list-2{grid-template-columns:1fr 1fr}}
+/* À la carte : prix en encadré or */
+.tf-table td.tf-name{font-weight:700;color:var(--navy)}
+.tf-badge{display:inline-block;background:#FBF4DC;border:1.5px solid var(--gold);color:var(--navy);font-weight:700;padding:6px 14px;border-radius:999px;white-space:nowrap}
+.tf-table td[data-l="Prestation"]{color:var(--navy)}
+@media(max-width:700px){.tf-table td.tf-name{font-size:16px}}
+/* Frise du dossier : fil doré qui se dessine */
+.tf-tl::before{transform-origin:top;transform:scaleY(0);transition:transform 1.6s cubic-bezier(.3,.7,.2,1)}
+.tf-tl.tl-in::before{transform:scaleY(1)}
+.tf-tl .tf-tl-item,.tf-tl .tf-tl-phase{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+.tf-tl.tl-in .tf-tl-item,.tf-tl.tl-in .tf-tl-phase{opacity:1;transform:none}
+.tf-tl.tl-in>li:nth-child(1){transition-delay:.05s}.tf-tl.tl-in>li:nth-child(2){transition-delay:.25s}.tf-tl.tl-in>li:nth-child(3){transition-delay:.4s}.tf-tl.tl-in>li:nth-child(4){transition-delay:.55s}.tf-tl.tl-in>li:nth-child(5){transition-delay:.7s}.tf-tl.tl-in>li:nth-child(6){transition-delay:.85s}.tf-tl.tl-in>li:nth-child(7){transition-delay:1s}.tf-tl.tl-in>li:nth-child(8){transition-delay:1.15s}.tf-tl.tl-in>li:nth-child(9){transition-delay:1.3s}.tf-tl.tl-in>li:nth-child(10){transition-delay:1.45s}
+@media(prefers-reduced-motion:reduce){.tf-tl::before{transform:none;transition:none}.tf-tl .tf-tl-item,.tf-tl .tf-tl-phase{opacity:1;transform:none;transition:none}.tf-panel{animation:none}}
+html:not(.js) .tf-tl::before{transform:none}
+html:not(.js) .tf-tl .tf-tl-item,html:not(.js) .tf-tl .tf-tl-phase{opacity:1;transform:none}
+@media(max-width:900px){main>section:last-of-type{padding-bottom:90px!important}}
