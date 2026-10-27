@@ -1191,3 +1191,16 @@ html{scroll-padding-top:90px}
  .tf-dos-intro{position:sticky;top:110px}
 }
 @media(max-width:959px){.tf-dos-cta{width:100%}}
+
+/* Dossier de chantier : version fond clair */
+.tf-dossier{background:#fff;border:1px solid var(--bordure);box-shadow:0 20px 40px -28px rgba(13,25,127,.35)}
+.tf-dossier::before{display:none}
+.tf-dos-eyebrow{color:var(--gold-text)}
+.tf-dossier h3{color:var(--navy)}
+.tf-dossier h3 em{color:var(--gold-text)}
+.tf-dossier .tf-dos-intro>p{color:#2D3748}
+.tf-tl::before{background:linear-gradient(var(--gold),rgba(212,175,55,.3))}
+.tf-tl-phase span{background:#FBF4DC;color:var(--gold-text);border-color:rgba(212,175,55,.6)}
+.tf-tl-item .tf-n{background:var(--navy);color:var(--gold);box-shadow:0 0 0 5px #fff}
+.tf-tl-item strong{color:var(--navy)}
+.tf-tl-item div span{color:#2D3748}
