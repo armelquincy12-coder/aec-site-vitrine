@@ -1110,7 +1110,7 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
 .tf-sit .tf-list{margin-top:10px}
 .tf-sit .link-arrow{margin-top:auto;padding-top:10px}
 .tf-sub{margin:48px 0 4px;font-size:20px;color:var(--navy)}
-.tf-note{margin:18px auto 0;max-width:760px;text-align:center;font-size:14px;color:#64748B;line-height:1.6}
+.tf-note{margin:18px 0 0;max-width:760px;text-align:left;font-size:14.5px;color:#475569;line-height:1.6}
 .cn-offer>p{flex:0 0 auto!important}
 
 /* Tarifs v3 */
