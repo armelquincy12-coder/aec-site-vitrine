@@ -1284,3 +1284,17 @@ html:not(.js) .tf-tl .tf-tl-item,html:not(.js) .tf-tl .tf-tl-phase{opacity:1;tra
 .reveal.in .cn-ico{animation:icoPop .7s cubic-bezier(.34,1.56,.64,1) .25s both}
 @keyframes icoPop{from{transform:scale(.4) rotate(-20deg);opacity:0}to{transform:none;opacity:1}}
 @media(prefers-reduced-motion:reduce){.js .reveal,.js .ap-split.reveal .ap-text,.js .ap-split.reveal .ap-photo{transform:none;transition:opacity .6s ease}.reveal.in .cn-ico{animation:none}}
+
+/* ===== Affichage ordinateur premium (28/10/2026) =====
+   Fonds pleine largeur, contenu centré et plafonné pour garder une lecture
+   confortable sur grand écran ; en-tête translucide avec ombre au défilement. */
+@media (min-width: 1100px) {
+  .wrap { max-width: 1240px; margin: 0 auto; width: 100%; padding: 0 48px; box-sizing: border-box; }
+  .section-head, .section-lead { max-width: 720px; }
+  .section > .wrap > p, .page-hero-inner .lead { max-width: 64ch; }
+}
+@media (min-width: 1500px) {
+  .wrap { max-width: 1320px; }
+}
+.nav { background: rgba(9, 18, 91, 0.94); -webkit-backdrop-filter: saturate(1.4) blur(12px); backdrop-filter: saturate(1.4) blur(12px); transition: box-shadow .3s ease; }
+.nav.nav-scrolled { box-shadow: 0 10px 30px -12px rgba(9, 18, 91, 0.55); }

@@ -258,3 +258,12 @@ document.addEventListener("click", function (e) {
   }, { threshold: 0.15 });
   tl.forEach(function (e) { io.observe(e); });
 })();
+
+/* En-tête : ombre douce dès que la page défile. */
+(function () {
+  var nav = document.getElementById("nav");
+  if (!nav) return;
+  function maj() { nav.classList.toggle("nav-scrolled", window.scrollY > 8); }
+  window.addEventListener("scroll", maj, { passive: true });
+  maj();
+})();
