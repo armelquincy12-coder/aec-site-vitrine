@@ -1308,3 +1308,22 @@ html:not(.js) .tf-tl .tf-tl-item,html:not(.js) .tf-tl .tf-tl-phase{opacity:1;tra
 @media (min-width: 1500px) {
   .xc-wrap { max-width: 1320px; }
 }
+
+/* Alignement grand écran (suite) : photo de page, galerie, contact, pages légales. */
+@media (min-width: 1100px) {
+  .page-hero-photo { margin: 30px 0 0; }
+  .cn-gallery-2 { max-width: none !important; margin: 0 !important; }
+  #contact .contact-inner { max-width: calc(min(100vw, 1240px) - 96px); margin-left: auto; margin-right: auto; padding: 64px; flex-wrap: nowrap; align-items: flex-start; justify-content: space-between; gap: 64px; }
+  #contact .contact-text { flex: 1 1 58%; max-width: none; }
+  #contact .contact-side { flex: 0 0 360px; }
+  .detail-block { max-width: 760px; margin-left: 0; margin-right: 0; }
+}
+@media (min-width: 1500px) {
+  #contact .contact-inner { max-width: calc(1320px - 96px); }
+}
+@media (min-width: 1100px) {
+  .wrap[style*="max-width:760px"] { max-width: 1240px !important; }
+}
+@media (min-width: 1500px) {
+  .wrap[style*="max-width:760px"] { max-width: 1320px !important; }
+}
