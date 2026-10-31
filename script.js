@@ -267,3 +267,28 @@ document.addEventListener("click", function (e) {
   window.addEventListener("scroll", maj, { passive: true });
   maj();
 })();
+
+/* Accueil : diaporama d'en-tête (fondu, pause au survol, désactivé si mouvement réduit). */
+(function () {
+  var hero = document.querySelector(".hero-slider");
+  if (!hero) return;
+  var slides = hero.querySelectorAll(".hero-slide");
+  var dots = hero.querySelectorAll(".hero-dots button");
+  var tag = document.getElementById("heroTag");
+  if (slides.length < 2) return;
+  var i = 0, timer = null;
+  var reduit = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function aller(n) {
+    slides[i].classList.remove("is-active"); if (dots[i]) dots[i].classList.remove("is-active");
+    i = (n + slides.length) % slides.length;
+    slides[i].classList.add("is-active"); if (dots[i]) dots[i].classList.add("is-active");
+    if (tag) tag.textContent = slides[i].getAttribute("data-label") || "";
+  }
+  function demarrer() { if (reduit || timer) return; timer = setInterval(function () { aller(i + 1); }, 6000); }
+  function arreter() { clearInterval(timer); timer = null; }
+  dots.forEach(function (d, k) { d.addEventListener("click", function () { arreter(); aller(k); demarrer(); }); });
+  hero.addEventListener("mouseenter", arreter);
+  hero.addEventListener("mouseleave", demarrer);
+  document.addEventListener("visibilitychange", function () { document.hidden ? arreter() : demarrer(); });
+  demarrer();
+})();
