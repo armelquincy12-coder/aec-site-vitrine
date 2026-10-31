@@ -45,7 +45,7 @@ if (projectForm) {
 // ---- Apparitions douces au défilement (le contenu reste visible si le script échoue) ----
 (function () {
   document.documentElement.classList.add("js");
-  var sel = ".section-head, .engagement, .domain-card, .target-card, .portfolio-card, .feature-card, .pack-card, .detail-block, .profile-card, .closing-banner, .contact-inner, .testi-card, .testi-invite, .cn-card, .cn-offer, .cn-fig, .ar-steps li, .cn-why, .ba-card, .tf-acc, .tf-table-wrap, .ap-split, .ap-legal, .cn-sit, .tf-sub, .tf-note, .tf-tabs, .tf-dos-intro, .tf-tl-item, .xa-item, .xc-trust-item, .xc-step, .xc-eyebrow, .xc-title";
+  var sel = ".section-head, .engagement, .domain-card, .target-card, .portfolio-card, .feature-card, .pack-card, .detail-block, .profile-card, .closing-banner, .contact-inner, .testi-card, .testi-invite, .cn-card, .cn-offer, .cn-fig, .ar-steps li, .cn-why, .ba-card, .tf-acc, .tf-table-wrap, .ap-split, .ap-legal, .cn-sit, .tf-sub, .tf-note, .tf-tabs, .tf-dos-intro, .tf-tl-item, .aud-card, .ent-dom, .xa-item, .xc-trust-item, .xc-step, .xc-eyebrow, .xc-title";
   var els = Array.prototype.slice.call(document.querySelectorAll(sel));
   if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); }
   else {
