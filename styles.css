@@ -1348,3 +1348,10 @@ html:not(.js) .tf-tl .tf-tl-item,html:not(.js) .tf-tl .tf-tl-phase{opacity:1;tra
   .hero-dots button{width:24px}.hero-dots button.is-active{width:34px}
 }
 @media (prefers-reduced-motion:reduce){.hero-slide{transition:opacity .01s;transform:none!important}}
+
+/* Confiance diaspora : cartes à fond blanc */
+.xc-trust-item{background:#fff;border:1px solid rgba(255,255,255,.9);box-shadow:0 14px 34px -18px rgba(4,8,40,.55);-webkit-backdrop-filter:none;backdrop-filter:none}
+.xc-trust-item:hover{background:#fff;border-color:var(--xc-gold);transform:translateY(-4px)}
+.xc-trust-item h3{color:var(--xc-blue)}
+.xc-trust-item p{color:#334155}
+.xc-trust-item .xc-ico{background:rgba(212,175,55,.16);border-color:rgba(184,147,46,.55);color:var(--xc-gold-dark)}
