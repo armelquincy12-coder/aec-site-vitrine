@@ -1355,3 +1355,9 @@ html:not(.js) .tf-tl .tf-tl-item,html:not(.js) .tf-tl .tf-tl-phase{opacity:1;tra
 .xc-trust-item h3{color:var(--xc-blue)}
 .xc-trust-item p{color:#334155}
 .xc-trust-item .xc-ico{background:rgba(212,175,55,.16);border-color:rgba(184,147,46,.55);color:var(--xc-gold-dark)}
+
+/* Accueil : problème client sur les cartes « Pour qui ? » + livrables de la méthode */
+.target-pain{margin:2px 0 4px;padding:10px 12px;background:#FFFBEB;border-radius:8px;font-size:14.5px;line-height:1.5;font-weight:600;color:var(--navy)}
+.xc-step .xc-livrables{margin-top:10px;font-size:14.5px;line-height:1.55;color:var(--xc-ink)}
+.xc-step .xc-livrables strong{color:var(--xc-gold-dark);font-weight:700}
+.target-desc{text-align:left}
