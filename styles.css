@@ -1416,3 +1416,5 @@ html:not(.js) .tf-tl .tf-tl-item,html:not(.js) .tf-tl .tf-tl-phase{opacity:1;tra
 @media(max-width:760px){.ex-cols{grid-template-columns:1fr}.ex-photos{grid-template-columns:1fr 1fr 1fr}}
 .ex-progress{height:12px;overflow:visible;margin:26px 0 18px}
 .ex-progress em{inset:auto;top:-24px;left:0;display:block;color:var(--navy);text-shadow:none;font-size:14px}
+
+.hero-slogan{margin:14px 0 0;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75)}
