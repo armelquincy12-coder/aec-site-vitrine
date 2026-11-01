@@ -1439,3 +1439,15 @@ html:not(.js) .tf-tl .tf-tl-item,html:not(.js) .tf-tl .tf-tl-phase{opacity:1;tra
 .ex-doc h3{margin:0 0 8px;font-size:16px;color:var(--navy)}
 .ex-doc ol{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:7px;font-size:14.5px;line-height:1.45;color:#2D3748}
 @media(max-width:900px){.ex-docs{grid-template-columns:1fr 1fr}}@media(max-width:560px){.ex-docs{grid-template-columns:1fr}}
+
+/* Textes de prestations : chapeau + intitulé de liste */
+.cn-lead-in{margin:6px 0 0!important;font-weight:700;font-size:14.5px!important;color:var(--navy)!important}
+.cn-offer .tf-list li strong{color:var(--navy)}
+
+/* Images des profils et bandeau Architecture */
+.aud-imgs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:-4px -4px 8px}
+.aud-imgs-1{grid-template-columns:1fr}
+.aud-imgs img{width:100%;height:150px;object-fit:cover;border-radius:10px;display:block}
+.domain-secondary-img{display:grid;grid-template-columns:240px 1fr;gap:22px;align-items:center;text-align:left}
+.domain-secondary-img img{width:100%;height:180px;object-fit:cover;border-radius:12px}
+@media(max-width:700px){.domain-secondary-img{grid-template-columns:1fr}.domain-secondary-img img{height:170px}.aud-imgs img{height:140px}}
