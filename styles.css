@@ -1418,3 +1418,16 @@ html:not(.js) .tf-tl .tf-tl-item,html:not(.js) .tf-tl .tf-tl-phase{opacity:1;tra
 .ex-progress em{inset:auto;top:-24px;left:0;display:block;color:var(--navy);text-shadow:none;font-size:14px}
 
 .hero-slogan{margin:14px 0 0;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+
+/* Accueil simplifié */
+.aud-grid-3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.aud-grid-3{grid-template-columns:1fr}}
+.proof{padding:18px 0 4px;background:#fff}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.proof-item{display:flex;flex-direction:column;gap:2px;padding:14px 16px;border-left:4px solid var(--gold);background:#F4F7FD;border-radius:10px;text-decoration:none;color:var(--navy)}
+.proof-item strong{font-size:18px}.proof-item span{font-size:14px;color:#475569;line-height:1.45}
+@media(max-width:760px){.proof-grid{grid-template-columns:1fr}}
+.xc-option-wide{grid-column:1/-1}
+.xc-more{margin:22px 0 0;text-align:center}.xc-more a{font-weight:700;color:var(--navy);text-decoration:underline}
+.xc-more-l{text-align:left}
+.faq-more{margin-top:22px;text-align:center;font-size:15px}.faq-more a{font-weight:700;color:var(--navy)}
