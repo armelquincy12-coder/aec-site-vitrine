@@ -1456,3 +1456,8 @@ html:not(.js) .tf-tl .tf-tl-item,html:not(.js) .tf-tl .tf-tl-phase{opacity:1;tra
 .aud-eyebrow{font-size:22px;letter-spacing:.04em;line-height:1.2;font-weight:800}
 .aud-card strong{font-size:17px}
 @media(max-width:700px){.aud-eyebrow{font-size:21px}}
+
+/* Cadrage des nouvelles illustrations */
+.pres-photo img[src*="equipe-gilet"]{object-position:50% 42%}
+img[src*="architecture-plan-bureau"]{object-position:50% 58%}
+img[src*="chantier-fondations"]{object-position:50% 60%}
