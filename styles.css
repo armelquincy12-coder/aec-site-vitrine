@@ -1431,3 +1431,11 @@ html:not(.js) .tf-tl .tf-tl-item,html:not(.js) .tf-tl .tf-tl-phase{opacity:1;tra
 .xc-more{margin:22px 0 0;text-align:center}.xc-more a{font-weight:700;color:var(--navy);text-decoration:underline}
 .xc-more-l{text-align:left}
 .faq-more{margin-top:22px;text-align:center;font-size:15px}.faq-more a{font-weight:700;color:var(--navy)}
+
+.doc-n{display:inline-block;margin-right:4px;padding:1px 8px;border-radius:999px;background:rgba(212,175,55,.18);border:1px solid rgba(212,175,55,.55);font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--gold-text,#8A6A00);white-space:nowrap}
+.xc-mesh .doc-n{color:var(--gold-text,#8A6A00)}
+.ex-docs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:6px 0 34px}
+.ex-doc{background:#fff;border:1px solid var(--bordure,#E2E8F0);border-top:4px solid var(--gold);border-radius:12px;padding:14px}
+.ex-doc h3{margin:0 0 8px;font-size:16px;color:var(--navy)}
+.ex-doc ol{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:7px;font-size:14.5px;line-height:1.45;color:#2D3748}
+@media(max-width:900px){.ex-docs{grid-template-columns:1fr 1fr}}@media(max-width:560px){.ex-docs{grid-template-columns:1fr}}
