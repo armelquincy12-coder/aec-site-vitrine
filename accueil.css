@@ -1,0 +1,101 @@
+/* ===== Accueil — grille unique « texte à gauche / visuel à droite » ===== */
+body.home{--sp-line:#DCE5F5;--sp-soft:#F3F7FD;--sp-navy:#14267F;--sp-gold:#C99A2E;--sp-gold-text:#8A6A1F;background:#fff}
+body.home .sp{position:relative;padding:96px 0;overflow:hidden;background-image:none}
+body.home .sp::before,body.home .sp::after{display:none!important}
+body.home .sp-white{background:#fff}
+body.home .sp-soft{background:var(--sp-soft)}
+body.home .sp-navy{background:linear-gradient(135deg,#14267F 0%,#1B34B5 100%);color:#fff}
+body.home .sp>.wrap{position:relative;z-index:1}
+
+body.home .sp-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center}
+body.home .sp-grid-wide-right{grid-template-columns:minmax(0,4fr) minmax(0,7fr)}
+body.home .sp-grid-cards{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+body.home .sp-sticky{position:sticky;top:110px;align-self:start}
+body.home .sp-vis,body.home .sp-cards,body.home .sp-text{min-width:0}
+
+/* système de titres unique */
+body.home .sp-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 16px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--sp-gold-text)}
+body.home .sp-eyebrow::before{content:"";width:34px;height:2px;background:var(--sp-gold)}
+body.home .sp-navy .sp-eyebrow{color:#E6C46A}
+body.home .sp-navy .sp-eyebrow::before{background:#E6C46A}
+body.home .sp-title{margin:0;max-width:none;font-family:'Syne','Plus Jakarta Sans',sans-serif;font-weight:800;font-size:40px;line-height:1.14;letter-spacing:-.01em;color:#0F1D66}
+body.home .sp-title em{font-style:normal;color:var(--sp-gold-text)}
+body.home .sp-navy .sp-title{color:#fff}
+body.home .sp-navy .sp-title em{color:#E6C46A}
+body.home .sp-lead{margin:18px 0 0;max-width:520px;font-size:16.5px;line-height:1.7;color:#3B4568}
+body.home .sp-lead+.sp-lead{margin-top:12px}
+body.home .sp-navy .sp-lead{color:#DCE5FF}
+body.home .sp-text .btn{margin-top:28px}
+body.home .sp-text .faq-more{margin-top:24px;line-height:1.9;font-size:15px}
+body.home .sp-text .faq-more a{color:#0F1D66;font-weight:600}
+
+/* cartes */
+body.home .sp-cards{display:grid;gap:20px}
+body.home .sp-cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+body.home .sp-cards-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+body.home .sp-card{display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid var(--sp-line);border-radius:18px;box-shadow:0 12px 32px rgba(15,29,102,.08);color:#1F2937;transition:transform .25s,box-shadow .25s}
+body.home .sp-card-link:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,29,102,.14)}
+body.home .sp-card img{display:block;width:100%;height:150px;object-fit:cover}
+body.home .sp-card-body{display:flex;flex-direction:column;gap:8px;padding:18px 20px 22px;flex:1}
+body.home .sp-card h3{margin:0;font-size:18px;line-height:1.25;color:#0F1D66;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800}
+body.home .sp-card p{font-size:14.5px;line-height:1.6;color:#3B4568}
+body.home .sp-more{margin-top:auto;padding-top:6px;font-size:13.5px;font-weight:700;color:var(--sp-gold-text)}
+body.home .sp-tag{align-self:flex-start;padding:3px 10px;border-radius:999px;background:#FFF4D6;color:var(--sp-gold-text);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+body.home .sp-card-dark{background:#0F1D66;border-color:#0F1D66}
+body.home .sp-card-dark h3{color:#fff}
+body.home .sp-card-dark p{color:#D3DCFF}
+body.home .sp-card-dark .sp-more{color:#E6C46A}
+body.home .sp-card-dark .sp-tag{background:rgba(255,255,255,.14);color:#F3D88A}
+
+/* médias */
+body.home .sp-media{position:relative;margin:0;border-radius:22px;overflow:hidden;box-shadow:0 22px 50px rgba(15,29,102,.18)}
+body.home .sp-media img{display:block;width:100%;height:100%;min-height:420px;max-height:560px;object-fit:cover}
+body.home .sp-media-tall img{max-height:640px;object-position:50% 42%}
+body.home .sp-media figcaption{position:absolute;left:14px;bottom:14px;padding:5px 12px;border-radius:999px;background:rgba(11,20,64,.82);color:#fff;font-size:12px;font-weight:600}
+
+/* diaspora */
+body.home .sp-checks{display:grid;gap:16px;margin:26px 0 0}
+body.home .sp-checks li{display:flex;gap:14px;align-items:flex-start}
+body.home .sp-checks svg{width:26px;height:26px;padding:5px;border-radius:50%;background:#E6C46A;color:#0F1D66;margin-top:2px}
+body.home .sp-checks strong{display:block;font-size:16.5px;color:#fff}
+body.home .sp-checks span{display:block;margin-top:2px;font-size:14.5px;line-height:1.55;color:#D3DCFF}
+
+/* clients */
+body.home .sp-logos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;list-style:none;margin:0;padding:0}
+body.home .sp-logos li{display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;max-height:210px;padding:22px;background:#fff;border:1px solid var(--sp-line);border-radius:18px;box-shadow:0 12px 32px rgba(15,29,102,.07)}
+body.home .sp-logos img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+
+/* composants existants intégrés */
+body.home .xa{max-width:none}
+body.home .faq-list{max-width:none}
+body.home .xc-flat{background:none;padding:0}
+body.home .xc-flat .xc-timeline{margin:0;max-width:none}
+body.home .pf-slider{margin-top:0}
+body.home .pf-track .portfolio-card{flex:0 0 calc((100% - 24px)/2)}
+body.home .pf-track .portfolio-card img{border-radius:16px}
+
+/* hero : texte à gauche */
+body.home .hero-text{align-items:flex-start;text-align:left;max-width:640px}
+body.home .hero-inner-solo{justify-content:flex-start}
+body.home .hero-text .cta-row,body.home .hero-text .cta-links{justify-content:flex-start}
+
+@media (max-width:1024px){
+  body.home .sp-grid,body.home .sp-grid-wide-right,body.home .sp-grid-cards{grid-template-columns:1fr;gap:36px}
+  body.home .sp-sticky{position:static}
+  body.home .sp-title{font-size:34px}
+  body.home .sp-cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  body.home .sp-media img{min-height:320px}
+}
+@media (max-width:700px){
+  body.home .sp{padding:60px 0}
+  body.home .sp-title{font-size:28px}
+  body.home .sp-lead{font-size:15.5px}
+  body.home .sp-cards-3,body.home .sp-cards-2{grid-template-columns:1fr}
+  body.home .sp-card img{height:170px}
+  body.home .sp-logos{gap:12px}
+  body.home .sp-logos li{padding:14px}
+  body.home .pf-track .portfolio-card{flex:0 0 82%}
+  body.home .sp-media img{min-height:260px}
+}
+body.home .sp-text .faq-more{text-align:left}
+body.home .sp-logos li{padding:30px}
