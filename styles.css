@@ -1462,3 +1462,10 @@ html:not(.js) .tf-tl .tf-tl-item,html:not(.js) .tf-tl .tf-tl-phase{opacity:1;tra
 img[src*="architecture-plan-bureau"]{object-position:50% 58%}
 img[src*="chantier-fondations"]{object-position:50% 60%}
 .ap-photo img[src*="gerant-armel"]{object-position:50% 12%}
+
+/* Ils nous font confiance */
+.clients-band{background:#fff;border-top:1px solid #E1E8F5;border-bottom:1px solid #E1E8F5}
+.clients-row{list-style:none;margin:36px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.clients-row li{flex:0 1 200px;height:160px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #D9E2F3;border-radius:14px;padding:16px}
+.clients-row img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+@media (max-width:640px){.clients-row{gap:12px}.clients-row li{flex:0 0 calc(50% - 6px);height:130px}}
