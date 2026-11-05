@@ -172,6 +172,34 @@ document.addEventListener("click", function (e) {
 })();
 
 
+// ---- Sections à défilement horizontal (flèches + défilement auto optionnel) ----
+(function () {
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll("[data-slider]").forEach(function (root) {
+    var tr = root.querySelector(".sp-track");
+    if (!tr) return;
+    function step() { var c = tr.querySelector(".sp-slide"); return c ? c.getBoundingClientRect().width + 20 : 300; }
+    function go(d) {
+      var end = tr.scrollLeft + tr.clientWidth >= tr.scrollWidth - 4;
+      if (d > 0 && end) tr.scrollTo({ left: 0, behavior: "smooth" });
+      else if (d < 0 && tr.scrollLeft <= 4) tr.scrollTo({ left: tr.scrollWidth, behavior: "smooth" });
+      else tr.scrollBy({ left: d * step(), behavior: "smooth" });
+    }
+    var timer = null;
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    root.querySelector(".sp-next").addEventListener("click", function () { stop(); go(1); });
+    root.querySelector(".sp-prev").addEventListener("click", function () { stop(); go(-1); });
+    tr.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { stop(); go(1); } else if (e.key === "ArrowLeft") { stop(); go(-1); }
+    });
+    if (root.hasAttribute("data-autoplay") && !reduce) {
+      timer = setInterval(function () { go(1); }, 5000);
+      ["pointerdown", "touchstart", "wheel", "focusin", "mouseenter"].forEach(function (ev) { root.addEventListener(ev, stop, { passive: true }); });
+    }
+  });
+})();
+
+
 // ---- Comparateur Avant / Après (souris, toucher, clavier via input range) ----
 (function () {
   document.querySelectorAll("[data-ba]").forEach(function (f) {
