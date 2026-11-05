@@ -18,7 +18,7 @@ body.home .sp-eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 16px;f
 body.home .sp-eyebrow::before{content:"";width:34px;height:2px;background:var(--sp-gold)}
 body.home .sp-navy .sp-eyebrow{color:#E6C46A}
 body.home .sp-navy .sp-eyebrow::before{background:#E6C46A}
-body.home .sp-title{margin:0;max-width:none;font-family:'Syne','Plus Jakarta Sans',sans-serif;font-weight:800;font-size:40px;line-height:1.14;letter-spacing:-.01em;color:#0F1D66}
+body.home .sp-title{margin:0;max-width:none;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:38px;line-height:1.14;letter-spacing:-.01em;color:#0F1D66}
 body.home .sp-title em{font-style:normal;color:var(--sp-gold-text)}
 body.home .sp-navy .sp-title{color:#fff}
 body.home .sp-navy .sp-title em{color:#E6C46A}
