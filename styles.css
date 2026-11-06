@@ -1484,3 +1484,7 @@ img[src*="chantier-fondations"]{object-position:50% 60%}
 .ap-closing .cn-cta-row{margin-top:24px}
 .ap-vision h2{margin:8px 0 18px}
 .ap-text h2{margin-bottom:18px}
+.en-sect{margin-top:44px;max-width:760px}.en-sect h3{font-size:20px;color:var(--navy);margin:0 0 10px}.cn-offer .tf-list{margin-bottom:14px}
+.ap-vision .tf-list,.en-sect .tf-list{margin:0 0 18px}
+#contact-entreprise .closing-lead{font-size:16.5px!important;font-weight:400!important;line-height:1.65;max-width:620px;margin:10px auto 0}
+#contact-entreprise .closing-lead strong{font-weight:700;color:#E6C46A}
