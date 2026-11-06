@@ -148,3 +148,8 @@ body.home #problemes .sp-next,body.home #methode .sp-next{left:56px;right:auto}
   body.home #domaines .sp-btn{top:80px}
   body.home #problemes .sp-prev,body.home #methode .sp-prev{left:2px}
 }
+
+body.home .sp-punch{margin:22px 0 0;padding-left:16px;border-left:3px solid var(--sp-gold);font-weight:700;font-size:17px;line-height:1.5;color:#0F1D66}
+body.home .contact-lead{margin:14px 0 0;max-width:560px;font-size:16.5px;line-height:1.65;color:#DCE5FF}
+body.home .contact-lead-strong{margin:8px 0 22px;font-weight:700;color:#E6C46A}
+body.home .faq-a p+p{margin-top:10px}
