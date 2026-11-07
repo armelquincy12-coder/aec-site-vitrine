@@ -1564,3 +1564,9 @@ main .section-dark h2 .gold-text,main .section-dark h2.on-dark .gold-text{color:
   .cn-offers::-webkit-scrollbar,.cn-grid4::-webkit-scrollbar{display:none}
   .cn-offers>*,.cn-grid4>*{flex:0 0 84%;scroll-snap-align:start;min-width:0}
 }
+
+/* Fond blanc (comme l'accueil) sur les sections « claires » alternées des pages intérieures */
+body:not(.home) .section:not(.section-light):not(.section-dark):not(.xc){background-color:#fff}
+body:not(.home) .section:not(.section-light):not(.section-dark):not(.xc) .cn-offer,
+body:not(.home) .section:not(.section-light):not(.section-dark):not(.xc) .cn-card{background:#F3F7FD;border:1px solid #DCE5F5}
+body:not(.home) .section:not(.section-light):not(.section-dark):not(.xc)::after{display:none}
