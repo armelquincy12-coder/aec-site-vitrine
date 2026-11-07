@@ -1490,3 +1490,22 @@ img[src*="chantier-fondations"]{object-position:50% 60%}
 #contact-entreprise .closing-lead strong{font-weight:700;color:#E6C46A}
 @media(min-width:900px){.cn-offers.cn-offers-4{grid-template-columns:1fr 1fr}}
 .cn-offer h3+p{margin-top:8px}
+
+/* Entreprises : sliders + sections bleues */
+.en-slider{position:relative;min-width:0;margin-top:30px;padding-bottom:62px}
+.en-slider .sp-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding:6px 2px 18px;scrollbar-width:none;align-items:stretch}
+.en-slider .sp-track::-webkit-scrollbar{display:none}
+.en-slider .sp-slide{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start;min-width:0}
+.en-slider .sp-btn{position:absolute;bottom:0;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#1B34B5;font-size:26px;line-height:1;cursor:pointer;box-shadow:0 8px 20px -6px rgba(27,52,181,.45);display:grid;place-items:center;padding:0 0 3px}
+.en-slider .sp-btn:hover{background:#D4AF37}
+.en-slider .sp-prev{left:2px}.en-slider .sp-next{left:56px}
+.en-step{position:relative}
+.en-step .ar-n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#1B34B5;color:#fff;font-weight:700;margin-bottom:10px}
+@media(max-width:1000px){.en-slider .sp-slide{flex:0 0 calc((100% - 20px)/2)}}
+@media(max-width:700px){.en-slider .sp-slide{flex:0 0 84%}.en-slider .sp-btn{width:38px;height:38px}.en-slider .sp-next{left:50px}}
+.en-blue .ap-vision{max-width:820px}
+.en-blue .ap-vision h2{color:#fff}
+.en-blue .ap-vision p,.en-blue .tf-list li{color:#DCE5FF}
+.en-blue .ap-quote{color:#E6C46A!important;border-color:#E6C46A}
+.en-blue .gold-text{color:#E6C46A}
+.en-blue .tf-list li::before{filter:brightness(1.4)}
