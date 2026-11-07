@@ -37,7 +37,7 @@
     <nav class="nav-links">
       <a href="index.html#accueil">Accueil</a>
       <a href="a-propos.html">À propos</a>
-      <a href="index.html#domaines" class="active">Nos services</a>
+      <div class="nav-dd"><a href="index.html#domaines" class="active">Nos services <span class="nav-caret" aria-hidden="true">▾</span></a><div class="nav-dd-menu"><a href="construction.html">Construction</a><a href="renovation.html">Rénovation</a><a href="amenagement.html">Aménagement</a><a href="architecture.html">Architecture &amp; ingénierie</a></div></div>
       <a href="entreprises.html">Entreprises</a>
       <a href="index.html#realisations">Réalisations</a>
       <a href="tarifs.html">Tarifs</a>
@@ -53,7 +53,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html#accueil">Accueil</a>
   <a href="a-propos.html">À propos</a>
-  <a href="index.html#domaines">Nos services</a>
+  <a href="index.html#domaines">Nos services</a><a href="construction.html" class="mm-sub">Construction</a><a href="renovation.html" class="mm-sub">Rénovation</a><a href="amenagement.html" class="mm-sub">Aménagement</a><a href="architecture.html" class="mm-sub">Architecture &amp; ingénierie</a>
   <a href="entreprises.html">Entreprises</a>
   <a href="index.html#realisations">Réalisations</a>
   <a href="tarifs.html">Tarifs</a>
@@ -81,13 +81,13 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="ap-vision">
+      <div class="ap-split"><div class="ap-vision">
         <span class="eyebrow eyebrow-dark">— LE BUREAU D’ÉTUDES</span>
         <h2>La préparation technique, <span class="gold-text">une étape essentielle de votre investissement.</span></h2>
         <p>Avant de construire ou de transformer un bâtiment, il est important de définir ce que l’on souhaite réaliser, de vérifier la cohérence des solutions envisagées et d’estimer les ressources nécessaires.</p>
         <p>Le bureau d’études AEC accompagne les particuliers, les entreprises et les investisseurs dans cette phase de préparation.</p>
         <p>Notre approche associe conception, réflexion technique et estimation financière afin de donner une meilleure visibilité au projet avant l’exécution.</p>
-      </div>
+      </div><figure class="cn-fig ap-split-fig"><img src="assets/photos/architecture-plan-etage.jpg" alt="Extrait de plan d’étage" loading="lazy"><span class="cn-badge cn-badge-render">Plans et documents architecturaux</span><figcaption>Pour visualiser et préparer avant de construire</figcaption></figure></div>
     </div>
   </section>
 
@@ -97,11 +97,15 @@
         <span class="eyebrow eyebrow-dark">— NOS PRESTATIONS D’ÉTUDES</span>
         <h2>Des compétences pour <span class="gold-text">préparer chaque étape de votre projet.</span></h2>
       </div>
-      <div class="cn-offers cn-offers-4">
-        <article class="cn-offer"><h3>Architecture et conception</h3><p>Étude des besoins, organisation des espaces, esquisses, plans architecturaux, façades, coupes et visualisations 3D selon le niveau de prestation retenu.</p></article>
-        <article class="cn-offer"><h3>Études techniques et structurelles</h3><p>Préparation des documents techniques nécessaires au projet, notamment les études de structure, plans de coffrage, plans de ferraillage et notes de calcul, selon les besoins et les compétences spécialisées mobilisées.</p></article>
-        <article class="cn-offer"><h3>Métrés et estimation budgétaire</h3><p>Quantification des ouvrages, identification des quantités de matériaux et estimation des coûts pour disposer d’une base de préparation financière.</p></article>
-        <article class="cn-offer"><h3>Assistance et préparation technique</h3><p>Conseils sur les solutions constructives, variantes techniques, choix des matériaux et préparation des interventions selon les besoins du projet.</p></article>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-offer"><h3>Architecture et conception</h3><p>Étude des besoins, organisation des espaces, esquisses, plans architecturaux, façades, coupes et visualisations 3D selon le niveau de prestation retenu.</p></article>
+        <article class="sp-slide cn-offer"><h3>Études techniques et structurelles</h3><p>Préparation des documents techniques nécessaires au projet, notamment les études de structure, plans de coffrage, plans de ferraillage et notes de calcul, selon les besoins et les compétences spécialisées mobilisées.</p></article>
+        <article class="sp-slide cn-offer"><h3>Métrés et estimation budgétaire</h3><p>Quantification des ouvrages, identification des quantités de matériaux et estimation des coûts pour disposer d’une base de préparation financière.</p></article>
+        <article class="sp-slide cn-offer"><h3>Assistance et préparation technique</h3><p>Conseils sur les solutions constructives, variantes techniques, choix des matériaux et préparation des interventions selon les besoins du projet.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
       </div>
     </div>
   </section>
@@ -127,10 +131,14 @@
         <h2>Des études adaptées <span class="gold-text">à l’avancement de votre projet</span></h2>
         <p class="section-lead">Vous n’avez pas toujours besoin d’une étude complète pour commencer. Selon votre projet, AEC peut intervenir sur une étape précise ou sur plusieurs niveaux d’étude. Les prestations, le niveau de détail et les documents remis sont définis avant le démarrage de chaque mission.</p>
       </div>
-      <div class="cn-grid4 tf-3">
-        <article class="cn-card"><h3>Étude de conception</h3><p>Pour définir l’organisation des espaces, les volumes et les grandes orientations architecturales.</p></article>
-        <article class="cn-card"><h3>Étude de développement</h3><p>Pour approfondir les choix architecturaux et préparer les documents complémentaires nécessaires à la définition du projet.</p></article>
-        <article class="cn-card"><h3>Préparation technique</h3><p>Pour établir les documents techniques et les éléments quantitatifs nécessaires à la préparation des travaux.</p></article>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-card"><h3>Étude de conception</h3><p>Pour définir l’organisation des espaces, les volumes et les grandes orientations architecturales.</p></article>
+        <article class="sp-slide cn-card"><h3>Étude de développement</h3><p>Pour approfondir les choix architecturaux et préparer les documents complémentaires nécessaires à la définition du projet.</p></article>
+        <article class="sp-slide cn-card"><h3>Préparation technique</h3><p>Pour établir les documents techniques et les éléments quantitatifs nécessaires à la préparation des travaux.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
       </div>
     </div>
   </section>
@@ -171,11 +179,15 @@
         <span class="eyebrow eyebrow-dark">— POURQUOI AEC ?</span>
         <h2>Pourquoi confier <span class="gold-text">vos études à AEC ?</span></h2>
       </div>
-      <div class="cn-grid4">
-        <article class="cn-card"><h3>Une approche qui associe conception et réalisation</h3><p>Notre expérience de la préparation des travaux nous permet de tenir compte des contraintes de mise en œuvre dès la conception.</p></article>
-        <article class="cn-card"><h3>Une meilleure visibilité sur votre investissement</h3><p>Les métrés et estimations permettent de mieux anticiper les dépenses et de préparer votre budget.</p></article>
-        <article class="cn-card"><h3>Des propositions compréhensibles</h3><p>Nous cherchons à présenter les choix techniques et les documents de manière claire afin de faciliter vos décisions.</p></article>
-        <article class="cn-card"><h3>Une continuité possible vers la réalisation</h3><p>Si vous le souhaitez, les études peuvent constituer une première étape vers une mission de réalisation ou d’accompagnement par AEC, selon les conditions convenues.</p></article>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-card"><h3>Une approche qui associe conception et réalisation</h3><p>Notre expérience de la préparation des travaux nous permet de tenir compte des contraintes de mise en œuvre dès la conception.</p></article>
+        <article class="sp-slide cn-card"><h3>Une meilleure visibilité sur votre investissement</h3><p>Les métrés et estimations permettent de mieux anticiper les dépenses et de préparer votre budget.</p></article>
+        <article class="sp-slide cn-card"><h3>Des propositions compréhensibles</h3><p>Nous cherchons à présenter les choix techniques et les documents de manière claire afin de faciliter vos décisions.</p></article>
+        <article class="sp-slide cn-card"><h3>Une continuité possible vers la réalisation</h3><p>Si vous le souhaitez, les études peuvent constituer une première étape vers une mission de réalisation ou d’accompagnement par AEC, selon les conditions convenues.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
       </div>
     </div>
   </section>

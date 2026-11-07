@@ -84,6 +84,20 @@ if (projectForm) {
   document.body.appendChild(a);
 })();
 
+// ---- Barre d'action fixe (mobile) : Appeler · WhatsApp · Devis ----
+(function () {
+  if (document.querySelector(".m-bar")) return;
+  var devis = document.getElementById("devis") ? "#devis" : "index.html#devis";
+  var b = document.createElement("div");
+  b.className = "m-bar";
+  b.setAttribute("role", "navigation");
+  b.setAttribute("aria-label", "Contacter AEC");
+  b.innerHTML = '<a class="m-bar-call" href="tel:+242050238985"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Appeler</a>' +
+    '<a class="m-bar-wa" href="https://wa.me/242050238985?text=' + encodeURIComponent("Bonjour AEC, je souhaite parler de mon projet.") + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/></svg>WhatsApp</a>' +
+    '<a class="m-bar-devis" href="' + devis + '">Devis</a>';
+  document.body.appendChild(b);
+})();
+
 // ---- Barre d'annonce fermable ----
 (function () {
   var closed = false;
@@ -185,6 +199,8 @@ document.addEventListener("click", function (e) {
       else if (d < 0 && tr.scrollLeft <= 4) tr.scrollTo({ left: tr.scrollWidth, behavior: "smooth" });
       else tr.scrollBy({ left: d * step(), behavior: "smooth" });
     }
+    function chk() { root.classList.toggle("no-nav", tr.scrollWidth <= tr.clientWidth + 4); }
+    chk(); window.addEventListener("resize", chk); window.addEventListener("load", chk);
     var timer = null;
     function stop() { if (timer) { clearInterval(timer); timer = null; } }
     root.querySelector(".sp-next").addEventListener("click", function () { stop(); go(1); });
@@ -319,4 +335,16 @@ document.addEventListener("click", function (e) {
   hero.addEventListener("mouseleave", demarrer);
   document.addEventListener("visibilitychange", function () { document.hidden ? arreter() : demarrer(); });
   demarrer();
+})();
+
+
+// ---- Barre d'action fixe (mobile) ----
+(function () {
+  if (document.querySelector(".mbar")) return;
+  var b = document.createElement("nav");
+  b.className = "mbar"; b.setAttribute("aria-label", "Contacter AEC");
+  b.innerHTML = '<a href="tel:+242050238985" class="mbar-call">Appeler</a>' +
+    '<a href="https://wa.me/242050238985" class="mbar-wa" target="_blank" rel="noopener">WhatsApp</a>' +
+    '<a href="index.html#devis" class="mbar-devis">Devis</a>';
+  document.body.appendChild(b);
 })();

@@ -37,7 +37,7 @@
     <nav class="nav-links">
       <a href="index.html#accueil">Accueil</a>
       <a href="a-propos.html">À propos</a>
-      <a href="index.html#domaines" class="active">Nos services</a>
+      <div class="nav-dd"><a href="index.html#domaines" class="active">Nos services <span class="nav-caret" aria-hidden="true">▾</span></a><div class="nav-dd-menu"><a href="construction.html">Construction</a><a href="renovation.html">Rénovation</a><a href="amenagement.html">Aménagement</a><a href="architecture.html">Architecture &amp; ingénierie</a></div></div>
       <a href="entreprises.html">Entreprises</a>
       <a href="index.html#realisations">Réalisations</a>
       <a href="tarifs.html">Tarifs</a>
@@ -53,7 +53,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html#accueil">Accueil</a>
   <a href="a-propos.html">À propos</a>
-  <a href="index.html#domaines">Nos services</a>
+  <a href="index.html#domaines">Nos services</a><a href="construction.html" class="mm-sub">Construction</a><a href="renovation.html" class="mm-sub">Rénovation</a><a href="amenagement.html" class="mm-sub">Aménagement</a><a href="architecture.html" class="mm-sub">Architecture &amp; ingénierie</a>
   <a href="entreprises.html">Entreprises</a>
   <a href="index.html#realisations">Réalisations</a>
   <a href="tarifs.html">Tarifs</a>
@@ -81,13 +81,13 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="ap-vision">
+      <div class="ap-split"><div class="ap-vision">
         <span class="eyebrow eyebrow-dark">— NOTRE APPROCHE</span>
         <h2>Chaque bâtiment mérite <span class="gold-text">une solution adaptée à son état.</span></h2>
         <p>Un projet de rénovation ne consiste pas uniquement à remplacer des équipements ou à refaire les finitions. Il faut d’abord comprendre l’état du bâtiment, identifier les travaux nécessaires et distinguer les interventions prioritaires des améliorations souhaitées.</p>
         <p>Chez AEC, nous privilégions une approche qui commence par l’observation et l’évaluation de l’existant.</p>
         <p>Cette préparation permet de mieux définir les travaux, d’anticiper les besoins et de proposer une intervention cohérente avec votre budget.</p>
-      </div>
+      </div><figure class="cn-fig ap-split-fig"><img src="assets/photos/mcv-apres-3.jpg" alt="MCV Services — portail après rénovation" loading="lazy"><span class="cn-badge cn-badge-real">Photo réelle · Après</span><figcaption>MCV Services — direction générale, après rénovation</figcaption></figure></div>
     </div>
   </section>
 
@@ -97,11 +97,15 @@
         <span class="eyebrow eyebrow-dark">— NOS SOLUTIONS DE RÉNOVATION</span>
         <h2>Des interventions pour <span class="gold-text">améliorer, réparer et transformer.</span></h2>
       </div>
-      <div class="cn-offers cn-offers-4">
-        <article class="cn-offer"><h3>Rénovation intérieure et esthétique</h3><p>Modernisation des espaces et amélioration des finitions : peinture, carrelage, revêtements de sols, faux plafonds, menuiserie, éclairage, aménagement intérieur et autres travaux de finition.</p></article>
-        <article class="cn-offer"><h3>Rénovation technique</h3><p>Interventions sur les éléments nécessitant une remise en état : plomberie, installations électriques, étanchéité, toiture, maçonnerie, fissures et autres désordres identifiés après évaluation.</p></article>
-        <article class="cn-offer"><h3>Réhabilitation et remise en état</h3><p>Travaux visant à améliorer l’état général et les conditions d’utilisation d’un bâtiment : reprises d’ouvrages, remplacement d’éléments dégradés, réfection des installations et rénovation des espaces.</p></article>
-        <article class="cn-offer"><h3>Extension et transformation</h3><p>Adaptation d’un bâtiment à de nouveaux besoins : création de pièces, modification de distributions intérieures, extensions et transformations, après étude de leur faisabilité technique.</p></article>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-offer"><h3>Rénovation intérieure et esthétique</h3><p>Modernisation des espaces et amélioration des finitions : peinture, carrelage, revêtements de sols, faux plafonds, menuiserie, éclairage, aménagement intérieur et autres travaux de finition.</p></article>
+        <article class="sp-slide cn-offer"><h3>Rénovation technique</h3><p>Interventions sur les éléments nécessitant une remise en état : plomberie, installations électriques, étanchéité, toiture, maçonnerie, fissures et autres désordres identifiés après évaluation.</p></article>
+        <article class="sp-slide cn-offer"><h3>Réhabilitation et remise en état</h3><p>Travaux visant à améliorer l’état général et les conditions d’utilisation d’un bâtiment : reprises d’ouvrages, remplacement d’éléments dégradés, réfection des installations et rénovation des espaces.</p></article>
+        <article class="sp-slide cn-offer"><h3>Extension et transformation</h3><p>Adaptation d’un bâtiment à de nouveaux besoins : création de pièces, modification de distributions intérieures, extensions et transformations, après étude de leur faisabilité technique.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
       </div>
     </div>
   </section>
@@ -203,12 +207,16 @@
         <span class="eyebrow eyebrow-dark">— POURQUOI AEC ?</span>
         <h2>Pourquoi choisir AEC <span class="gold-text">pour votre rénovation ?</span></h2>
       </div>
-      <div class="cn-grid4 tf-3">
-        <article class="cn-card"><h3>Une évaluation avant intervention</h3><p>Nous cherchons à comprendre l’état du bâtiment avant de proposer les travaux.</p></article>
-        <article class="cn-card"><h3>Des propositions adaptées à vos priorités</h3><p>Les interventions sont étudiées en fonction de vos besoins, de l’état de l’existant et de votre budget.</p></article>
-        <article class="cn-card"><h3>Une meilleure visibilité financière</h3><p>Les postes de travaux sont identifiés afin de faciliter la compréhension des coûts et les choix de finition.</p></article>
-        <article class="cn-card"><h3>Une organisation des interventions</h3><p>Les différents corps de métier sont mobilisés selon les besoins et l’ordre de réalisation des travaux.</p></article>
-        <article class="cn-card"><h3>Un suivi de proximité</h3><p>Nous privilégions les échanges avec le client et le suivi des interventions selon les modalités convenues.</p></article>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-card"><h3>Une évaluation avant intervention</h3><p>Nous cherchons à comprendre l’état du bâtiment avant de proposer les travaux.</p></article>
+        <article class="sp-slide cn-card"><h3>Des propositions adaptées à vos priorités</h3><p>Les interventions sont étudiées en fonction de vos besoins, de l’état de l’existant et de votre budget.</p></article>
+        <article class="sp-slide cn-card"><h3>Une meilleure visibilité financière</h3><p>Les postes de travaux sont identifiés afin de faciliter la compréhension des coûts et les choix de finition.</p></article>
+        <article class="sp-slide cn-card"><h3>Une organisation des interventions</h3><p>Les différents corps de métier sont mobilisés selon les besoins et l’ordre de réalisation des travaux.</p></article>
+        <article class="sp-slide cn-card"><h3>Un suivi de proximité</h3><p>Nous privilégions les échanges avec le client et le suivi des interventions selon les modalités convenues.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
       </div>
     </div>
   </section>
@@ -219,12 +227,16 @@
         <span class="eyebrow eyebrow-dark">— NOTRE MÉTHODE</span>
         <h2>Notre méthode <span class="gold-text">de rénovation</span></h2>
       </div>
-      <ol class="ar-steps">
-        <li><span class="ar-n">1</span><h3>Évaluation du bâtiment</h3><p>Échange avec le client, visite si nécessaire et observation de l’état de l’existant.</p></li>
-        <li><span class="ar-n">2</span><h3>Définition des travaux</h3><p>Identification des interventions, des priorités et des solutions envisageables.</p></li>
-        <li><span class="ar-n">3</span><h3>Estimation et validation</h3><p>Préparation du devis, choix des matériaux et définition des conditions d’intervention.</p></li>
-        <li><span class="ar-n">4</span><h3>Réalisation et suivi</h3><p>Organisation des travaux, coordination des intervenants et suivi de l’avancement selon la mission convenue.</p></li>
-      </ol>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-card en-step"><span class="ar-n">1</span><h3>Évaluation du bâtiment</h3><p>Échange avec le client, visite si nécessaire et observation de l’état de l’existant.</p></article>
+        <article class="sp-slide cn-card en-step"><span class="ar-n">2</span><h3>Définition des travaux</h3><p>Identification des interventions, des priorités et des solutions envisageables.</p></article>
+        <article class="sp-slide cn-card en-step"><span class="ar-n">3</span><h3>Estimation et validation</h3><p>Préparation du devis, choix des matériaux et définition des conditions d’intervention.</p></article>
+        <article class="sp-slide cn-card en-step"><span class="ar-n">4</span><h3>Réalisation et suivi</h3><p>Organisation des travaux, coordination des intervenants et suivi de l’avancement selon la mission convenue.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
+      </div>
     </div>
   </section>
 

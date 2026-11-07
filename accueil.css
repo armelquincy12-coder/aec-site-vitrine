@@ -153,3 +153,25 @@ body.home .sp-punch{margin:22px 0 0;padding-left:16px;border-left:3px solid var(
 body.home .contact-lead{margin:14px 0 0;max-width:560px;font-size:16.5px;line-height:1.65;color:#DCE5FF}
 body.home .contact-lead-strong{margin:8px 0 22px;font-weight:700;color:#E6C46A}
 body.home .faq-a p+p{margin-top:10px}
+
+body.home .sp-facts{background:#0F1D66;color:#fff;padding:26px 0}
+body.home .sp-facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+body.home .sp-facts li{display:flex;flex-direction:column;gap:4px;padding-left:16px;border-left:2px solid #D4AF37}
+body.home .sp-facts strong{font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:28px;font-weight:800;color:#E6C46A;line-height:1.1}
+body.home .sp-facts span{font-size:14px;line-height:1.45;color:#DCE5FF}
+@media(max-width:900px){body.home .sp-facts ul{grid-template-columns:1fr 1fr;gap:18px}body.home .sp-facts strong{font-size:23px}}
+
+/* Titres accueil : accent doré réservé au titre principal et aux fonds bleus */
+body.home .sp-white:not(#presentation) .sp-title em,body.home .sp-soft .sp-title em{color:inherit}
+/* Bandeau « AEC en bref » */
+body.home .sp-band{background:#fff;border-top:1px solid #E3EAF8;border-bottom:1px solid #E3EAF8;padding:34px 0}
+body.home .sp-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+body.home .sp-stats div{border-left:3px solid #D4AF37;padding-left:16px}
+body.home .sp-stats strong{display:block;font:800 34px/1.1 "Plus Jakarta Sans",sans-serif;color:#1B34B5}
+body.home .sp-stats span{display:block;margin-top:6px;font-size:14px;line-height:1.5;color:#4A5568}
+@media(max-width:800px){body.home .sp-stats{grid-template-columns:1fr 1fr;gap:20px 14px}body.home .sp-stats strong{font-size:28px}}
+/* Contact : rassurance */
+body.home .contact-assure{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px;max-width:560px}
+body.home .contact-assure li{position:relative;padding-left:24px;color:#DCE5FF;font-size:15px;line-height:1.5}
+body.home .contact-assure li::before{content:"✓";position:absolute;left:0;color:#E6C46A;font-weight:700}
+body.home .contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}

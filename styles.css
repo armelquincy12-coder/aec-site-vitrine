@@ -878,12 +878,12 @@ fieldset.xc-fs{border:0;margin:0;padding:0;min-width:0}
 
 /* Motifs plus visibles (v2) : sections claires et blanches */
 .section:not(.section-dark):not(.xc){position:relative;overflow:hidden;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='139'%3E%3Cg fill='none' stroke='%231B34B5' stroke-opacity='.085' stroke-width='1'%3E%3Cpath d='M0 0l80 139L160 0zM0 139L80 0l80 139zM0 0h160M0 139h160M40 69.5h80'/%3E%3C/g%3E%3C/svg%3E");background-size:160px 139px}
-.section:not(.section-dark):not(.xc):not(.section-light)::after{content:"";position:absolute;right:-70px;top:-30px;width:min(460px,78vw);aspect-ratio:1;pointer-events:none;z-index:0;opacity:.7;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='139'%3E%3Cg fill='none' stroke='%231B34B5' stroke-opacity='.045' stroke-width='1'%3E%3Cpath d='M0 0l80 139L160 0zM0 139L80 0l80 139zM0 0h160M0 139h160M40 69.5h80'/%3E%3C/g%3E%3C/svg%3E");background-size:160px 139px}
+.section:not(.section-dark):not(.xc):not(.section-light)::after{content:"";position:absolute;right:-70px;top:-30px;width:min(460px,78vw);aspect-ratio:1;pointer-events:none;z-index:0;opacity:.32;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='1.4'%3E%3Cpath d='M200 20L380 330H20zM200 20L110 175L290 175zM110 175L20 330L200 330zM290 175L200 330L380 330M110 175H290'/%3E%3C/g%3E%3Cg fill='%23D4AF37'%3E%3Ccircle cx='200' cy='20' r='4'/%3E%3Ccircle cx='20' cy='330' r='4'/%3E%3Ccircle cx='380' cy='330' r='4'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;
   -webkit-mask-image:linear-gradient(225deg,#000 10%,transparent 72%);mask-image:linear-gradient(225deg,#000 10%,transparent 72%)}
 .section:not(.section-dark):not(.xc)>.wrap{position:relative;z-index:1}
-.section-light::after{opacity:.75}
+.section-light::after{opacity:.4}
 
 /* Header : logo 42px, bouton Devis compact */
 .logo-img{height:42px!important;width:auto}
@@ -1509,3 +1509,58 @@ img[src*="chantier-fondations"]{object-position:50% 60%}
 .en-blue .ap-quote{color:#E6C46A!important;border-color:#E6C46A}
 .en-blue .gold-text{color:#E6C46A}
 .en-blue .tf-list li::before{filter:brightness(1.4)}
+
+/* Titres : le doré n'est conservé que sur les titres principaux */
+main .section h2 .gold-text{color:inherit}
+main .page-hero+.section h2 .gold-text{color:var(--gold-text)}
+main .section-dark h2 .gold-text,main .section-dark h2.on-dark .gold-text{color:#E6C46A}
+/* Sliders : masquer les flèches s'il n'y a rien à faire défiler */
+.en-slider.no-nav{padding-bottom:6px}.en-slider.no-nav .sp-btn{display:none}
+.en-slider .cn-offer{height:100%}
+/* Menu Nos services */
+.nav-dd{position:relative;display:inline-block}
+.nav-dd-menu{position:absolute;top:100%;left:-14px;min-width:210px;background:#fff;border-radius:14px;box-shadow:0 18px 40px -14px rgba(15,29,102,.45);padding:8px;display:none;z-index:120}
+.nav-dd:hover .nav-dd-menu,.nav-dd:focus-within .nav-dd-menu{display:block}
+.nav-dd-menu a{display:block;padding:10px 14px;border-radius:9px;color:#0F1D66!important;font-size:14px;font-weight:600;white-space:nowrap}
+.nav-dd-menu a:hover{background:#EEF3FF}
+.nav-caret{font-size:10px;opacity:.7;margin-left:2px}
+.mobile-menu .mm-sub{padding-left:22px;font-size:15px;opacity:.9}
+/* Barre d'action mobile */
+.mbar{display:none}
+@media(max-width:760px){
+  .mbar{display:grid;grid-template-columns:1fr 1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:95;background:#0F1D66;box-shadow:0 -8px 24px -10px rgba(0,0,0,.45);padding:8px 8px calc(8px + env(safe-area-inset-bottom));gap:8px}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;border-radius:10px;font-weight:700;font-size:14px;color:#fff;background:rgba(255,255,255,.1);text-decoration:none}
+  .mbar a.mbar-wa{background:#25D366;color:#0b3d1d}
+  .mbar a.mbar-devis{background:#D4AF37;color:#0F1D66}
+  body{padding-bottom:68px}
+  .wa-float{display:none!important}
+  #toTop,.to-top{bottom:84px!important}
+}
+.contact-call{display:flex;flex-wrap:wrap;gap:8px 18px}
+
+/* ===== Polish UX ===== */
+/* Titres : l'accent doré reste réservé aux titres principaux */
+.section:not(.section-dark) h2 .gold-text{color:inherit}
+/* Fond de plans : uniquement sur les sections « light » */
+.section:not(.section-light):not(.section-dark):not(.xc){background-image:none}
+/* Photo + texte */
+.ap-split{display:grid;gap:28px;align-items:center}
+.ap-split .ap-split-fig{margin:0;position:relative}
+.ap-split .ap-split-fig img{width:100%;height:auto;border-radius:16px;display:block;aspect-ratio:4/3;object-fit:cover}
+@media(min-width:900px){.ap-split{grid-template-columns:1.1fr .9fr;gap:56px}}
+/* Barre d'action mobile */
+.m-bar{display:none}
+@media(max-width:760px){
+  .m-bar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:95;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:#fff;box-shadow:0 -8px 24px -10px rgba(14,30,100,.35)}
+  .m-bar a{display:flex;align-items:center;justify-content:center;gap:7px;min-height:46px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;color:#1B34B5;background:#EAF1FF}
+  .m-bar a svg{width:18px;height:18px}
+  .m-bar .m-bar-wa{background:#25D366;color:#fff}
+  .m-bar .m-bar-devis{background:#D4AF37;color:#1B2B6B}
+  .wa-float{display:none!important}
+  .to-top{bottom:calc(76px + env(safe-area-inset-bottom))!important}
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  /* Cartes en défilement horizontal : pages plus courtes */
+  .cn-offers,.cn-grid4{display:flex!important;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 2px 14px;scrollbar-width:none}
+  .cn-offers::-webkit-scrollbar,.cn-grid4::-webkit-scrollbar{display:none}
+  .cn-offers>*,.cn-grid4>*{flex:0 0 84%;scroll-snap-align:start;min-width:0}
+}

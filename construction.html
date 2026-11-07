@@ -37,7 +37,7 @@
     <nav class="nav-links">
       <a href="index.html#accueil">Accueil</a>
       <a href="a-propos.html">À propos</a>
-      <a href="index.html#domaines" class="active">Nos services</a>
+      <div class="nav-dd"><a href="index.html#domaines" class="active">Nos services <span class="nav-caret" aria-hidden="true">▾</span></a><div class="nav-dd-menu"><a href="construction.html">Construction</a><a href="renovation.html">Rénovation</a><a href="amenagement.html">Aménagement</a><a href="architecture.html">Architecture &amp; ingénierie</a></div></div>
       <a href="entreprises.html">Entreprises</a>
       <a href="index.html#realisations">Réalisations</a>
       <a href="tarifs.html">Tarifs</a>
@@ -53,7 +53,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html#accueil">Accueil</a>
   <a href="a-propos.html">À propos</a>
-  <a href="index.html#domaines">Nos services</a>
+  <a href="index.html#domaines">Nos services</a><a href="construction.html" class="mm-sub">Construction</a><a href="renovation.html" class="mm-sub">Rénovation</a><a href="amenagement.html" class="mm-sub">Aménagement</a><a href="architecture.html" class="mm-sub">Architecture &amp; ingénierie</a>
   <a href="entreprises.html">Entreprises</a>
   <a href="index.html#realisations">Réalisations</a>
   <a href="tarifs.html">Tarifs</a>
@@ -81,13 +81,13 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="ap-vision">
+      <div class="ap-split"><div class="ap-vision">
         <span class="eyebrow eyebrow-dark">— NOTRE APPROCHE</span>
         <h2>Une construction réussie <span class="gold-text">commence bien avant les travaux.</span></h2>
         <p>Construire représente un investissement important. Au-delà de la réalisation des ouvrages, la réussite d’un projet dépend de la qualité de sa préparation, de la pertinence des choix techniques, de la maîtrise des dépenses et de l’organisation des interventions.</p>
         <p>Chez AEC, nous accordons une importance particulière à ces étapes préalables. Notre bureau d’études intégré en architecture et ingénierie nous permet d’associer la conception, la préparation technique et l’organisation des travaux.</p>
         <p class="ap-quote">Notre objectif : vous apporter une meilleure visibilité sur votre projet avant et pendant sa réalisation.</p>
-      </div>
+      </div><figure class="cn-fig ap-split-fig"><img src="assets/photos/portfolio-villa.jpg" alt="Villa en construction — Pointe-Noire" loading="lazy"><span class="cn-badge cn-badge-site">Chantier en cours</span><figcaption>Villa — Pointe-Noire</figcaption></figure></div>
     </div>
   </section>
 
@@ -97,11 +97,15 @@
         <span class="eyebrow eyebrow-dark">— NOS PRESTATIONS EN CONSTRUCTION</span>
         <h2>Des solutions adaptées <span class="gold-text">à l’importance de votre projet.</span></h2>
       </div>
-      <div class="cn-offers cn-offers-4">
-        <article class="cn-offer"><h3>Construction neuve</h3><p>Nous vous accompagnons dans la réalisation de vos projets de construction, depuis la préparation technique jusqu’à l’exécution des travaux, selon le niveau de prestation retenu.</p><p>Maisons individuelles, bâtiments professionnels, locaux commerciaux et autres ouvrages : chaque projet fait l’objet d’une étude adaptée à ses caractéristiques.</p></article>
-        <article class="cn-offer"><h3>Gros œuvre</h3><p>Réalisation des principaux ouvrages de structure et de maçonnerie : terrassement, fondations, soubassement, élévation, béton armé, dallage et autres travaux relevant du gros œuvre, selon les études et le périmètre du projet.</p></article>
-        <article class="cn-offer"><h3>Second œuvre et finitions</h3><p>Réalisation et organisation des travaux nécessaires à l’aménagement et à la finition du bâtiment : plomberie, électricité, revêtements, carrelage, plafonds, menuiserie, peinture et autres prestations selon les besoins.</p></article>
-        <article class="cn-offer"><h3>Coordination et suivi technique</h3><p>Vous avez déjà vos artisans ou vos entreprises d’exécution ? AEC peut vous accompagner dans la préparation, la coordination et le suivi technique de votre chantier, selon une mission définie ensemble.</p></article>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-offer"><h3>Construction neuve</h3><p>Nous vous accompagnons dans la réalisation de vos projets de construction, depuis la préparation technique jusqu’à l’exécution des travaux, selon le niveau de prestation retenu.</p><p>Maisons individuelles, bâtiments professionnels, locaux commerciaux et autres ouvrages : chaque projet fait l’objet d’une étude adaptée à ses caractéristiques.</p></article>
+        <article class="sp-slide cn-offer"><h3>Gros œuvre</h3><p>Réalisation des principaux ouvrages de structure et de maçonnerie : terrassement, fondations, soubassement, élévation, béton armé, dallage et autres travaux relevant du gros œuvre, selon les études et le périmètre du projet.</p></article>
+        <article class="sp-slide cn-offer"><h3>Second œuvre et finitions</h3><p>Réalisation et organisation des travaux nécessaires à l’aménagement et à la finition du bâtiment : plomberie, électricité, revêtements, carrelage, plafonds, menuiserie, peinture et autres prestations selon les besoins.</p></article>
+        <article class="sp-slide cn-offer"><h3>Coordination et suivi technique</h3><p>Vous avez déjà vos artisans ou vos entreprises d’exécution ? AEC peut vous accompagner dans la préparation, la coordination et le suivi technique de votre chantier, selon une mission définie ensemble.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
       </div>
     </div>
   </section>
@@ -112,12 +116,16 @@
         <span class="eyebrow eyebrow-dark">— POURQUOI AEC ?</span>
         <h2>Pourquoi confier votre projet à AEC ? <span class="gold-text">Préparation et transparence.</span></h2>
       </div>
-      <div class="cn-grid4 tf-3">
-        <article class="cn-card"><h3>Une vision technique avant l’exécution</h3><p>Nous cherchons à comprendre les caractéristiques de votre projet et à préparer les interventions avant le démarrage des travaux.</p></article>
-        <article class="cn-card"><h3>Une meilleure visibilité sur votre budget</h3><p>Nos propositions financières permettent d’identifier les principaux postes de dépenses, de comprendre les quantités et d’étudier les choix de matériaux et de finitions.</p></article>
-        <article class="cn-card"><h3>Une organisation adaptée au chantier</h3><p>Nous mobilisons les compétences et les corps de métier nécessaires selon la nature des travaux et les différentes phases d’intervention.</p></article>
-        <article class="cn-card"><h3>Un suivi de proximité</h3><p>Basée à Pointe-Noire, AEC privilégie les échanges réguliers et le suivi des opérations selon les modalités convenues avec le client.</p></article>
-        <article class="cn-card"><h3>Un interlocuteur engagé</h3><p>Nous accordons de l’importance à la clarté des missions, à la communication et au respect des engagements définis avec chaque client.</p></article>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-card"><h3>Une vision technique avant l’exécution</h3><p>Nous cherchons à comprendre les caractéristiques de votre projet et à préparer les interventions avant le démarrage des travaux.</p></article>
+        <article class="sp-slide cn-card"><h3>Une meilleure visibilité sur votre budget</h3><p>Nos propositions financières permettent d’identifier les principaux postes de dépenses, de comprendre les quantités et d’étudier les choix de matériaux et de finitions.</p></article>
+        <article class="sp-slide cn-card"><h3>Une organisation adaptée au chantier</h3><p>Nous mobilisons les compétences et les corps de métier nécessaires selon la nature des travaux et les différentes phases d’intervention.</p></article>
+        <article class="sp-slide cn-card"><h3>Un suivi de proximité</h3><p>Basée à Pointe-Noire, AEC privilégie les échanges réguliers et le suivi des opérations selon les modalités convenues avec le client.</p></article>
+        <article class="sp-slide cn-card"><h3>Un interlocuteur engagé</h3><p>Nous accordons de l’importance à la clarté des missions, à la communication et au respect des engagements définis avec chaque client.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
       </div>
     </div>
   </section>
@@ -128,12 +136,16 @@
         <span class="eyebrow eyebrow-dark">— NOTRE MÉTHODE DE TRAVAIL</span>
         <h2>De la préparation <span class="gold-text">à la réception des travaux.</span></h2>
       </div>
-      <ol class="ar-steps">
-        <li><span class="ar-n">1</span><h3>Échange et compréhension du projet</h3><p>Nous échangeons sur vos besoins, vos objectifs, votre budget et les caractéristiques de votre terrain ou bâtiment.</p></li>
-        <li><span class="ar-n">2</span><h3>Études et proposition financière</h3><p>Selon votre projet, nous préparons les études nécessaires, les métrés, les estimations et une proposition technique et financière.</p></li>
-        <li><span class="ar-n">3</span><h3>Validation et préparation du chantier</h3><p>Après validation des prestations et des conditions contractuelles, nous préparons les interventions, les ressources nécessaires et le planning prévisionnel.</p></li>
-        <li><span class="ar-n">4</span><h3>Réalisation et suivi</h3><p>Les travaux sont exécutés et suivis selon le périmètre convenu, avec des échanges sur l’avancement et les éventuels ajustements nécessaires.</p></li>
-      </ol>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-card en-step"><span class="ar-n">1</span><h3>Échange et compréhension du projet</h3><p>Nous échangeons sur vos besoins, vos objectifs, votre budget et les caractéristiques de votre terrain ou bâtiment.</p></article>
+        <article class="sp-slide cn-card en-step"><span class="ar-n">2</span><h3>Études et proposition financière</h3><p>Selon votre projet, nous préparons les études nécessaires, les métrés, les estimations et une proposition technique et financière.</p></article>
+        <article class="sp-slide cn-card en-step"><span class="ar-n">3</span><h3>Validation et préparation du chantier</h3><p>Après validation des prestations et des conditions contractuelles, nous préparons les interventions, les ressources nécessaires et le planning prévisionnel.</p></article>
+        <article class="sp-slide cn-card en-step"><span class="ar-n">4</span><h3>Réalisation et suivi</h3><p>Les travaux sont exécutés et suivis selon le périmètre convenu, avec des échanges sur l’avancement et les éventuels ajustements nécessaires.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
+      </div>
     </div>
   </section>
 

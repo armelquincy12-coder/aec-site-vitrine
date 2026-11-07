@@ -37,7 +37,7 @@
     <nav class="nav-links">
       <a href="index.html#accueil">Accueil</a>
       <a href="a-propos.html">À propos</a>
-      <a href="index.html#domaines" class="active">Nos services</a>
+      <div class="nav-dd"><a href="index.html#domaines" class="active">Nos services <span class="nav-caret" aria-hidden="true">▾</span></a><div class="nav-dd-menu"><a href="construction.html">Construction</a><a href="renovation.html">Rénovation</a><a href="amenagement.html">Aménagement</a><a href="architecture.html">Architecture &amp; ingénierie</a></div></div>
       <a href="entreprises.html">Entreprises</a>
       <a href="index.html#realisations">Réalisations</a>
       <a href="tarifs.html">Tarifs</a>
@@ -53,7 +53,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html#accueil">Accueil</a>
   <a href="a-propos.html">À propos</a>
-  <a href="index.html#domaines">Nos services</a>
+  <a href="index.html#domaines">Nos services</a><a href="construction.html" class="mm-sub">Construction</a><a href="renovation.html" class="mm-sub">Rénovation</a><a href="amenagement.html" class="mm-sub">Aménagement</a><a href="architecture.html" class="mm-sub">Architecture &amp; ingénierie</a>
   <a href="entreprises.html">Entreprises</a>
   <a href="index.html#realisations">Réalisations</a>
   <a href="tarifs.html">Tarifs</a>
@@ -81,13 +81,13 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="ap-vision">
+      <div class="ap-split"><div class="ap-vision">
         <span class="eyebrow eyebrow-dark">— NOTRE APPROCHE</span>
         <h2>Un bon aménagement <span class="gold-text">ne se limite pas à l’esthétique.</span></h2>
         <p>Un espace bien aménagé doit répondre à un usage précis. Il doit faciliter les déplacements, améliorer le confort, valoriser les volumes et tenir compte des habitudes de ceux qui l’utilisent.</p>
         <p>Pour un commerce, il doit contribuer à mettre en valeur les produits et à faciliter la circulation des clients. Pour un bureau, il doit favoriser l’organisation et le confort de travail. Pour une habitation, il doit améliorer le quotidien de ses occupants.</p>
         <p>AEC associe conception, visualisation 3D, choix des matériaux et préparation des travaux pour vous aider à transformer vos espaces.</p>
-      </div>
+      </div><figure class="cn-fig ap-split-fig"><img src="assets/photos/domaine-construction.jpg" alt="Aménagement intérieur — projet AEC" loading="lazy"><span class="cn-badge cn-badge-real">Photo réelle</span><figcaption>Aménagement intérieur — Pointe-Noire</figcaption></figure></div>
     </div>
   </section>
 
@@ -97,11 +97,15 @@
         <span class="eyebrow eyebrow-dark">— NOS DOMAINES D’AMÉNAGEMENT</span>
         <h2>Des solutions <span class="gold-text">adaptées à chaque environnement.</span></h2>
       </div>
-      <div class="cn-offers cn-offers-4">
-        <article class="cn-offer"><h3>Commerces, boutiques et showrooms</h3><p>Conception et optimisation des espaces de vente, comptoirs, présentoirs, mobilier, éclairage, circulation des clients et mise en valeur des produits.</p><p>Nous cherchons à créer des espaces accueillants, fonctionnels et cohérents avec l’image de votre activité.</p></article>
-        <article class="cn-offer"><h3>Bureaux et espaces professionnels</h3><p>Aménagement des bureaux de direction, postes de travail, salles de réunion, espaces d’accueil et zones communes.</p><p>Cloisonnement, faux plafonds, revêtements, éclairage et organisation des circulations : chaque intervention est étudiée selon les usages et les contraintes de vos locaux.</p></article>
-        <article class="cn-offer"><h3>Restaurants et espaces de restauration</h3><p>Organisation des espaces d’accueil, de consommation et de circulation, réflexion sur l’ambiance, les matériaux, l’éclairage et l’agencement des différents espaces.</p></article>
-        <article class="cn-offer"><h3>Espaces résidentiels</h3><p>Aménagement des salons, chambres, cuisines et autres espaces de vie. Optimisation des volumes, rangements, mobilier, choix des matériaux et harmonisation des finitions.</p></article>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-offer"><h3>Commerces, boutiques et showrooms</h3><p>Conception et optimisation des espaces de vente, comptoirs, présentoirs, mobilier, éclairage, circulation des clients et mise en valeur des produits.</p><p>Nous cherchons à créer des espaces accueillants, fonctionnels et cohérents avec l’image de votre activité.</p></article>
+        <article class="sp-slide cn-offer"><h3>Bureaux et espaces professionnels</h3><p>Aménagement des bureaux de direction, postes de travail, salles de réunion, espaces d’accueil et zones communes.</p><p>Cloisonnement, faux plafonds, revêtements, éclairage et organisation des circulations : chaque intervention est étudiée selon les usages et les contraintes de vos locaux.</p></article>
+        <article class="sp-slide cn-offer"><h3>Restaurants et espaces de restauration</h3><p>Organisation des espaces d’accueil, de consommation et de circulation, réflexion sur l’ambiance, les matériaux, l’éclairage et l’agencement des différents espaces.</p></article>
+        <article class="sp-slide cn-offer"><h3>Espaces résidentiels</h3><p>Aménagement des salons, chambres, cuisines et autres espaces de vie. Optimisation des volumes, rangements, mobilier, choix des matériaux et harmonisation des finitions.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
       </div>
     </div>
   </section>
@@ -136,10 +140,14 @@
         <span class="eyebrow eyebrow-dark">— NOS MODES D’ACCOMPAGNEMENT</span>
         <h2>Vous choisissez <span class="gold-text">le niveau de prestation dont vous avez besoin.</span></h2>
       </div>
-      <div class="cn-grid4 tf-3">
-        <article class="cn-card"><h3>Conception et plans</h3><p>Étude de votre espace, propositions d’aménagement, plans et visualisations 3D selon la prestation retenue.</p></article>
-        <article class="cn-card"><h3>Conception et préparation technique</h3><p>Plans, choix des matériaux, indications de finitions, quantitatifs et estimation budgétaire selon le périmètre convenu.</p></article>
-        <article class="cn-card"><h3>Conception et réalisation</h3><p>AEC peut également organiser et réaliser les travaux d’aménagement, selon les prestations et conditions définies dans le devis et le contrat.</p></article>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-card"><h3>Conception et plans</h3><p>Étude de votre espace, propositions d’aménagement, plans et visualisations 3D selon la prestation retenue.</p></article>
+        <article class="sp-slide cn-card"><h3>Conception et préparation technique</h3><p>Plans, choix des matériaux, indications de finitions, quantitatifs et estimation budgétaire selon le périmètre convenu.</p></article>
+        <article class="sp-slide cn-card"><h3>Conception et réalisation</h3><p>AEC peut également organiser et réaliser les travaux d’aménagement, selon les prestations et conditions définies dans le devis et le contrat.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
       </div>
     </div>
   </section>
@@ -178,11 +186,15 @@
         <span class="eyebrow eyebrow-dark">— POURQUOI AEC ?</span>
         <h2>Pourquoi choisir AEC <span class="gold-text">pour votre aménagement ?</span></h2>
       </div>
-      <div class="cn-grid4">
-        <article class="cn-card"><h3>Une approche qui associe esthétique et fonctionnalité</h3><p>Nous cherchons à créer des espaces agréables, mais surtout adaptés à leur utilisation.</p></article>
-        <article class="cn-card"><h3>Une meilleure projection grâce à la 3D</h3><p>Vous pouvez visualiser les propositions avant de prendre vos décisions.</p></article>
-        <article class="cn-card"><h3>Des choix adaptés à votre budget</h3><p>Nous étudions les matériaux et les finitions en tenant compte de vos priorités financières.</p></article>
-        <article class="cn-card"><h3>Une continuité entre conception et travaux</h3><p>AEC peut vous accompagner de l’étude de l’aménagement jusqu’à sa réalisation, selon la mission retenue.</p></article>
+      <div class="sp-slider en-slider" data-slider>
+        <div class="sp-track" tabindex="0">
+        <article class="sp-slide cn-card"><h3>Une approche qui associe esthétique et fonctionnalité</h3><p>Nous cherchons à créer des espaces agréables, mais surtout adaptés à leur utilisation.</p></article>
+        <article class="sp-slide cn-card"><h3>Une meilleure projection grâce à la 3D</h3><p>Vous pouvez visualiser les propositions avant de prendre vos décisions.</p></article>
+        <article class="sp-slide cn-card"><h3>Des choix adaptés à votre budget</h3><p>Nous étudions les matériaux et les finitions en tenant compte de vos priorités financières.</p></article>
+        <article class="sp-slide cn-card"><h3>Une continuité entre conception et travaux</h3><p>AEC peut vous accompagner de l’étude de l’aménagement jusqu’à sa réalisation, selon la mission retenue.</p></article>
+        </div>
+        <button class="sp-btn sp-prev" type="button" aria-label="Précédent">‹</button>
+        <button class="sp-btn sp-next" type="button" aria-label="Suivant">›</button>
       </div>
     </div>
   </section>

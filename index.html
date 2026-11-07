@@ -63,7 +63,7 @@
     <nav class="nav-links">
       <a href="#accueil" class="active">Accueil</a>
       <a href="a-propos.html">À propos</a>
-      <a href="#domaines">Nos services</a>
+      <div class="nav-dd"><a href="#domaines">Nos services <span class="nav-caret" aria-hidden="true">▾</span></a><div class="nav-dd-menu"><a href="construction.html">Construction</a><a href="renovation.html">Rénovation</a><a href="amenagement.html">Aménagement</a><a href="architecture.html">Architecture &amp; ingénierie</a></div></div>
       <a href="entreprises.html">Entreprises</a>
       <a href="#realisations">Réalisations</a>
       <a href="tarifs.html">Tarifs</a>
@@ -79,7 +79,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="#accueil">Accueil</a>
   <a href="a-propos.html">À propos</a>
-  <a href="#domaines">Nos services</a>
+  <a href="#domaines">Nos services</a><a href="construction.html" class="mm-sub">Construction</a><a href="renovation.html" class="mm-sub">Rénovation</a><a href="amenagement.html" class="mm-sub">Aménagement</a><a href="architecture.html" class="mm-sub">Architecture &amp; ingénierie</a>
   <a href="entreprises.html">Entreprises</a>
   <a href="#realisations">Réalisations</a>
   <a href="tarifs.html">Tarifs</a>
@@ -138,6 +138,28 @@
   </section>
 
   <!-- POUR QUI -->
+    <!-- AEC EN BREF -->
+  <section class="sp-band" aria-label="AEC en bref">
+    <div class="wrap sp-stats">
+      <div><strong>2025</strong><span>Année de création de l’agence, à Pointe-Noire</span></div>
+      <div><strong>4</strong><span>domaines : architecture, construction, rénovation, aménagement</span></div>
+      <div><strong>7+</strong><span>corps de métier mobilisables selon le chantier</span></div>
+      <div><strong>1 mois</strong><span>pour la rénovation de la direction générale de MCV Services</span></div>
+    </div>
+  </section>
+
+  <!-- FAITS -->
+  <section class="sp-facts" aria-label="AEC en quelques repères">
+    <div class="wrap">
+      <ul>
+        <li><strong>2025</strong><span>Création de l’agence à Pointe-Noire</span></li>
+        <li><strong>4</strong><span>Domaines : architecture, construction, rénovation, aménagement</span></li>
+        <li><strong>1</strong><span>Interlocuteur unique, de l’étude à la réception</span></li>
+        <li><strong>Centre-Ville</strong><span>Agence installée Av. Marien Ngouabi</span></li>
+      </ul>
+    </div>
+  </section>
+
   <section class="sp sp-navy" id="profils" aria-label="Choisissez votre profil">
     <div class="wrap sp-grid sp-grid-cards">
       <div class="sp-text">
@@ -348,10 +370,12 @@
         <h2 class="on-dark">Vous avez un projet de construction, de rénovation ou d’aménagement ?</h2>
         <p class="contact-lead">Présentez-nous votre projet. Nous étudierons vos besoins et vous accompagnerons dans la définition d’une solution adaptée à vos attentes et à votre budget.</p>
         <p class="contact-lead contact-lead-strong">Contactez AEC pour échanger sur votre projet.</p>
+        <ul class="contact-assure"><li>Premier échange gratuit</li><li>Propositions techniques et financières détaillées</li><li>Impasse KILANTARI, Av. Marien NGOUABI, Centre-Ville, Pointe-Noire</li></ul>
+        <div class="contact-actions"><a class="btn btn-outline" href="tel:+242050238985">Appeler : +242 05 023 89 85</a><a class="btn btn-outline" href="tel:+242066685405">+242 06 668 54 05</a></div>
         <div class="xc xc-embed" id="devis">
           <form class="xc-form" id="xc-quote" novalidate>
       <div aria-live="polite">
-        <div class="xc-progress-top"><span class="a" data-xc="label">Étape 1 sur 3</span><span class="b" data-xc="name">Votre projet</span></div>
+        <div class="xc-progress-top"><span class="a" data-xc="label">Étape 1 sur 2</span><span class="b" data-xc="name">Votre projet</span></div>
         <div class="xc-track"><div class="xc-bar" data-xc="bar"></div></div>
       </div>
 
@@ -387,17 +411,6 @@
             <input id="xc-lieu" name="lieu" type="text" placeholder="Ex. Pointe-Noire, quartier…"></div>
         </div>
         <p class="xc-error" data-xc="err2" hidden>Merci de renseigner les trois champs.</p>
-      </div>
-
-      <!-- Étape 3 -->
-      <div class="xc-pane" data-step="3" hidden>
-        <p class="xc-q">Récapitulatif</p>
-        <dl class="xc-recap">
-          <div><dt>Projet</dt><dd class="strong" data-xc="rProjet"></dd></div>
-          <div><dt>Nom</dt><dd data-xc="rNom"></dd></div>
-          <div><dt>Contact</dt><dd data-xc="rTel"></dd></div>
-          <div><dt>Lieu</dt><dd data-xc="rLieu"></dd></div>
-        </dl>
         <button type="submit" class="xc-cta">Lancer l'étude de mon projet →</button>
         <p class="xc-note">Votre message s'ouvrira dans WhatsApp, prêt à être envoyé.</p>
       </div>
@@ -414,6 +427,10 @@
           <a href="https://wa.me/242050238985" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 11-4.2-7.6L21 3l-1.2 4.2A9 9 0 0121 12z" stroke="currentColor" stroke-width="1.5"/><path d="M8.5 9.5c.3 2.8 2.7 5.2 5.5 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             WhatsApp et appels : +242 05 023 89 85
+          </a>
+          <a href="tel:+242066685405">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            Appeler : +242 06 668 54 05
           </a>
           <a href="mailto:contact@agenceaec.com">
             <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.5"/></svg>
