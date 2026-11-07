@@ -1582,3 +1582,5 @@ body:not(.home) .section:not(.section-light):not(.section-dark):not(.xc)::after{
 .ar-fiche .tf-list li strong{color:var(--navy)}
 .ar-fiche .link-arrow{margin-top:auto;padding-top:8px}
 @media(max-width:760px){.ar-fiches{display:grid!important}.ar-fiches>*{flex:none}}
+.ar-fiche .ar-recu{flex:none;font-size:15px}
+.ar-fiche{gap:10px}
