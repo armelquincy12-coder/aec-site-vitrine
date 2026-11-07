@@ -1525,17 +1525,6 @@ main .section-dark h2 .gold-text,main .section-dark h2.on-dark .gold-text{color:
 .nav-dd-menu a:hover{background:#EEF3FF}
 .nav-caret{font-size:10px;opacity:.7;margin-left:2px}
 .mobile-menu .mm-sub{padding-left:22px;font-size:15px;opacity:.9}
-/* Barre d'action mobile */
-.mbar{display:none}
-@media(max-width:760px){
-  .mbar{display:grid;grid-template-columns:1fr 1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:95;background:#0F1D66;box-shadow:0 -8px 24px -10px rgba(0,0,0,.45);padding:8px 8px calc(8px + env(safe-area-inset-bottom));gap:8px}
-  .mbar a{display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;border-radius:10px;font-weight:700;font-size:14px;color:#fff;background:rgba(255,255,255,.1);text-decoration:none}
-  .mbar a.mbar-wa{background:#25D366;color:#0b3d1d}
-  .mbar a.mbar-devis{background:#D4AF37;color:#0F1D66}
-  body{padding-bottom:68px}
-  .wa-float{display:none!important}
-  #toTop,.to-top{bottom:84px!important}
-}
 .contact-call{display:flex;flex-wrap:wrap;gap:8px 18px}
 
 /* ===== Polish UX ===== */
@@ -1570,3 +1559,14 @@ body:not(.home) .section:not(.section-light):not(.section-dark):not(.xc){backgro
 body:not(.home) .section:not(.section-light):not(.section-dark):not(.xc) .cn-offer,
 body:not(.home) .section:not(.section-light):not(.section-dark):not(.xc) .cn-card{background:#F3F7FD;border:1px solid #DCE5F5}
 body:not(.home) .section:not(.section-light):not(.section-dark):not(.xc)::after{display:none}
+
+/* Barre mobile : trois pastilles-icônes flottantes au lieu d'une barre pleine largeur */
+@media(max-width:760px){
+  .m-bar{left:auto;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));grid-template-columns:none;grid-auto-flow:row;gap:10px;padding:0;background:transparent;box-shadow:none}
+  .m-bar a{width:50px;height:50px;min-height:0;border-radius:50%;box-shadow:0 6px 16px -4px rgba(14,30,100,.45);background:#1B34B5;color:#fff}
+  .m-bar a svg{width:23px;height:23px}
+  .m-bar .m-bar-wa{background:#25D366}
+  .m-bar .m-bar-devis{background:#D4AF37;color:#1B2B6B}
+  body{padding-bottom:0}
+  .to-top{right:auto!important;left:14px;bottom:calc(14px + env(safe-area-inset-bottom))!important}
+}

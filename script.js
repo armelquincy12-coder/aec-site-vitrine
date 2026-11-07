@@ -92,9 +92,10 @@ if (projectForm) {
   b.className = "m-bar";
   b.setAttribute("role", "navigation");
   b.setAttribute("aria-label", "Contacter AEC");
-  b.innerHTML = '<a class="m-bar-call" href="tel:+242050238985"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Appeler</a>' +
-    '<a class="m-bar-wa" href="https://wa.me/242050238985?text=' + encodeURIComponent("Bonjour AEC, je souhaite parler de mon projet.") + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/></svg>WhatsApp</a>' +
-    '<a class="m-bar-devis" href="' + devis + '">Devis</a>';
+  var ic = function (d) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + d + '</svg>'; };
+  b.innerHTML = '<a class="m-bar-call" href="tel:+242050238985" aria-label="Appeler AEC" title="Appeler">' + ic('<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>') + '</a>' +
+    '<a class="m-bar-wa" href="https://wa.me/242050238985?text=' + encodeURIComponent("Bonjour AEC, je souhaite parler de mon projet.") + '" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp" title="WhatsApp">' + ic('<path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 9.5c.3 2.2 2.3 4.2 4.5 4.5l1.3-1.3-1.8-1-.8.6c-.7-.3-1.4-1-1.7-1.7l.6-.8-1-1.8z"/>') + '</a>' +
+    '<a class="m-bar-devis" href="' + devis + '" aria-label="Demander un devis" title="Devis">' + ic('<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/>') + '</a>';
   document.body.appendChild(b);
 })();
 
@@ -338,13 +339,3 @@ document.addEventListener("click", function (e) {
 })();
 
 
-// ---- Barre d'action fixe (mobile) ----
-(function () {
-  if (document.querySelector(".mbar")) return;
-  var b = document.createElement("nav");
-  b.className = "mbar"; b.setAttribute("aria-label", "Contacter AEC");
-  b.innerHTML = '<a href="tel:+242050238985" class="mbar-call">Appeler</a>' +
-    '<a href="https://wa.me/242050238985" class="mbar-wa" target="_blank" rel="noopener">WhatsApp</a>' +
-    '<a href="index.html#devis" class="mbar-devis">Devis</a>';
-  document.body.appendChild(b);
-})();
