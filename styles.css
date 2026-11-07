@@ -1570,3 +1570,15 @@ body:not(.home) .section:not(.section-light):not(.section-dark):not(.xc)::after{
   body{padding-bottom:0}
   .to-top{right:auto!important;left:14px;bottom:calc(14px + env(safe-area-inset-bottom))!important}
 }
+
+/* Fiches de prestations détaillées (Architecture) */
+.ar-fiches{display:grid;gap:22px;grid-template-columns:1fr;margin-top:8px}
+@media(min-width:900px){.ar-fiches{grid-template-columns:1fr 1fr;gap:26px}}
+.ar-fiche{padding:30px 26px;gap:12px}
+.ar-fiche h4{margin:10px 0 2px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text)}
+.ar-fiche .ar-intro{flex:none;font-size:16px}
+.ar-fiche .ar-pour{flex:none;background:#F3F7FD;border-left:3px solid var(--gold);border-radius:8px;padding:10px 14px;font-size:15px}
+.ar-fiche .ar-note{flex:none;font-size:15px;color:#3B4568}
+.ar-fiche .tf-list li strong{color:var(--navy)}
+.ar-fiche .link-arrow{margin-top:auto;padding-top:8px}
+@media(max-width:760px){.ar-fiches{display:grid!important}.ar-fiches>*{flex:none}}
