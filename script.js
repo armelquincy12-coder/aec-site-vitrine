@@ -361,3 +361,14 @@ document.addEventListener("click", function (e) {
     }
   });
 })();
+
+// ---- Ouverture d'un projet de la galerie via l'ancre (#proj-mcv, #proj-mlc) ----
+(function () {
+  function ouvrir() {
+    var h = (location.hash || "").slice(1);
+    var d = h && document.getElementById(h);
+    if (d && d.tagName === "DETAILS") { d.open = true; setTimeout(function () { d.scrollIntoView({ block: "start" }); }, 60); }
+  }
+  window.addEventListener("load", ouvrir);
+  window.addEventListener("hashchange", ouvrir);
+})();
