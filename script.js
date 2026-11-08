@@ -339,3 +339,25 @@ document.addEventListener("click", function (e) {
 })();
 
 
+
+// ---- Galerie des chantiers (accueil) : ouverture depuis le carrousel + agrandissement ----
+(function () {
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("[data-open]");
+    if (a) {
+      var d = document.getElementById(a.getAttribute("data-open"));
+      if (d) { d.open = true; setTimeout(function () { d.scrollIntoView({ behavior: "smooth", block: "start" }); }, 30); }
+      e.preventDefault();
+      return;
+    }
+    var img = e.target.closest(".pj-fig img");
+    if (img) {
+      var lb = document.createElement("div");
+      lb.className = "lb"; lb.setAttribute("role", "dialog"); lb.setAttribute("aria-label", "Photo agrandie");
+      lb.innerHTML = '<img alt="' + (img.alt || "") + '" src="' + img.src + '">';
+      lb.addEventListener("click", function () { lb.remove(); });
+      document.addEventListener("keydown", function k(ev) { if (ev.key === "Escape") { lb.remove(); document.removeEventListener("keydown", k); } });
+      document.body.appendChild(lb);
+    }
+  });
+})();

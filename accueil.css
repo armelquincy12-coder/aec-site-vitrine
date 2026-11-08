@@ -175,3 +175,26 @@ body.home .contact-assure{list-style:none;margin:18px 0 0;padding:0;display:grid
 body.home .contact-assure li{position:relative;padding-left:24px;color:#DCE5FF;font-size:15px;line-height:1.5}
 body.home .contact-assure li::before{content:"✓";position:absolute;left:0;color:#E6C46A;font-weight:700}
 body.home .contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+
+/* Chantiers en photos */
+body.home .proj-photos{margin-top:56px}
+body.home .proj-title{font:800 26px/1.2 "Plus Jakarta Sans",sans-serif;color:#14267F;margin:0 0 8px}
+body.home .proj-lead{margin:0 0 20px;color:#4A5568;font-size:15.5px}
+body.home .proj{background:#fff;border:1px solid #DCE5F5;border-radius:16px;margin-bottom:14px;overflow:hidden}
+body.home .proj>summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;color:#14267F}
+body.home .proj>summary::-webkit-details-marker{display:none}
+body.home .proj>summary strong{display:block;font-size:18px}
+body.home .proj>summary span{font-size:14.5px;color:#4A5568;line-height:1.5}
+body.home .proj>summary::after{content:"+";font-size:26px;font-weight:700;color:#C99A2E;flex:none}
+body.home .proj[open]>summary::after{content:"–"}
+body.home .proj>*:not(summary){margin-left:22px;margin-right:22px}
+body.home .proj-note{margin-top:0;color:#2D3748;font-size:15px;line-height:1.6}
+body.home .pj-sub{margin:18px 22px 8px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#8A6A1F}
+body.home .pj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:6px}
+body.home .pj-fig{margin:0}
+body.home .pj-fig img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block;cursor:zoom-in}
+body.home .pj-fig figcaption{font-size:13px;color:#4A5568;margin-top:6px;line-height:1.4}
+body.home .proj>:last-child{margin-bottom:20px}
+@media(max-width:700px){body.home .pj-grid{grid-template-columns:1fr 1fr;gap:10px}body.home .proj>summary{padding:16px}}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(8,14,40,.92);display:flex;align-items:center;justify-content:center;padding:16px;cursor:zoom-out}
+.lb img{max-width:100%;max-height:100%;border-radius:8px}
