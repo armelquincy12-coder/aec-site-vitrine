@@ -1584,3 +1584,7 @@ body:not(.home) .section:not(.section-light):not(.section-dark):not(.xc)::after{
 @media(max-width:760px){.ar-fiches{display:grid!important}.ar-fiches>*{flex:none}}
 .ar-fiche .ar-recu{flex:none;font-size:15px}
 .ar-fiche{gap:10px}
+
+.tf-access.tf-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.tf-access.tf-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.tf-access.tf-4{grid-template-columns:1fr}}
