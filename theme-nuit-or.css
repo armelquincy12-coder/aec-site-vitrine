@@ -135,19 +135,20 @@ body:not(.home) .section .eyebrow,body:not(.home) .section .eyebrow-dark{color:#
   #contact .xc-card{padding:14px}
 }
 
-/* === Barre de navigation « pilule » + titres Piste 1 === */
-.nav{background:#0B1030;border-bottom:0;padding:12px 0 10px}
-.nav-inner{height:68px;padding:0 12px 0 22px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+/* === Barre de navigation « pilule » (conservée) === */
+.nav{background:#16298A;border-bottom:0;padding:12px 0 10px}
+.nav-inner{height:68px;padding:0 12px 0 22px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.10);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .logo-caption,.logo-divider{display:none}
-.logo-img{height:46px!important;width:auto}
+.logo-img{height:52px!important;width:auto}
 .nav-links a{font-family:'Inter','Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:500;letter-spacing:0;text-transform:none;color:#E3E6F7}
 .nav-links a:hover,.nav-links a.active{color:var(--or)}
 .nav-devis{padding:13px 26px;font-weight:600}
-h1,.page-hero h1{font-family:'Sora','Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-.035em;line-height:1.03;color:#fff}
-h1{font-size:clamp(40px,6vw,84px)}
-.page-hero h1{font-size:clamp(34px,4.4vw,58px)}
-h1 .gold,h1 em{color:var(--or);font-style:normal}
-.eyebrow,.eyebrow-lg{font-family:'Inter',sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.24em;color:var(--or)}
+/* style de texte d'avant : serif éditorial + italique doré */
+h1,.page-hero h1{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.03em;line-height:.97;color:#F7F3EA}
+h1{font-size:clamp(46px,7vw,92px)}
+.page-hero h1{font-size:clamp(40px,5.2vw,68px)}
+h1 .gold,h1 em{color:var(--or);font-style:italic}
+.eyebrow,.eyebrow-lg{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:12.5px;letter-spacing:.18em;color:var(--or)}
 /* cartes verre dans le hero */
 .hero-facts{position:absolute;z-index:3;right:5vw;bottom:70px;display:flex;gap:14px}
 .hero-facts div{width:158px;padding:18px 20px;border:1px solid rgba(255,255,255,.22);border-radius:20px;background:rgba(255,255,255,.09);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
@@ -170,3 +171,25 @@ h1 .gold,h1 em{color:var(--or);font-style:normal}
   .logo-img{height:44px!important}
 }
 @media(max-width:980px){.hero-slider .hero-facts{margin:22px 20px 0!important}}
+
+/* palette : bleu plus clair pour distinguer les sections */
+:root{--bleu-clair:#16298A;--bleu-moyen:#1C3399}
+body.home .sp-soft{background:var(--bleu-clair)}
+body.home .sp-navy{background:#0B1030}
+body.home .sp-facts{background:var(--bleu-clair)}
+.footer{background:var(--bleu-clair)}
+.mobile-menu{background:var(--bleu-clair)}
+body.home .sp-soft .sp-card,body.home .sp-soft .sp-info,body.home .sp-soft .faq-item,body.home .sp-soft .proj{background:rgba(11,16,48,.45)}
+/* accueil : photo du professionnel au casque AEC en fond */
+.hero-slides{display:none}
+.hero-slider{background-color:#16298A;background-image:linear-gradient(90deg,rgba(22,41,138,.88) 0%,rgba(22,41,138,.55) 48%,rgba(22,41,138,.08) 100%),url("assets/photos/apropos-hero-inspection.jpg");background-size:cover;background-position:75% center}
+.hero-slider::after{background:linear-gradient(180deg,rgba(11,16,48,.25) 0%,rgba(11,16,48,0) 40%,rgba(11,16,48,.55) 100%)}
+.hero-slide-tag,.hero-dots{display:none}
+.page-hero.page-hero--photo{background-image:linear-gradient(90deg,rgba(22,41,138,.88) 0%,rgba(22,41,138,.55) 45%,rgba(22,41,138,.06) 100%),var(--hero-img)}
+@media(max-width:760px){
+  .hero-slider{background-image:linear-gradient(180deg,rgba(22,41,138,.85) 0%,rgba(22,41,138,.5) 55%,rgba(22,41,138,.2) 100%),url("assets/photos/apropos-hero-inspection.jpg");background-position:72% center}
+  .page-hero.page-hero--photo{background-image:linear-gradient(180deg,rgba(22,41,138,.85) 0%,rgba(22,41,138,.48) 55%,rgba(22,41,138,.15) 100%),var(--hero-img)}
+}
+@media(max-width:980px){.hero-slider .hero-inner{flex:0 0 auto}.hero-slider{padding-bottom:120px}}
+@media(max-width:980px){.hero-slider .hero-facts{margin:22px auto 0!important;width:calc(100% - 40px);align-self:center}.hero-slider .cta-links{display:none}}
+@media(max-width:980px){.hero-slider{padding-bottom:190px!important}.hero-slider .hero-facts{position:absolute!important;left:20px;right:20px;bottom:62px;margin:0!important;width:auto!important}}
