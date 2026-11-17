@@ -261,3 +261,11 @@ body.svc .section p.ap-quote{color:var(--or)!important}
   .cta-pill{width:100%}
   .contact-strip .wrap{grid-template-columns:1fr}
 }
+@media(max-width:760px){
+  .contact-strip{padding:4px 0 28px}
+  .contact-strip .wrap{grid-template-columns:1fr 1fr;gap:8px}
+  .contact-strip .wrap>a,.contact-strip .wrap>div{padding:11px 12px;font-size:13px;border-radius:14px}
+  .contact-strip .wrap>a:nth-child(3),.contact-strip .wrap>div:last-child{grid-column:1/-1}
+  #contact.section{padding:36px 0 20px}
+  .cta-band h2{font-size:48px}
+}
