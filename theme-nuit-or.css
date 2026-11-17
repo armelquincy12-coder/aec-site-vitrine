@@ -200,3 +200,39 @@ body.home .sp-facts{background:var(--bleu-clair)}
   body.home #profils .sp-text,body.home #problemes .sp-text,body.home #confiance-diaspora .sp-text,body.home #clients .sp-text{order:2}
   body.home #profils .sp-text,body.home #problemes .sp-text,body.home #confiance-diaspora .sp-text,body.home #clients .sp-text{padding-left:24px}
 }
+
+/* ===== Pages services : thème sombre (body.svc) ===== */
+body.svc{background:#0B1030;color:#D5D9F3}
+body.svc .section,body.svc .section:not(.section-dark):not(.xc):not(.section-light){background-color:#0B1030;background-image:none}
+body.svc .section.section-light{background-color:#0E1540;background-image:none}
+body.svc .section::after,body.svc .section-light::after{display:none!important}
+body.svc .section h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(34px,4.4vw,58px);line-height:1.04;letter-spacing:-.03em;color:#F7F3EA}
+body.svc .section h2 .gold-text,body.svc .gold-text{color:var(--or);font-style:italic}
+body.svc .section h3{color:#F7F3EA}
+body.svc .section p,body.svc .section li{color:#D5D9F3}
+body.svc .section strong{color:#fff}
+body.svc .eyebrow,body.svc .eyebrow-dark{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:12.5px;letter-spacing:.18em;color:var(--or)}
+body.svc .ap-quote{border-left:3px solid var(--or);padding-left:18px;font-family:'Instrument Serif',Georgia,serif;font-size:24px;line-height:1.3;color:var(--or)}
+body.svc .cn-card,body.svc .cn-offer{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-top:1px solid rgba(255,255,255,.14);border-radius:24px;box-shadow:none}
+body.svc .cn-card:hover,body.svc .cn-offer:hover{border-color:var(--or);box-shadow:none}
+body.svc .cn-card h3,body.svc .cn-offer h3{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:26px;color:#F7F3EA}
+body.svc .cn-card p,body.svc .cn-offer p{color:#C9CDEB}
+body.svc .ar-n{background:var(--or);color:#0B1030}
+body.svc .cn-offer-tag{color:var(--or)}
+body.svc .cn-fig{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:24px}
+body.svc .cn-fig figcaption{color:#F7F3EA}
+body.svc .section-lead{color:#D5D9F3}
+body.svc .sp-btn{background:#fff;color:#0B1030}
+body.svc .closing-banner{background:linear-gradient(135deg,#121A45,#0B1030);border:1px solid rgba(230,198,92,.45);border-radius:32px}
+body.svc .closing-banner h2,body.svc .closing-title{color:#F7F3EA}
+body.svc .closing-lead,body.svc .closing-sign{color:#D5D9F3}
+/* alternance texte / image */
+@media(min-width:981px){
+  body.svc .ap-split{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center}
+  body.svc .section:nth-of-type(odd) .ap-split{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+  body.svc .section:nth-of-type(odd) .ap-split .ap-vision{order:2}
+}
+body.svc .section .cn-card,body.svc .section .cn-offer{background:rgba(255,255,255,.05)!important;border:1px solid rgba(255,255,255,.14)!important}
+body.svc .section .cn-card h3,body.svc .section .cn-offer h3{color:#F7F3EA!important}
+body.svc .section .cn-card p,body.svc .section .cn-offer p{color:#C9CDEB!important}
+body.svc .section p.ap-quote{color:var(--or)!important}
