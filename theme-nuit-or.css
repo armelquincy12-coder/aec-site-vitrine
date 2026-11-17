@@ -269,3 +269,7 @@ body.svc .section p.ap-quote{color:var(--or)!important}
   #contact.section{padding:36px 0 20px}
   .cta-band h2{font-size:48px}
 }
+/* coordonnées : pastilles jaunes */
+.contact-strip .wrap>a,.contact-strip .wrap>div{background:#E6C65C;border:1px solid #E6C65C;color:#0B1030;font-weight:600}
+.contact-strip .wrap>a:hover{background:#F0D676;border-color:#F0D676}
+.contact-strip span{color:#5A4510}
