@@ -25,26 +25,36 @@ h1 .gold,h1 em{color:var(--or);font-style:italic}
 .eyebrow-lg{font-size:13px}
 .lead{color:#E6E1D6}
 .hero-slide-tag{border:1px solid rgba(230,198,92,.5);font-family:'IBM Plex Mono',monospace;letter-spacing:.08em}
-/* sections claires (B) */
-body.home .sp-white{background:var(--creme)}
-body.home .sp-soft{background:var(--creme-2)}
-body.home .sp-navy,.section-dark{background:var(--nuit)}
-body.home .sp-title,.section h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(34px,4.4vw,56px);line-height:1.04;letter-spacing:-.03em;color:var(--encre)}
-body.home .sp-title em{font-style:italic;color:#8A6A12}
-body.home .sp-navy .sp-title,.section-dark h2{color:#F7F3EA}
-body.home .sp-navy .sp-title em{color:var(--or)}
-body.home .sp-eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;color:#8A6A12;letter-spacing:.18em}
-body.home .sp-eyebrow::before{background:var(--or-2)}
-body.home .sp-navy .sp-eyebrow{color:var(--or)}
-/* cartes arrondies (B) */
-body.home .sp-card{border-radius:24px;border:0;box-shadow:0 14px 36px rgba(20,23,42,.10);background:#fff}
-body.home .sp-card h3{color:var(--encre);font-weight:700}
-body.home .sp-card-dark{background:var(--nuit)}
-body.home .sp-card-dark h3{color:#fff}
+/* sections immersives sombres (Piste 1 + A) */
+body{background:var(--creme)}
+body.home{background:#070E3C;color:#E6E1D6}
+body.home .sp-white{background:#0B1030}
+body.home .sp-soft{background:#0E1540}
+body.home .sp-navy,.section-dark{background:#070E3C}
+body.home .sp-title,.section h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(36px,4.8vw,64px);line-height:1.02;letter-spacing:-.03em;color:#F7F3EA}
+body.home .sp-title em,body.home .sp-white:not(#presentation) .sp-title em,body.home .sp-soft .sp-title em{font-style:italic;color:var(--or)}
+body.home .sp-lead,body.home .sp-text p,body.home .sp-white p,body.home .sp-soft p{color:#D5D9F3}
+body.home .sp-punch{color:var(--or);font-family:'Instrument Serif',Georgia,serif;font-size:24px}
+body.home .sp-eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;color:var(--or);letter-spacing:.2em}
+body.home .sp-eyebrow::before{background:var(--or-2);width:46px;height:1px}
+/* cartes verre (Piste 1) */
+body.home .sp-card{border-radius:24px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);box-shadow:none;color:#E6E1D6}
+body.home .sp-card-link:hover{border-color:var(--or);box-shadow:none}
+body.home .sp-card h3{color:#F7F3EA;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:26px;letter-spacing:-.01em}
+body.home .sp-card p{color:#C9CDEB}
+body.home .sp-more{color:var(--or)}
+body.home .sp-tag{background:rgba(230,198,92,.14);color:var(--or);font-family:'IBM Plex Mono',monospace;letter-spacing:.1em}
+body.home .sp-card-dark{background:rgba(230,198,92,.08)}
 body.home .sp-media img,body.home .sp-media{border-radius:24px}
-body.home .sp-facts{background:var(--nuit-2);border-top:1px solid rgba(230,198,92,.3)}
-body.home .sp-facts li{border-left-color:var(--or-2)}
-body.home .sp-facts strong{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:38px;color:var(--or)}
+body.home .sp-media figcaption{font-family:'IBM Plex Mono',monospace;letter-spacing:.12em}
+body.home .sp-soft .sp-info,body.home .sp-info{background:rgba(255,255,255,.05);color:#E6E1D6;border:1px solid rgba(255,255,255,.14)}
+body.home .sp-info *{color:inherit}
+body.home .sp-facts{background:#0B1030;border-top:1px solid var(--or-2);border-bottom:1px solid rgba(230,198,92,.25)}
+body.home .sp-facts li{border-left:1px solid var(--or-2)}
+body.home .sp-facts strong{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:44px;color:var(--or)}
+body.home .sp-btn{background:#fff;color:#0B1030}
+.btn-navy{background:var(--or);color:var(--nuit)}
+.btn-navy:hover{background:var(--or-2)}
 /* pied de page */
 .footer{background:var(--nuit);border-top:1px solid rgba(230,198,92,.28)}
 .footer-links a:hover,.footer-social a:hover{color:var(--or)}
@@ -54,3 +64,34 @@ body.home .sp-facts strong{font-family:'Instrument Serif',Georgia,serif;font-wei
 }
 .page-hero.page-hero--photo{background-image:linear-gradient(90deg,rgba(11,16,48,.86) 0%,rgba(11,16,48,.55) 45%,rgba(11,16,48,.08) 100%),var(--hero-img)}
 @media(max-width:760px){.page-hero.page-hero--photo{background-image:linear-gradient(180deg,rgba(11,16,48,.82) 0%,rgba(11,16,48,.45) 55%,rgba(11,16,48,.15) 100%),var(--hero-img)}}
+body.home h3,body.home .sp-info h3,body.home .sp-info strong{color:#F7F3EA}
+body.home .sp-info .sp-num,body.home .sp-num{background:var(--or);color:var(--nuit)}
+/* corrections de contraste (fond sombre) */
+.portfolio-card figcaption,.portfolio-card figcaption *{color:#D5D9F3}
+.portfolio-card figcaption strong{color:var(--or)}
+.portfolio-card figcaption span{color:var(--or-2)}
+.pf-btn,.sp-btn{background:#fff;color:#0B1030}
+details.proj,.faq-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:18px}
+details.proj summary,details.proj summary *,.faq-item summary{color:#F7F3EA}
+details.proj summary strong{color:var(--or)}
+.proj-note,.faq-a p,.pj-fig figcaption{color:#D5D9F3}
+.pj-sub,body.home h4{color:var(--or)}
+.faq-more,.faq-more a,.link-arrow{color:var(--or)}
+body.home .sp-vis h3,body.home #realisations h3,body.home .sp-soft h3{color:#F7F3EA}
+#contact.section-dark{background:#0B1030;background-image:none}
+.contact-inner{background:linear-gradient(135deg,#121A45,#0B1030);border:1px solid rgba(230,198,92,.4);border-radius:32px;background-image:none}
+.contact-inner h2{color:#F7F3EA}
+.contact-text .eyebrow,.contact-inner .eyebrow{font-size:13px}
+body.home .sp-text .faq-more a{color:var(--or)}
+body.home .proj{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:18px}
+body.home .proj>summary{color:#F7F3EA}
+body.home .proj>summary strong{color:var(--or)}
+body.home .proj>summary span{color:#D5D9F3}
+#contact .contact-inner{background:linear-gradient(135deg,#121A45 0%,#0B1030 100%)!important;border:1px solid rgba(230,198,92,.45);box-shadow:none}
+#contact .contact-inner::before,#contact .contact-inner::after{display:none}
+.portfolio-card figcaption a{color:var(--or);text-decoration:underline}
+
+/* pages intérieures : texte clair, accents or, titres en serif */
+body:not(.home) .section h2{color:#0B1030}
+body:not(.home) .section h2 em{color:#8A6A12;font-style:italic}
+body:not(.home) .section .eyebrow,body:not(.home) .section .eyebrow-dark{color:#8A6A12}
