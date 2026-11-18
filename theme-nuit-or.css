@@ -386,6 +386,7 @@ body.home .why-card p{margin:0;font-size:15px;line-height:1.6;color:#D5D9F3}
 .qs-card svg{width:38px;height:38px;color:#E6C65C;margin-bottom:14px}
 body.home .qs-card h3{margin:0 0 10px;font-family:'Sora',sans-serif;font-size:20px;color:#F7F3EA}
 body.home .qs-card p{margin:0;font-size:15.5px;line-height:1.7;color:#D5D9F3}
-.qs-line{margin:26px 0 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-size:15px;color:#E6C65C;letter-spacing:.02em}
+.qs-line{margin:26px 0 0;line-height:1.65;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-size:15px;color:#D5D9F3}
+.qs-line strong{color:#E6C65C}
 @media(max-width:980px){.why-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.qs-grid{grid-template-columns:1fr}}
 @media(max-width:560px){.why-grid{grid-template-columns:1fr}.why-card{padding:20px 18px}}
