@@ -451,3 +451,6 @@ body.home h3.qs-title em{color:#E6C65C}
   body.home .sp-title{font-size:30px}
   body.home .sp-lead{margin-top:12px}
 }
+.dia-points{margin:4px 0 6px;padding:0;list-style:none;display:grid;gap:6px}
+.dia-points li{position:relative;padding-left:18px;font-size:13.5px;line-height:1.45;color:#D5D9F3}
+.dia-points li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:#C9A44A}
