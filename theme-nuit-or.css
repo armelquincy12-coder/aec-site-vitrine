@@ -595,3 +595,4 @@ body.svc .ar-prest,.ar-prest{background:radial-gradient(800px 420px at 90% -10%,
   .ar-slider .ar-fiches{align-items:stretch !important}
   .ar-slider .ar-fiche{height:auto}
 }
+@media(min-width:900px){.cn-offers.ar-offers{grid-template-columns:repeat(2,1fr)}}
