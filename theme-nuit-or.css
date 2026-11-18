@@ -454,3 +454,16 @@ body.home h3.qs-title em{color:#E6C65C}
 .dia-points{margin:4px 0 6px;padding:0;list-style:none;display:grid;gap:6px}
 .dia-points li{position:relative;padding-left:18px;font-size:13.5px;line-height:1.45;color:#D5D9F3}
 .dia-points li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:#C9A44A}
+
+/* À propos : Pourquoi choisir AEC + Qualité et sécurité */
+.pq-ap{background:#17298C!important}
+.pq-ap h2{color:#F7F3EA!important;font-size:clamp(32px,4vw,44px);line-height:1.12;margin:0 0 14px}
+.pq-ap h2 em,.pq-ap h3.qs-title em{color:#E6C65C!important;font-style:italic}
+.pq-ap .eyebrow{display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.16em;color:#E6C65C!important;margin:0 0 16px}
+.pq-ap .why-head p{color:#D5D9F3;max-width:620px;line-height:1.7}
+.pq-ap .why-card h3{margin:0 0 10px;font-family:'Sora',sans-serif;font-size:18px;line-height:1.3;color:#F7F3EA}
+.pq-ap .why-card p{margin:0;font-size:15px;line-height:1.6;color:#D5D9F3}
+.pq-ap h3.qs-title{margin:0 0 10px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(28px,3.2vw,38px);line-height:1.15;color:#F7F3EA}
+.pq-ap .qs-card h3{margin:0 0 10px;font-family:'Sora',sans-serif;font-size:20px;color:#F7F3EA}
+.pq-ap .qs-card p{margin:0;font-size:15.5px;line-height:1.7;color:#D5D9F3}
+.pq-ap .qs-line{max-width:none;color:#D5D9F3}
