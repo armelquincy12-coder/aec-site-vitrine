@@ -332,3 +332,18 @@ body.svc-a #realisations-amenagement h2,body.svc-a #realisations-amenagement h3{
 body.svc-a #realisations-amenagement h2 .gold-text{color:#E6C65C}
 body.svc-a #realisations-amenagement p,body.svc-a #realisations-amenagement figcaption{color:#D5D9F3}
 body.svc-a #realisations-amenagement .eyebrow,body.svc-a #realisations-amenagement a{color:#E6C65C}
+
+/* ===== Lisibilité des cartes de prestations (pages claires) ===== */
+body.svc .section .cn-offer h3,body.svc .section .cn-card h3{letter-spacing:.005em;line-height:1.2}
+body.svc .cn-offer-tag,body.svc .ar-fiche h4,body.svc .section h4{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#8A6A12}
+body.svc .ar-fiche{padding:28px 26px;gap:8px}
+body.svc .ar-fiche h4{margin:14px 0 4px}
+body.svc .ar-fiche .ar-intro,body.svc .cn-offer p{font-size:15.5px;line-height:1.55}
+body.svc .section .tf-list{gap:6px}
+body.svc .section .tf-list li{font-size:15px;line-height:1.45;margin:0}
+body.svc .section .tf-list li+li{margin-top:6px}
+@media(max-width:760px){
+  body.svc .section .tf-list li,body.svc .ar-fiche .ar-intro{font-size:15px;line-height:1.5}
+  body.svc .section .cn-offer h3{font-size:24px}
+  body.svc .ar-fiche{padding:24px 20px}
+}
