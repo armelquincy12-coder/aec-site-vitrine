@@ -517,3 +517,12 @@ body.home h3.qs-title em{color:#E6C65C}
 @media(max-width:860px){.mt-two{grid-template-columns:1fr;gap:30px}}
 .page-hero--photo .eyebrow{color:#E6C65C!important;text-shadow:0 1px 6px rgba(0,0,0,.5)}
 .page-hero--photo .lead{text-align:left!important}
+
+/* Grilles statiques (remplacent des carrousels) */
+.rn-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.rn-grid.rn-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.rn-grid>*{min-width:0;flex:none;width:auto}
+@media(max-width:860px){.rn-grid,.rn-grid.rn-4{grid-template-columns:1fr}}
+.rn-note{margin:26px 0 0;padding:16px 20px;border-left:3px solid #C9A44A;background:rgba(11,16,48,.05);font-size:15.5px;line-height:1.65;color:#3B4568;max-width:860px}
+.rn-grid.rn-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:860px){.rn-grid.rn-3{grid-template-columns:1fr}}
