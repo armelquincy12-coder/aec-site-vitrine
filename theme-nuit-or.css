@@ -421,3 +421,33 @@ body.home .qs-card p{margin:0;font-size:15.5px;line-height:1.7;color:#D5D9F3}
 #collaborer .eyebrow{display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.16em;color:#E6C65C!important;margin:0 0 16px}
 .closing-banner .closing-title{color:#F7F3EA!important}
 .closing-banner .closing-title em,.closing-banner .closing-title .gold-text{color:#E6C65C!important}
+
+/* Qualité & sécurité intégrée à Pourquoi choisir */
+.qs-block{margin-top:56px;padding-top:44px;border-top:1px solid rgba(230,198,92,.35)}
+body.home h3.qs-title{margin:0 0 10px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(28px,3.2vw,38px);line-height:1.15;color:#F7F3EA}
+body.home h3.qs-title em{color:#E6C65C}
+.qs-intro{margin:0 0 26px;max-width:640px;color:#D5D9F3;font-size:16px;line-height:1.65}
+.qs-block .qs-card{padding:24px 26px}
+.qs-block .qs-card svg{width:32px;height:32px;margin-bottom:10px}
+
+/* Raccourcissement mobile : défilement horizontal */
+@media(max-width:640px){
+  .why-grid,body.home #profils .sp-cards{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin-right:-20px;padding-right:20px;padding-bottom:6px;scrollbar-width:none}
+  .why-grid::-webkit-scrollbar,body.home #profils .sp-cards::-webkit-scrollbar{display:none}
+  .why-grid .why-card{flex:0 0 78%;scroll-snap-align:start}
+  body.home #profils .sp-card{flex:0 0 80%;scroll-snap-align:start}
+  body.home #profils .sp-card img{height:110px}
+  .qs-block{margin-top:36px;padding-top:30px}
+  .qs-block .qs-card{padding:18px 18px}
+  .qs-block .qs-card p{font-size:14.5px;line-height:1.6}
+  .qs-grid{gap:12px}
+}
+
+/* Compacité globale de l'accueil */
+@media(min-width:981px){body.home .sp{padding:72px 0}body.home .sp-media-tall img{max-height:520px}}
+@media(max-width:640px){
+  body.home .sp{padding:40px 0}
+  body.home .sp-media img,body.home .sp-media-tall img{min-height:0;height:230px;max-height:230px}
+  body.home .sp-title{font-size:30px}
+  body.home .sp-lead{margin-top:12px}
+}
