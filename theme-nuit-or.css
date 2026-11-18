@@ -347,3 +347,28 @@ body.svc .section .tf-list li+li{margin-top:6px}
   body.svc .section .cn-offer h3{font-size:24px}
   body.svc .ar-fiche{padding:24px 20px}
 }
+
+/* ===== Animations légères ===== */
+.nav-inner{transition:height .3s ease,background .3s ease,box-shadow .3s ease}
+.nav.nav-compact .nav-inner{height:58px;background:rgba(11,16,48,.92);box-shadow:0 12px 30px -14px rgba(0,0,0,.6)}
+.nav.nav-compact .logo-img{height:40px!important}
+.logo-img{transition:height .3s ease}
+@keyframes wdIn{from{opacity:0;transform:translateY(.45em)}to{opacity:1;transform:none}}
+.hero-slider h1 .wd{display:inline-block;opacity:0;animation:wdIn .7s cubic-bezier(.16,.84,.3,1) forwards}
+.hero-slider h1 .gold .wd{animation-name:wdIn,wdGlow;animation-duration:.7s,1.6s}
+@keyframes wdGlow{0%{text-shadow:0 0 0 rgba(230,198,92,0)}50%{text-shadow:0 0 26px rgba(230,198,92,.55)}100%{text-shadow:0 0 0 rgba(230,198,92,0)}}
+@keyframes heroZoom{from{background-size:100%;transform:none}to{transform:none}}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.05)}}
+.hero-slider{overflow:hidden;isolation:isolate}
+.hero-slider::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(90deg,rgba(11,16,48,.88) 0%,rgba(11,16,48,.55) 48%,rgba(11,16,48,.08) 100%),url("assets/photos/apropos-hero-inspection.jpg");background-size:cover;background-position:75% center;animation:kenburns 14s ease-out forwards;transform-origin:70% 40%}
+@media(max-width:760px){.hero-slider::before{background-image:linear-gradient(180deg,rgba(11,16,48,.85) 0%,rgba(11,16,48,.5) 55%,rgba(11,16,48,.2) 100%),url("assets/photos/apropos-hero-inspection.jpg");background-position:72% center}}
+.hero-slider{background-image:none!important}
+@media(prefers-reduced-motion:reduce){.hero-slider::before{animation:none}.hero-slider h1 .wd{opacity:1;animation:none}}
+@media(hover:hover){
+  .btn,.cta-pill,.contact-strip a{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+  .btn:hover,.cta-pill:hover{transform:translateY(-2px);box-shadow:0 10px 22px -10px rgba(0,0,0,.45)}
+  .sp-more:hover,.link-arrow:hover{letter-spacing:.02em}
+  .cn-card,.cn-offer,.sp-card{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+  .cn-card:hover,.cn-offer:hover,.sp-card:hover{transform:translateY(-4px)}
+}
+.btn:active,.cta-pill:active,.contact-strip a:active{transform:scale(.97)}
