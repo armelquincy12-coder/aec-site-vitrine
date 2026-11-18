@@ -372,3 +372,20 @@ body.svc .section .tf-list li+li{margin-top:6px}
   .cn-card:hover,.cn-offer:hover,.sp-card:hover{transform:translateY(-4px)}
 }
 .btn:active,.cta-pill:active,.contact-strip a:active{transform:scale(.97)}
+
+/* ===== Pourquoi choisir AEC / Qualité et sécurité ===== */
+.why-head{max-width:760px;margin:0 0 36px}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.why-card{padding:26px 24px;border:1px solid rgba(255,255,255,.16);border-top:2px solid #E6C65C;border-radius:14px;background:rgba(11,16,48,.5);transition:transform .25s,border-color .25s}
+.why-card:hover{transform:translateY(-4px);border-color:#E6C65C}
+.why-n{display:block;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.14em;color:#E6C65C;margin-bottom:12px}
+body.home .why-card h3{margin:0 0 10px;font-family:'Sora',sans-serif;font-size:18px;line-height:1.3;color:#F7F3EA}
+body.home .why-card p{margin:0;font-size:15px;line-height:1.6;color:#D5D9F3}
+.qs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.qs-card{padding:30px 28px;border:1px solid rgba(230,198,92,.35);border-radius:14px;background:linear-gradient(160deg,rgba(23,41,140,.55),rgba(11,16,48,.6))}
+.qs-card svg{width:38px;height:38px;color:#E6C65C;margin-bottom:14px}
+body.home .qs-card h3{margin:0 0 10px;font-family:'Sora',sans-serif;font-size:20px;color:#F7F3EA}
+body.home .qs-card p{margin:0;font-size:15.5px;line-height:1.7;color:#D5D9F3}
+.qs-line{margin:26px 0 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-size:15px;color:#E6C65C;letter-spacing:.02em}
+@media(max-width:980px){.why-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.qs-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.why-grid{grid-template-columns:1fr}.why-card{padding:20px 18px}}
