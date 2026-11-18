@@ -467,3 +467,21 @@ body.home h3.qs-title em{color:#E6C65C}
 .pq-ap .qs-card h3{margin:0 0 10px;font-family:'Sora',sans-serif;font-size:20px;color:#F7F3EA}
 .pq-ap .qs-card p{margin:0;font-size:15.5px;line-height:1.7;color:#D5D9F3}
 .pq-ap .qs-line{max-width:none;color:#D5D9F3}
+
+/* Entreprises allégée */
+.en-detail{margin-top:28px}
+.en-detail>summary{cursor:pointer;display:inline-block;padding:12px 22px;border:1.5px solid #0B1030;border-radius:999px;font-weight:700;font-size:15px;color:#0B1030;list-style:none}
+.en-detail>summary::-webkit-details-marker{display:none}
+.en-detail[open]>summary{background:#0B1030;color:#E6C65C}
+.en-detail .cn-offers{margin-top:24px}
+.ec-list{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.ec-list li{padding:20px 22px;border-left:3px solid #C9A44A;background:rgba(11,16,48,.04);border-radius:0 12px 12px 0}
+.ec-list strong{display:block;font-family:'Sora',sans-serif;font-size:18px;color:#14172A;margin-bottom:4px}
+.ec-list span{font-size:15.5px;line-height:1.55;color:#3B4568}
+.ep-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center;border-radius:16px;overflow:hidden;background:#0B1030;color:#D5D9F3;text-decoration:none}
+.ep-card img{width:100%;height:100%;min-height:260px;max-height:340px;object-fit:cover;display:block}
+.ep-card div{padding:28px}
+.ep-card p{margin:0 0 16px;font-size:16.5px;line-height:1.65;color:#D5D9F3}
+.ep-more{color:#E6C65C;font-weight:700}
+.closing-etude{font-size:15px}.closing-etude a{color:#E6C65C;text-decoration:underline}
+@media(max-width:760px){.ec-list{grid-template-columns:1fr}.ep-card{grid-template-columns:1fr;gap:0}.ep-card img{min-height:0;height:200px}.ep-card div{padding:20px}}
