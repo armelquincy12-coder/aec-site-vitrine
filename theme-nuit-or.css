@@ -526,3 +526,8 @@ body.home h3.qs-title em{color:#E6C65C}
 .rn-note{margin:26px 0 0;padding:16px 20px;border-left:3px solid #C9A44A;background:rgba(11,16,48,.05);font-size:15.5px;line-height:1.65;color:#3B4568;max-width:860px}
 .rn-grid.rn-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:860px){.rn-grid.rn-3{grid-template-columns:1fr}}
+
+/* glissement droite -> gauche */
+[data-slide-left] .sl-item{opacity:0;transform:translateX(90px);transition:opacity .7s ease,transform .8s cubic-bezier(.22,.8,.3,1)}
+[data-slide-left].sl-in .sl-item{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){[data-slide-left] .sl-item{opacity:1;transform:none;transition:none}}

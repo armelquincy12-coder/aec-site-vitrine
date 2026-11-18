@@ -19,3 +19,14 @@
   /* cartes : apparition décalée */
   document.querySelectorAll('.sp-track,.cn-gallery,.cn-offers,.ar-fiches,.ba-grid').forEach(function(g){Array.prototype.forEach.call(g.children,function(c,i){c.style.transitionDelay=Math.min(i,5)*90+'ms';});});
 })();
+
+/* glissement de la droite vers la gauche (étapes de méthode) */
+(function(){
+  var groups=document.querySelectorAll('[data-slide-left]');
+  if(!groups.length)return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window))return;
+  groups.forEach(function(g){Array.prototype.forEach.call(g.children,function(c,i){c.classList.add('sl-item');c.style.transitionDelay=(i*140)+'ms';});});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('sl-in');io.unobserve(e.target);}});},{threshold:.25});
+  groups.forEach(function(g){io.observe(g);});
+})();
