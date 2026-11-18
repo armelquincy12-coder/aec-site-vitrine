@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/tarifs.html", "destination": "/#contact", "permanent": false },
+    { "source": "/tarifs", "destination": "/#contact", "permanent": false }
+  ]
+}
