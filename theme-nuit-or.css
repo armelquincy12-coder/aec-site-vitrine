@@ -287,3 +287,48 @@ body.svc .section p.ap-quote{color:var(--or)!important}
   .contact-strip .wrap>div:last-child span{color:var(--or);margin-bottom:2px}
 }
 @media(max-width:760px){.contact-strip .wrap>a:nth-child(3){font-size:12px;word-break:normal;letter-spacing:-.2px;font-weight:600}}
+
+/* Pages services : contenu clair, vitrine sombre */
+body.svc-a{background:#F6F5F1;color:#14172A}
+body.svc-a .section,body.svc-a .section:not(.section-dark):not(.xc):not(.section-light){background-color:#F6F5F1}
+body.svc-a .section.section-light{background-color:#EFECE4}
+body.svc-a .section h2,body.svc-a .section h3{color:#14172A}
+body.svc-a .section h2 .gold-text,body.svc-a .gold-text{color:#8A6A12}
+body.svc-a .section p,body.svc-a .section li{color:#3B3E52}
+body.svc-a .section strong{color:#14172A}
+body.svc-a .eyebrow,body.svc-a .eyebrow-dark{color:#8A6A12}
+body.svc-a .ap-quote,body.svc-a .section p.ap-quote{color:#14172A!important;border-left-color:#C9A44A}
+body.svc-a .section .cn-card,body.svc-a .section .cn-offer{background:#fff!important;border:1px solid #E4E0D4!important;box-shadow:0 12px 30px rgba(20,23,42,.08)}
+body.svc-a .section .cn-card h3,body.svc-a .section .cn-offer h3{color:#14172A!important}
+body.svc-a .section .cn-card p,body.svc-a .section .cn-offer p{color:#3B3E52!important}
+body.svc-a .ar-n{background:#0B1030;color:#E6C65C}
+body.svc-a .cn-offer-tag{color:#8A6A12}
+body.svc-a .sp-btn{background:#0B1030;color:#fff}
+body.svc-a .cn-fig{background:#fff;border-color:#E4E0D4}
+body.svc-a .cn-fig figcaption{color:#14172A}
+body.svc-a .section:has(.cn-gallery),body.svc-a .section:has(.closing-banner){background-color:#0B1030}
+body.svc-a .section:has(.cn-gallery) h2,body.svc-a .section:has(.cn-gallery) h3{color:#F7F3EA}
+body.svc-a .section:has(.cn-gallery) h2 .gold-text{color:#E6C65C}
+body.svc-a .section:has(.cn-gallery) p,body.svc-a .section:has(.cn-gallery) .eyebrow{color:#D5D9F3}
+body.svc-a .section:has(.cn-gallery) .eyebrow{color:#E6C65C}
+body.svc-a .section:has(.cn-gallery) .cn-fig{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.14)}
+body.svc-a .section:has(.cn-gallery) .cn-fig figcaption{color:#F7F3EA}
+body.svc-a .section:has(.closing-banner) h2{color:#F7F3EA}
+body.svc-a .section:has(.closing-banner) p{color:#D5D9F3}
+
+/* Accueil : alternance visuelle nuit / bleu royal */
+body.home .sp-soft,body.home .sp-facts{background:#17298C}
+body.home .sp-soft .sp-card,body.home .sp-soft .sp-info,body.home .sp-soft .faq-item,body.home .sp-soft .proj,body.home .sp-soft details{background:rgba(11,16,48,.5);border-color:rgba(255,255,255,.18)}
+body.home .sp-white{background:#0B1030}
+body.svc-a #projet-mcv{background-color:#0B1030}
+body.svc-a #projet-mcv h2,body.svc-a #projet-mcv h3{color:#F7F3EA}
+body.svc-a #projet-mcv h2 .gold-text{color:#E6C65C}
+body.svc-a #projet-mcv p,body.svc-a #projet-mcv figcaption{color:#D5D9F3}
+body.svc-a #projet-mcv .eyebrow{color:#E6C65C}
+body.svc-a #projet-mcv a{color:#E6C65C}
+
+body.svc-a #realisations-amenagement{background-color:#0B1030}
+body.svc-a #realisations-amenagement h2,body.svc-a #realisations-amenagement h3{color:#F7F3EA}
+body.svc-a #realisations-amenagement h2 .gold-text{color:#E6C65C}
+body.svc-a #realisations-amenagement p,body.svc-a #realisations-amenagement figcaption{color:#D5D9F3}
+body.svc-a #realisations-amenagement .eyebrow,body.svc-a #realisations-amenagement a{color:#E6C65C}
