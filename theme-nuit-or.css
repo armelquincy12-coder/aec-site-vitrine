@@ -498,3 +498,7 @@ body.home h3.qs-title em{color:#E6C65C}
 @media(max-width:760px){.ec-3{grid-template-columns:1fr}}
 .ap-closing h2.on-dark{color:#F7F3EA!important}
 .page-hero--photo .lead{color:#EEF0FA!important;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+.dia-flow{margin:22px 0 18px;color:#D5D9F3;font-size:15.5px;line-height:1.6}
+.dia-flow b{color:#E6C65C}.dia-flow span{color:#E6C65C;margin:0 4px}
+.dia-cta{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center}
+.dia-link{color:#E6C65C;font-weight:600;text-decoration:underline;text-underline-offset:4px}
