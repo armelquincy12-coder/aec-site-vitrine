@@ -629,3 +629,19 @@ body.home #profils .sp-more{font-size:15px;padding-top:10px}
 @media(max-width:700px){body.home #profils .sp-card img{height:200px}body.home #profils .sp-card h3{font-size:28px}}
 body.svc #prestations .cn-offer{height:auto;align-self:stretch}
 body.home #profils .sp-title{font-size:clamp(34px,3.3vw,46px);line-height:1.1}
+
+/* Cartes de prestations / formules : en-tête marine, titre souligné or, listes à pastilles (proposition 2) */
+body.svc .section .cn-offer.has-hd{padding:0!important;gap:0!important;overflow:hidden;border-radius:22px;background:#fff!important;border:1px solid #E4E0D4!important;box-shadow:0 26px 50px -34px rgba(11,16,48,.5)!important;display:flex;flex-direction:column}
+body.svc .section .cn-offer.has-hd:hover{border-color:#C9A44A!important}
+body.svc .cn-offer-hd{position:relative;background:linear-gradient(150deg,#17298C,#0B1030);padding:30px 32px 30px;overflow:hidden}
+body.svc .cn-offer-hd::after{content:"";position:absolute;right:-34px;top:-34px;width:130px;height:130px;border-radius:50%;border:2px solid rgba(230,198,92,.35);pointer-events:none}
+body.svc .cn-offer-hd .cn-offer-tag{display:block;margin:0 0 12px;color:#E6C65C!important}
+body.svc .section .cn-offer-hd h3{display:inline-block;margin:0;padding-bottom:10px;border-bottom:3px solid #E6C65C;color:#fff!important;font-size:30px;line-height:1.15;position:relative}
+body.svc .cn-offer-bd{padding:28px 32px 34px;display:flex;flex-direction:column;gap:20px;flex:1}
+body.svc .section .cn-offer-bd p{margin:0;font-size:16px;line-height:1.75;flex:none;color:#2D3748!important}
+body.svc .section .cn-offer-bd .tf-list{gap:16px;margin:0}
+body.svc .section .cn-offer-bd .tf-list li{font-size:15.5px;line-height:1.65;padding-left:36px;margin:0}
+body.svc .section .cn-offer-bd .tf-list li+li{margin-top:0}
+body.svc .cn-offer-bd .tf-list li::before{left:0;top:.1em;width:24px;height:24px;border:0;border-radius:50%;transform:none;background:#E8EBFA url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2317298C' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4L18.5 8'/%3E%3C/svg%3E") center/13px no-repeat}
+body.svc .cn-offer-bd .sp-btn,body.svc .cn-offer-bd .link-arrow{margin-top:auto}
+@media(max-width:700px){body.svc .cn-offer-hd{padding:24px 22px}body.svc .section .cn-offer-hd h3{font-size:25px}body.svc .cn-offer-bd{padding:22px 22px 28px}}
