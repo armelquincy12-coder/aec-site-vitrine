@@ -669,3 +669,6 @@ body.home .sp-eyebrow::before{width:56px;height:2px}
 .ps-link:hover b{color:#17298C}
 .ps-link:hover .ps-ar{transform:translateX(4px);background:#17298C}
 @media(max-width:760px){.ps-row{grid-template-columns:1fr;padding:30px 0}.ps-num{font-size:60px}.ps-head h3{font-size:32px!important}}
+
+/* Page Architecture : sur mobile, les 4 prestations s'empilent (plus de carrousel horizontal où les cartes 2 à 4 restaient cachées) */
+@media(max-width:760px){.cn-offers.ar-offers{display:grid!important;grid-template-columns:1fr!important;overflow:visible!important;scroll-snap-type:none!important;padding:0!important;gap:18px}.cn-offers.ar-offers>*{flex:none;min-width:0}}
