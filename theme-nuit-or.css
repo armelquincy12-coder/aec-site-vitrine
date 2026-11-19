@@ -335,7 +335,7 @@ body.svc-a #realisations-amenagement .eyebrow,body.svc-a #realisations-amenageme
 
 /* ===== Lisibilité des cartes de prestations (pages claires) ===== */
 body.svc .section .cn-offer h3,body.svc .section .cn-card h3{letter-spacing:.005em;line-height:1.2}
-body.svc .cn-offer-tag,body.svc .ar-fiche h4,body.svc .section h4{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#8A6A12}
+body.svc .cn-offer-tag,body.svc .ar-fiche h4,body.svc .section h4{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#8A6A12;margin-top:22px}
 body.svc .ar-fiche{padding:28px 26px;gap:8px}
 body.svc .ar-fiche h4{margin:14px 0 4px}
 body.svc .ar-fiche .ar-intro,body.svc .cn-offer p{font-size:15.5px;line-height:1.55}
@@ -404,7 +404,7 @@ body.home .qs-card p{margin:0;font-size:15.5px;line-height:1.7;color:#D5D9F3}
 /* Page Entreprises : besoins/réponses + collaboration */
 .nr-table{border-top:2px solid #0B1030}
 .nr-head,.nr-row{display:grid;grid-template-columns:1fr 40px 1.2fr;gap:12px;align-items:center;padding:16px 4px;border-bottom:1px solid rgba(11,16,48,.18)}
-.nr-head{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A6A12}
+.nr-head{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8A6A12;margin-top:22px}
 .nr-need{font-family:'Sora',sans-serif;font-weight:700;font-size:17px;color:#14172A}
 .nr-arrow{color:#C9A44A;font-size:20px;text-align:center}
 .nr-resp{font-size:16px;line-height:1.55;color:#3B4568}
@@ -670,5 +670,15 @@ body.home .sp-eyebrow::before{width:56px;height:2px}
 .ps-link:hover .ps-ar{transform:translateX(4px);background:#17298C}
 @media(max-width:760px){.ps-row{grid-template-columns:1fr;padding:30px 0}.ps-num{font-size:60px}.ps-head h3{font-size:32px!important}}
 
-/* Page Architecture : sur mobile, les 4 prestations s'empilent (plus de carrousel horizontal où les cartes 2 à 4 restaient cachées) */
-@media(max-width:760px){.cn-offers.ar-offers{display:grid!important;grid-template-columns:1fr!important;overflow:visible!important;scroll-snap-type:none!important;padding:0!important;gap:18px}.cn-offers.ar-offers>*{flex:none;min-width:0}}
+/* Mobile : prestations en carrousel horizontal (glisser de droite à gauche), toujours visibles, avec aperçu de la carte suivante et pastilles */
+@media(max-width:760px){
+.cn-offers>.reveal,.cn-grid4>.reveal{opacity:1!important;transform:none!important;transition:none!important}
+.cn-offers>*{flex:0 0 86%!important}
+.cn-dots{display:flex;justify-content:center;align-items:center;gap:8px;margin:6px 0 4px}
+.cn-dots i{width:8px;height:8px;border-radius:50%;background:#C5CCE6;transition:all .25s}
+.cn-dots i.on{width:26px;border-radius:4px;background:#17298C}
+.cn-swipe{display:flex;justify-content:center;align-items:center;gap:8px;margin:18px 0 8px;font:400 13px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8A6A12;margin-top:22px}
+.cn-swipe svg{width:18px;height:18px;animation:cnSw 1.4s ease-in-out infinite}
+@keyframes cnSw{0%,100%{transform:translateX(0)}50%{transform:translateX(-6px)}}
+}
+@media(min-width:761px){.cn-dots,.cn-swipe{display:none}}

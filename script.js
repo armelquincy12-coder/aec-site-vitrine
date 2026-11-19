@@ -372,3 +372,28 @@ document.addEventListener("click", function (e) {
   window.addEventListener("load", ouvrir);
   window.addEventListener("hashchange", ouvrir);
 })();
+
+
+// ---- Carrousels de prestations (mobile) : pastilles + indication « Glissez » ----
+(function () {
+  Array.prototype.forEach.call(document.querySelectorAll(".cn-offers"), function (box) {
+    var n = box.children.length;
+    if (n < 2) return;
+    var hint = document.createElement("div");
+    hint.className = "cn-swipe";
+    hint.innerHTML = 'Glissez pour voir la suite <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>';
+    var dots = document.createElement("div");
+    dots.className = "cn-dots";
+    dots.setAttribute("aria-hidden", "true");
+    for (var k = 0; k < n; k++) dots.appendChild(document.createElement("i"));
+    box.parentNode.insertBefore(hint, box);
+    box.parentNode.insertBefore(dots, box.nextSibling);
+    function upd() {
+      var w = box.children[0].getBoundingClientRect().width + 14;
+      var idx = Math.min(n - 1, Math.round(box.scrollLeft / Math.max(w, 1)));
+      Array.prototype.forEach.call(dots.children, function (d, i) { d.className = i === idx ? "on" : ""; });
+    }
+    box.addEventListener("scroll", upd, { passive: true });
+    upd();
+  });
+})();
